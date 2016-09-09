@@ -1,0 +1,16 @@
+
+@media (min-width: 992px){
+.hh_login_form{
+    margin-left:29% !important;
+}
+.hh_registration_form
+{
+    margin-left:29% !important;
+}
+}
+@media (max-width:768px) {
+	.well{
+		margin-top:50px ;
+	}
+
+}

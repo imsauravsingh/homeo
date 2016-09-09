@@ -1,0 +1,135 @@
+@import url(http://db.onlinewebfonts.com/c/07689d4eaaa3d530d58826b5d7f84735?family=Montserrat);
+@font-face {font-family: "Montserrat";
+    src: url("http://db.onlinewebfonts.com/t/07689d4eaaa3d530d58826b5d7f84735.eot");
+    src: url("http://db.onlinewebfonts.com/t/07689d4eaaa3d530d58826b5d7f84735.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/07689d4eaaa3d530d58826b5d7f84735.woff2") format("woff2"),
+    url("http://db.onlinewebfonts.com/t/07689d4eaaa3d530d58826b5d7f84735.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/07689d4eaaa3d530d58826b5d7f84735.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/07689d4eaaa3d530d58826b5d7f84735.svg#Montserrat") format("svg");
+}
+@font-face {
+    font-family: 'loraregular';
+    src: url('../fonts/lora-regular-webfont.eot');
+    src: url('../fonts/lora-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lora-regular-webfont.woff2') format('woff2'),
+         url('../fonts/lora-regular-webfont.woff') format('woff'),
+         url('../fonts/lora-regular-webfont.svg#loraregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.wrapper{
+	width:470px;
+	margin:80px auto;
+	font-family: "Montserrat";
+}
+body{
+	background-color:#f2f2f2;
+}
+ul.nav.nav-tabs {
+    background: #bba7c3;
+    /* color: white; */
+	width:450px;
+}
+/* Tabs panel */
+.tabbable-panel {
+  padding: 10px;
+}
+
+/* Default mode */
+.tabbable-line > .nav-tabs {
+  border: none;
+  margin: 0px;
+}
+.tabbable-line > .nav-tabs > li {
+  margin-right: 2px;
+   
+}
+.tabbable-line > .nav-tabs > li > a {
+  border: 0;
+  margin-right: 0;
+  color: #fff;
+}
+.tabbable-line > .nav-tabs > li > a > i {
+  color: #a6a6a6;
+}
+.tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
+  border-bottom:10px solid #886895;
+}
+
+.tabbable-line > .nav-tabs > li.active {
+  border-bottom:10px solid #886895;
+  position: relative;
+  margin-bottom:0px;
+}
+.tabbable-line > .nav-tabs > li.active > a {
+  border: 0;
+  color: #fff;
+  background:#886895 !important;
+  
+}
+.tabbable-line > .nav-tabs > li:hover {
+  border-bottom:10px solid #886895;
+  position: relative;
+  margin-bottom:0px;
+}
+.tabbable-line > .nav-tabs > li:hover > a {
+  border: 0;
+  color: #fff;
+  background:#886895 !important;
+  
+}
+.tabbable-line > .nav-tabs > li.active > a > i {
+  color: #404040;
+}
+.tabbable-line > .tab-content {
+  margin-top: -3px;
+  background-color: #fff;
+  border: 0;
+  border-top: 1px solid #eee;
+  background: #886895;
+    color: white;
+    padding: 20px;
+	width:450px;
+}
+.portlet .tabbable-line > .tab-content {
+  padding-bottom: 0;
+}
+
+/* Below tabs mode */
+
+.tabbable-line.tabs-below > .nav-tabs > li {
+  border-top: 4px solid transparent;
+}
+
+.tabbable-line.tabs-below > .nav-tabs > li:hover {
+  border-bottom: 0;
+  border-top: 4px solid #fbcdcf;
+}
+.tabbable-line.tabs-below > .nav-tabs > li.active {
+  margin-bottom: -2px;
+  border-bottom: 0;
+  border-top: 4px solid #f3565d;
+}
+.tabbable-line.tabs-below > .tab-content {
+  margin-top: -10px;
+  border-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+.input-group-addon {
+    background: white;
+    color:  #886895;
+	font-size:20px;
+}
+..form-control{
+	height:40px !important;
+}
+
+	span a{
+color:white;
+}
+.tabbable-line {
+    box-shadow: 1px 2px 5px;
+}

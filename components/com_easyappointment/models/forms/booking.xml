@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details" addfieldpath="/components/com_easyappointment/models/fields">
+
+		<field name="calendar" type="text"
+			class="input-sm booking-form" required="true"
+			description="COM_EASYAPPOINTMENT_DATE"
+			label="COM_EASYAPPOINTMENT_DATE"
+			size="30"/>
+
+		<field name="service" type="staffServices"
+			class="input-sm booking-form" required="true"
+			description="COM_EASYAPPOINTMENT_SERVICE"
+			label="COM_EASYAPPOINTMENT_SERVICE"
+			size="30"/>
+
+		<field name="startingTime" type="list"
+			class="input-sm booking-form" required="true"
+			description="COM_EASYAPPOINTMENT_FROM_HOUR"
+			label="COM_EASYAPPOINTMENT_FROM_HOUR"
+			/>
+			
+		<field name="endingTime" type="list"
+			class="input-sm booking-form" required="true"
+			description="COM_EASYAPPOINTMENT_TO_HOUR"
+			label="COM_EASYAPPOINTMENT_TO_HOUR"
+			/>
+			
+		<field name="name" type="text"
+			class="input-sm booking-form" required="true"
+			description="COM_EASYAPPOINTMENT_CLIENT"
+			label="COM_EASYAPPOINTMENT_CLIENT"
+			size="30"/>
+			
+		<field name="email" type="text"
+			class="input-sm booking-form" required="true"
+			description="COM_EASYAPPOINTMENT_EMAIL"
+			label="COM_EASYAPPOINTMENT_EMAIL"
+			size="30"/>
+			
+		<field name="phone" type="text"
+			class="input-sm booking-form"
+			description="COM_EASYAPPOINTMENT_PHONE"
+			label="COM_EASYAPPOINTMENT_PHONE"
+			size="30"/>
+				
+		<field name="address" type="text"
+			class="input-sm booking-form"
+			description="COM_EASYAPPOINTMENT_ADDRESS"
+			label="COM_EASYAPPOINTMENT_ADDRESS"
+			size="30"/>
+			
+		<field name="comments" type="textarea"
+			class="input-sm booking-form" 
+			description="COM_EASYAPPOINTMENT_COMMENTS"
+			label="COM_EASYAPPOINTMENT_COMMENTS"
+			size="30"/>
+			
+		<field name="published" type="list"
+			class="input-sm booking-form"
+			description="COM_EASYAPPOINTMENT_BOOKINGS_STATUS"
+			label="COM_EASYAPPOINTMENT_BOOKINGS_STATUS">
+			<option value="0">COM_EASYAPPOINTMENT_UNCONFIRMED</option>
+			<option value="1">COM_EASYAPPOINTMENT_CONFIRMED</option>
+		</field>
+
+		<field name="appointmentDate" type="hidden" required="true"/>
+		<field name="staff" type="hidden" />
+		<field name="id" type="hidden" />
+	</fieldset>
+</form>

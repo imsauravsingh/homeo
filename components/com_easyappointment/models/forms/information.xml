@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details" addfieldpath="/components/com_easyappointment/models/fields">
+		<field name="name" type="text"
+			class="form-control booking-form" required="true"
+			description="COM_EASYAPPOINTMENT_NAME"
+			label="COM_EASYAPPOINTMENT_NAME" validate="" />
+			
+		<field name="email" type="text"
+			class="form-control booking-form"
+			description="COM_EASYAPPOINTMENT_EMAIL"
+			label="COM_EASYAPPOINTMENT_EMAIL" validate="/^[A-Za-z0-9-\._]{1,}@[\w-\.]*\.[\w]{2,}$/" />
+			
+		<field name="phone" type="text"
+			class="form-control booking-form"
+			description="COM_EASYAPPOINTMENT_PHONE"
+			label="COM_EASYAPPOINTMENT_PHONE" validate="/[\d\s.\-()+]*/" />
+				
+		<field name="address" type="text"
+			class="form-control booking-form"
+			description="COM_EASYAPPOINTMENT_ADDRESS"
+			label="COM_EASYAPPOINTMENT_ADDRESS" validate="" />
+			
+		<field name="comments" type="textarea"
+			class="form-control booking-form" 
+			description="COM_EASYAPPOINTMENT_COMMENTS"
+			label="COM_EASYAPPOINTMENT_COMMENTS" validate="" />
+	</fieldset>
+
+	<fieldset name="details-hidden">
+		<field name="appointmentDate" type="hidden" required="true" validate="/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/" />
+		<field name="startingTime" type="hidden" required="true" validate="/^[0-9]{1,}$/" />
+		<field name="endingTime" type="hidden" required="true" validate="/^[0-9]{1,}$/" />
+		<field name="staff" type="hidden" required="true" validate="/^[0-9]{1,}$/" />
+		<field name="service" type="hidden" required="true" validate="/^[0-9]{1,}$/" />
+	</fieldset>
+</form>
