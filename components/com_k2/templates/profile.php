@@ -13,11 +13,12 @@ defined('_JEXEC') or die;
 ?>
 
 <!-- K2 user profile form -->
-<form action="<?php echo JURI::root(true); ?>/index.php" enctype="multipart/form-data" method="post" name="userform" autocomplete="off" class="form-validate">
+<form action="<?php echo JURI::root(true); ?>/index.php" enctype="multipart/form-data" method="post" name="userform" autocomplete="off" class="form-validate well">
 	<?php if($this->params->def('show_page_title',1)): ?>
-	<div class="componentheading<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
+	<!--<div class="componentheading<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
 		<?php echo $this->escape($this->params->get('page_title')); ?>
-	</div>
+	</div>-->
+	<legend>Your Profile</legend>
 	<?php endif; ?>
 	<div id="k2Container" class="k2AccountPage">
 		<table class="admintable" cellpadding="0" cellspacing="0">
@@ -77,11 +78,11 @@ defined('_JEXEC') or die;
 					<input class="inputbox validate-passverify" type="password" id="password2" name="<?php echo $this->passwordVerifyFieldName; ?>" size="40" value="" />
 				</td>
 			</tr>
-			<tr>
+			<!--<tr>
 				<th colspan="2" class="k2ProfileHeading">
 					<?php echo JText::_('K2_PERSONAL_DETAILS'); ?>
 				</th>
-			</tr>
+			</tr>-->
 			<!-- K2 attached fields -->
 			<tr>
 				<td class="key">
@@ -112,33 +113,33 @@ defined('_JEXEC') or die;
 					<?php endif; ?>
 				</td>
 			</tr>
-			<tr>
+			<!--<tr>
 				<td class="key">
 					<label id="urlmsg" for="url"><?php echo JText::_('K2_URL'); ?></label>
 				</td>
 				<td>
 					<input type="text" size="50" value="<?php echo $this->K2User->url; ?>" name="url" id="url" />
 				</td>
-			</tr>
+			</tr>-->
 			<?php if(count(array_filter($this->K2Plugins))): ?>
 			<!-- K2 Plugin attached fields -->
-			<tr>
+			<!--<tr>
 				<th colspan="2" class="k2ProfileHeading">
 					<?php echo JText::_('K2_ADDITIONAL_DETAILS'); ?>
 				</th>
-			</tr>
+			</tr>-->
 			<?php foreach($this->K2Plugins as $K2Plugin): ?>
 			<?php if(!is_null($K2Plugin)): ?>
-			<tr>
+			<!--<tr>
 				<td colspan="2">
 					<?php echo $K2Plugin->fields; ?>
 				</td>
-			</tr>
+			</tr>-->
 			<?php endif; ?>
 			<?php endforeach; ?>
 			<?php endif; ?>
 			<?php if(isset($this->params) && version_compare(JVERSION, '1.6', 'lt')): ?>
-			<tr>
+			<!--<tr>
 				<th colspan="2" class="k2ProfileHeading">
 					<?php echo JText::_('K2_ADMINISTRATIVE_DETAILS'); ?>
 				</th>
@@ -147,7 +148,7 @@ defined('_JEXEC') or die;
 				<td colspan="2" id="userAdminParams">
 					<?php echo $this->params->render('params'); ?>
 				</td>
-			</tr>
+			</tr>-->
 			<?php endif; ?>
 			<!-- Joomla! 1.6+ JForm implementation -->
 			<?php if(isset($this->form)): ?>
@@ -156,15 +157,15 @@ defined('_JEXEC') or die;
 				<?php $fields = $this->form->getFieldset($fieldset->name);?>
 				<?php if (count($fields)):?>
 					<?php if (isset($fieldset->label)):// If the fieldset has a label set, display it as the legend.?>
-					<tr>
+					<!--<tr>
 						<th colspan="2" class="k2ProfileHeading">
 							<?php echo JText::_($fieldset->label);?>
 						</th>
-					</tr>
+					</tr>-->
 					<?php endif;?>
 					<?php foreach($fields as $field):// Iterate through the fields in the set and display them.?>
 						<?php if ($field->hidden):// If the field is hidden, just display the input.?>
-							<tr><td colspan="2"><?php echo $field->input;?></td></tr>
+							<!--<tr><td colspan="2"><?php echo $field->input;?></td></tr>-->
 						<?php else:?>
 							<tr>
 								<td class="key">
@@ -183,7 +184,7 @@ defined('_JEXEC') or die;
 			<?php endif; ?>
 		</table>
 		<div class="k2AccountPageUpdate">
-			<button class="button validate" type="submit" onclick="submitbutton( this.form );return false;">
+			<button class="button validate rs_button" type="submit" onclick="submitbutton( this.form );return false;">
 				<?php echo JText::_('K2_SAVE'); ?>
 			</button>
 		</div>

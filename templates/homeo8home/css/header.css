@@ -27,7 +27,7 @@
 .header{
 	background:#886895;
 	color:white;
-	padding:10px 0px 5px;
+	padding:5px 0px;
     width: 100%;
 	z-index: 9999;
 	    margin-bottom: 0px!important;
@@ -49,4 +49,8 @@
 	color:white;
 	font-size: 12px !important;
 	}
-/* comment added by saurav */
+ul.bm-cool-menu {
+    background-color: transparent !important;
+    border: 0px none !important;
+    float: right;
+}

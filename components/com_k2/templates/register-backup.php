@@ -15,21 +15,19 @@ defined('_JEXEC') or die;
 <!-- K2 user register form -->
 <?php if(isset($this->message)) $this->display('message'); ?>
 
-<form action="<?php echo version_compare(JVERSION, '3.0', 'ge') ? JRoute::_('index.php?option=com_users&task=registration.register') : JURI::root(true).'/index.php'; ?>" enctype="multipart/form-data" method="post" id="josForm" name="josForm" class="col-lg-5 col-md-5 col-sm-5 col-xs-12 form-validate well hh_registration_form">
+<form action="<?php echo version_compare(JVERSION, '3.0', 'ge') ? JRoute::_('index.php?option=com_users&task=registration.register') : JURI::root(true).'/index.php'; ?>" enctype="multipart/form-data" method="post" id="josForm" name="josForm" class="form-validate">
 	<?php if($this->params->def('show_page_title',1)): ?>
-	<!--<div class="componentheading<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
+	<div class="componentheading<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
 		<?php echo $this->escape($this->params->get('page_title')); ?>
-	</div>-->
-	<legend>Registration Form</legend>
+	</div>
 	<?php endif; ?>
-	<div class="k2AccountPageNotice"><?php echo JText::_('K2_REGISTER_REQUIRED'); ?></div>
 	<div id="k2Container" class="k2AccountPage">
 		<table class="admintable" cellpadding="0" cellspacing="0">
-			<!--<tr>
+			<tr>
 				<th colspan="2" class="k2ProfileHeading">
 					<?php echo JText::_('K2_ACCOUNT_DETAILS'); ?>
 				</th>
-			</tr>-->
+			</tr>
 			<tr>
 				<td class="key">
 					<label id="namemsg" for="name"><?php echo JText::_('K2_NAME'); ?></label>
@@ -86,11 +84,11 @@ defined('_JEXEC') or die;
 					*
 				</td>
 			</tr>
-		<!--	<tr>
+			<tr>
 				<th colspan="2" class="k2ProfileHeading">
 					<?php echo JText::_('K2_PERSONAL_DETAILS'); ?>
 				</th>
-			</tr>-->
+			</tr>
 			<!-- K2 attached fields -->
 			<tr>
 				<td class="key">
@@ -100,15 +98,15 @@ defined('_JEXEC') or die;
 					<?php echo $this->lists['gender']; ?>
 				</td>
 			</tr>
-		<!--	<tr>
+			<tr>
 				<td class="key">
 					<label id="descriptionmsg" for="description"><?php echo JText::_('K2_DESCRIPTION'); ?></label>
 				</td>
 				<td>
 					<?php echo $this->editor; ?>
 				</td>
-			</tr>-->
-			<!--<tr>
+			</tr>
+			<tr>
 				<td class="key">
 					<label id="imagemsg" for="image"><?php echo JText::_( 'K2_USER_IMAGE_AVATAR' ); ?></label>
 				</td>
@@ -128,21 +126,21 @@ defined('_JEXEC') or die;
 				<td>
 					<input type="text" size="50" value="<?php echo $this->K2User->url; ?>" name="url" id="url" />
 				</td>
-			</tr>-->
+			</tr>
 			<?php if(count(array_filter($this->K2Plugins))): ?>
 			<!-- K2 Plugin attached fields -->
-			<!--<tr>
+			<tr>
 				<th colspan="2" class="k2ProfileHeading">
 					<?php echo JText::_('K2_ADDITIONAL_DETAILS'); ?>
 				</th>
-			</tr>-->
+			</tr>
 			<?php foreach ($this->K2Plugins as $K2Plugin): ?>
 			<?php if(!is_null($K2Plugin)): ?>
-			<!--<tr>
+			<tr>
 				<td colspan="2">
 					<?php echo $K2Plugin->fields; ?>
 				</td>
-			</tr>-->
+			</tr>
 			<?php endif; ?>
 			<?php endforeach; ?>
 			<?php endif; ?>
@@ -154,11 +152,11 @@ defined('_JEXEC') or die;
 				<?php $fields = $this->form->getFieldset($fieldset->name);?>
 				<?php if (count($fields)):?>
 					<?php if (isset($fieldset->label)):// If the fieldset has a label set, display it as the legend.?>
-					<!--<tr>
+					<tr>
 						<th colspan="2" class="k2ProfileHeading">
 							<?php echo JText::_($fieldset->label);?>
 						</th>
-					</tr>-->
+					</tr>
 					<?php endif;?>
 					<?php foreach($fields as $field):// Iterate through the fields in the set and display them.?>
 						<?php if ($field->hidden):// If the field is hidden, just display the input.?>
@@ -188,9 +186,10 @@ defined('_JEXEC') or die;
 		<?php endif; ?>
 		<div id="recaptcha" class="<?php echo $this->recaptchaClass; ?>"></div>
 		<?php endif; ?>
-		
-		<div class="k2AccountPageUpdate registration_button">
-			<button class="button validate rs_button" type="submit">
+
+		<div class="k2AccountPageNotice"><?php echo JText::_('K2_REGISTER_REQUIRED'); ?></div>
+		<div class="k2AccountPageUpdate">
+			<button class="button validate" type="submit">
 				<?php echo JText::_('K2_REGISTER'); ?>
 			</button>
 		</div>
