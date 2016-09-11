@@ -10,10 +10,9 @@
 defined('_JEXEC') or die('Restricted access');
 
 ?>
-
 <div id="easyapp">
 	<h3 class="list-title"> 
-		<i class="ico ico-user"></i> <span class="main"><span class="second"><?php echo sprintf(JText::_('COM_EASYAPPOINTMENT_USERS'), $this->category->name);?></span></span>
+		<i class="fa fa-user-md fa-fw"></i><span class="main"><span class="second"><?php echo sprintf(JText::_('COM_EASYAPPOINTMENT_USERS'), $this->category->name);?></span></span>
 	</h3>
 
 	<?php foreach ($this->items as $item) { $user_services = $item->getServices(); ?>
