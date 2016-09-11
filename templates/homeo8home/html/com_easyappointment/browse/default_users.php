@@ -8,6 +8,17 @@
  
 // Check to ensure this file is included in Joomla!
 defined('_JEXEC') or die('Restricted access');
+$permission_file = JPATH_BASE."/components/com_k2/helpers/permissions.php";
+require_once($permission_file);
+
+$name_prefix = "Mr. ";
+if(in_array(14, $user->groups)){
+    $name_prefix = "Dr. ";
+}elseif($K2User->gender=='m'){
+    $name_prefix = "Mr. ";    
+}else{
+    $name_prefix = "Mrs. ";    
+}
 
 ?>
 <div id="easyapp">
@@ -15,12 +26,20 @@ defined('_JEXEC') or die('Restricted access');
 		<i class="fa fa-user-md fa-fw"></i><span class="main"><span class="second"><?php echo sprintf(JText::_('COM_EASYAPPOINTMENT_USERS'), $this->category->name);?></span></span>
 	</h3>
 
-	<?php foreach ($this->items as $item) { $user_services = $item->getServices(); ?>
+	<?php foreach ($this->items as $item) { 
+            $K2User = K2HelperPermissions::getK2User($item->id);
+            $user_services = $item->getServices(); ?>
 	<div class="listing staff">
 		<div class="col-md-2 left">
 			<div class="staff_image">
 				<a class="profilepic" href="<?php echo JRoute::_('index.php?option=com_easyappointment&view=user&id=' . $item->id . '&service=' . $this->category->id);?>">
-					<img src="<?php echo JUri::root();?><?php echo $item->picture ? $this->escape($item->picture) : '/components/com_easyappointment/assets/img/default.png';?>" height="" width="" class="img-circle" />
+                                    <?php if ($K2User->image): ?>
+                                        <img class="k2AccountPageImage img-circle" src="<?php echo JURI::root(true).'/media/k2/users/'.$K2User->image; ?>" alt="<?php echo $user->name; ?>" />
+                                    <?php elseif($K2User->gender=='m'): ?> 
+                                        <img src="<?php echo JURI::root(true).'/images/User2.jpg'; ?>" alt="img" class="img-circle"/>                
+                                    <?php elseif($K2User->gender!='m'): ?> 
+                                        <img src="<?php echo JURI::root(true).'/images/User.jpg'; ?>" alt="img" class="img-circle"/>                
+                                    <?php endif; ?>            
 				</a>
 			</div>
 		</div>

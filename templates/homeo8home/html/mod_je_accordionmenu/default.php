@@ -90,16 +90,36 @@ jQuery( function( ) {
 ";
 $doc->addScriptDeclaration($js);
 $user = JFactory::getUser();
+
+$permission_file = JPATH_BASE."/components/com_k2/helpers/permissions.php";
+require_once($permission_file);
+$K2User = K2HelperPermissions::getK2User($user->id);
+
+$name_prefix = "Mr. ";
+if(in_array(14, $user->groups)){
+    $name_prefix = "Dr. ";
+}elseif($K2User->gender=='m'){
+    $name_prefix = "Mr. ";    
+}else{
+    $name_prefix = "Mrs. ";    
+}
+
 ?>
 <div class="profile-detail">
 	<div class="row">
 	<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-	<img src="images/User2.jpg" alt="img" class="img-circle"/>
+            <?php if ($K2User->image): ?>
+                <img class="k2AccountPageImage img-circle" src="<?php echo JURI::root(true).'/media/k2/users/'.$K2User->image; ?>" alt="<?php echo $user->name; ?>" />
+            <?php elseif($K2User->gender=='m'): ?> 
+                <img src="<?php echo JURI::root(true).'/images/User2.jpg'; ?>" alt="img" class="img-circle"/>                
+            <?php elseif($K2User->gender!='m'): ?> 
+                <img src="<?php echo JURI::root(true).'/images/User.jpg'; ?>" alt="img" class="img-circle"/>                
+            <?php endif; ?>            
 	</div>
 
 	<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
 	<div class="profile-text">
-	<p>Mr.Saurav Kumar</p>
+            <p><?php echo $name_prefix.ucfirst($user->name); ?></p>
 	<p><i class="fa fa-stethoscope fa-fw"></i>Physiotherapist</p>
 	</div>
 	</div>

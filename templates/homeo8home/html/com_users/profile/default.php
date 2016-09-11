@@ -9,15 +9,15 @@
 
 defined('_JEXEC') or die;
 ?>
-<div class="col-md-3 profile_image">
+<!--<div class="col-md-3 profile_image">
 <img src="images/User.jpg"/>
 <ul class="list-unstyled user_social">
 <a href=""> <li class="text-center"><i class="fa fa-envelope fa-fw"></i> Gmail</li></a>
 <a href=""> <li class="text-center"><i class="fa fa-twitter fa-fw"></i> Twitter</li></a>
 <a href=""> <li class="text-center"><i class="fa fa-facebook-official fa-fw"></i> facebook</li></a>
 </ul>
-</div>
-<div class="col-md-9 profile<?php echo $this->pageclass_sfx?>">
+</div>-->
+<div class=" profile<?php echo $this->pageclass_sfx?>">
 <?php if ($this->params->get('show_page_heading')) : ?>
 <div class="page-header">
 	<h1>
@@ -35,8 +35,8 @@ defined('_JEXEC') or die;
 <?php endif; ?>
 <?php echo $this->loadTemplate('core'); ?>
 
-<?php echo $this->loadTemplate('params'); ?>
+<?php //echo $this->loadTemplate('params'); ?>
 
-<?php echo $this->loadTemplate('custom'); ?>
+<?php //echo $this->loadTemplate('custom'); ?>
 
 </div>
