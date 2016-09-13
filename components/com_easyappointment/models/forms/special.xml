@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details">
+		<field name="date" type="hidden" />
+
+		<field name="calendar" type="text"
+			class="input-sm" required="true"
+			description="COM_EASYAPPOINTMENT_DATE"
+			label="COM_EASYAPPOINTMENT_DATE"
+			size="30"/>
+
+		<field name="status" type="list" default="1" class="input-sm" label="COM_EASYAPPOINTMENT_STATE">
+			<option value="0">COM_EASYAPPOINTMENT_FREE_DAY</option>
+			<option value="1">COM_EASYAPPOINTMENT_WORKING_DAY</option>
+		</field>
+	</fieldset>
+</form>

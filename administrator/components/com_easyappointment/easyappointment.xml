@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" type="component" version="3.0">
+	<name>EasyAppointment</name>
+	<author>Ionut Lupu</author>
+	<creationDate>August 2016</creationDate>
+	<authorEmail>contact@ionutlupu.me</authorEmail>
+	<authorUrl>www.ionutlupu.me</authorUrl>
+	<copyright>Ionut Lupu</copyright>
+	<license>GNU/GPL</license>
+	<version>2.2</version>
+	<description><![CDATA[ EasyAppointment is an easy to use reservation component that can be used for medical appointments, beauty saloon reservations or any other service reservation. ]]></description>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">uninstall.sql</file>
+		</sql>
+	</uninstall>
+
+	<files folder="site">
+		<folder>assets</folder>
+		<filename>autoloader.php</filename>
+		<filename>controller.php</filename>
+		<folder>controllers</folder>
+		<filename>default_menu.php</filename>
+		<filename>easyappointment.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>lib</folder>
+		<filename>license.txt</filename>
+		<folder>models</folder>
+		<filename>router.php</filename>
+		<folder>views</folder>
+	</files>
+
+	<administration>
+		<menu img="components/com_easyappointment/easyappointment.png" link="option=com_easyappointment">COM_EASYAPPOINTMENT_MENU</menu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<folder>assets</folder>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<folder>controllers</folder>
+			<filename>easyappointment.php</filename>
+			<filename>easyappointment.png</filename>
+			<folder>helpers</folder>
+			<filename>index.html</filename>
+			<filename>install.sql</filename>
+			<folder>language</folder>
+			<filename>license.txt</filename>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<filename>uninstall.sql</filename>
+			<folder>views</folder>
+		</files>
+	</administration>
+</extension>

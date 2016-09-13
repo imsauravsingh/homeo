@@ -1,0 +1,91 @@
+#easyapp input, #easyapp select {border: 1px solid #EEE;width: auto;}
+#easyapp h3.list-title {border-bottom: 1px solid #D0D0D0;margin-bottom:20px;}
+#easyapp h3.list-title span.main {border-bottom: 5px solid #019ED5;}
+#easyapp h3.list-title span.second {padding-bottom: 10px;background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABHNCSVQICAgIfAhkiAAAAKpJREFUGJV90EFKA1EQhOHvPVx5DLeZUzmHEgluhhgUsvMmko2KjqggHkEkU1lkxDFKCnrTVf1308XF+qGUcuKAIn1Fl2SD+m/FUFIWFQusDwAf0VU8o4vkz8okkSX6qm2iuB4n99VjmXaWOjY+cB4+J7QvzMewXfC0GaRciacJ7R2X2mbzE4R29oazxBAZMNc2r9929Uu5IbfiTrGaOkd7x7/YvesY91NjCx6iR15E3YTXAAAAAElFTkSuQmCC') no-repeat scroll 50% 100% transparent;}
+#easyapp .service {margin-bottom: 25px;border-top:1px solid #E5E5E5;background-color: #2477B9;}
+#easyapp .service a {text-decoration: none;color:#fff;text-transform: uppercase;}
+#easyapp div.sdescription {background: #EBEBF3;color: #2E1918;border: none;border-radius: 0;}
+#easyapp .listing {border-bottom: 1px solid #eee;margin-bottom: 10px;padding-bottom: 10px;}
+#easyapp a.profilepic {display:block;text-decoration: none;width:98px; height: 98px;border: 1px solid #ddd;border-radius: 5px;margin-top: 20px;}
+#easyapp .profilepic img {padding:2px;}
+#easyapp h2.section-title {border-bottom: 1px solid #eee;=}
+#easyapp ul.prices li {list-style: none;line-height: 1.1em;}
+#easyapp div.description {text-align: justify;margin-bottom: 20px}
+#easyapp div.header {background: #fff;}
+#easyapp div#calendar {background:#F4F7FB;}
+#easyapp div#calendar-controls {padding: 10px}
+#easyapp div.calendar {background: #fff;position:relative;}
+#easyapp div.calendar table {background: #fff;}
+#easyapp div.calendar table th {border:none;background:#fff; color:#435F71; text-align: center;}
+#easyapp div.calendar table tr.days-of-week, #easyapp div.calendar table tr.names-row {border:none;}
+#easyapp div.calendar table td {color: #0596DE;text-align: center;font-weight: 400;}
+#easyapp div.calendar table td.cell0{background: #EEEEEE;}
+#easyapp div.calendar a.free {padding:4px;cursor: pointer;text-align: center;}
+#easyapp div.calendar a.free:hover {background-color: #1694D4;background-image: linear-gradient(to bottom, #32A9E4, #0596DE);background-repeat: repeat-x;box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);border: 1px solid #047BB6;border-radius: 4px;color: #FFF;text-align: center;text-decoration: none;} 
+#easyapp div.information {background: #D4E1EF;color: #2E1918;}
+#easyapp div.finished {background: #FFF;color: #2E1918;overflow: auto;}
+#easyapp div.finished h2 {font-size: 24px;text-align: center;}
+#easyapp div.finished h4 {font-size:16px;}
+#easyapp div.finished h3 {font-size:20px;}
+#easyapp div.details {border: 1px solid #829DB1;border-radius: 3px;}
+#easyapp div.details-header {background: #829DB1;padding:10px;}
+#easyapp div.details-header h4 {color:#fff;font-size: 15px;}
+#easyapp div.details-body {padding:10px;}
+#easyapp button.continue {background: #2E1918;color: #fff;}
+#easyapp div.steps {text-align: center;}
+#easyapp ul.booking-steps {display: inline-block;text-decoration: none;font-size:11px;}
+#easyapp ul.booking-steps li {display: inline-block;height: 30px;width: 143px;padding-top: 30px;text-align: center;float:left;margin-bottom: 50px;}
+#easyapp .busy {color:#8D8D8D;}
+#calendar-close {
+display: none;
+cursor: pointer;
+background: #F44321;
+width: 60px;
+padding: 5px;
+color: #fff;
+right: 0;
+position: absolute;
+top: -28px;
+z-index: 2;
+font-size: 13px;
+}
+#easyapp .pagination {display:block}
+#easyapp ul.pagination-list {display:inline-block}
+#easyapp ul.pagination-list li {display:inline-block}
+#easyapp .icon-step-forward:before, #easyapp .icon-forward:before {font-family: 'medial';speak: none;font-style: normal;font-weight: normal;font-variant: normal;text-transform: none;line-height: 1;content: "\e611";}
+#easyapp .icon-step-backward:before, #easyapp .icon-backward:before {font-family: 'medial';speak: none;font-style: normal;font-weight: normal;font-variant: normal;text-transform: none;line-height: 1;content: "\e610";}
+#go-back, #go-next {font-size:17px;vertical-align:top;}
+#go-next {float:right;}
+#mobile-calendar-navigation{display:none;}
+@media only screen and (max-width: 579px) {
+	#mobile-calendar-navigation {
+		display:block;
+		position: absolute;
+		margin-top: 5px;
+		font-size: 30px;
+		z-index:99;
+		color:#fff;
+		width:100%;
+		line-height:40px;
+		padding:0px 0px 0px 20px;
+	}
+	#mobile-calendar-navigation a:link{
+		color:#fff;
+		text-decoration:none;
+	}
+	.calendar-prev, .calendar-next {
+		background: #000;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		opacity:0.6;
+		text-align:center;
+	}
+	.calendar-prev {float:left;}
+	.calendar-next {float:right;}
+	#easyapp div#calendar {overflow:hidden;}
+	#calendar-table {max-width:99%;overflow:hidden;}
+	#go-back, #go-next {font-size:13px;}
+	#calendar-close {top:0;}
+	#calendar-controls {margin-top:25px;}
+}

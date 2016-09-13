@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details"
+		addfieldpath="/administrator/components/com_easyappointment/models/fields">
+		
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+			description="JGLOBAL_FIELD_ID_DESC" readonly="true" class="readonly input-sm" />
+			
+		<field name="staff" type="staff" label="COM_EASYAPPOINTMENT_APPOINTMENTS_DETAILS_STAFF_MEMBER"
+			description="COM_EASYAPPOINTMENT_APPOINTMENTS_DETAILS_STAFF_MEMBER_HELP" class="input-sm" readonly="true"  />
+			
+		<field name="service" type="service" label="COM_EASYAPPOINTMENT_APPOINTMENTS_SELECT_SERVICE"
+			description="COM_EASYAPPOINTMENT_APPOINTMENTS_SELECT_SERVICE" class="input-sm" readonly="true" />
+			
+		<field name="appointmentDateV" type="text" label="COM_EASYAPPOINTMENT_APPOINTMENTS_APP_DATE"
+			description="COM_EASYAPPOINTMENT_APPOINTMENTS_APP_DATE" class="input-sm" readonly="true"  />
+			
+		<field name="startingTimeV" type="text" label="COM_EASYAPPOINTMENT_APPOINTMENTS_APP_START"
+			description="COM_EASYAPPOINTMENT_APPOINTMENTS_APP_START" class="input-sm" readonly="true" />
+			
+		<field name="endingTimeV" type="endingTime" label="COM_EASYAPPOINTMENT_APPOINTMENTS_APP_END"
+			description="COM_EASYAPPOINTMENT_APPOINTMENTS_APP_END" class="input-sm" readonly="true"  />
+
+		<field name="name" type="text" label="COM_EASYAPPOINTMENT_APPOINTMENTS_CLIENT_NAME"
+			description="COM_EASYAPPOINTMENT_APPOINTMENTS_CLIENT_NAME" class="input-sm"  />
+			
+		<field name="email" type="text" label="COM_EASYAPPOINTMENT_APPOINTMENTS_CLIENT_EMAIL"
+			description="COM_EASYAPPOINTMENT_APPOINTMENTS_CLIENT_EMAIL" class="input-sm"  />
+			
+		<field name="phone" type="text" label="COM_EASYAPPOINTMENT_APPOINTMENTS_CLIENT_PHONE"
+			description="COM_EASYAPPOINTMENT_APPOINTMENTS_CLIENT_PHONE" class="input-sm"  />
+			
+		<field name="published" type="list" class="input-sm"
+			default="0" label="COM_EASYAPPOINTMENT_APPOINTMENTS_DETAILS_STATUS"
+			description="COM_EASYAPPOINTMENT_APPOINTMENTS_DETAILS_STATUS">
+			<option value="0">COM_EASYAPPOINTMENT_APPOINTMENTS_DETAILS_NOTCONFIRMED</option>
+			<option value="1">COM_EASYAPPOINTMENT_APPOINTMENTS_DETAILS_CONFIRMED</option>
+		</field>
+		
+		<field name="appointmentDate" type="hidden" />
+		<field name="startingTime" type="hidden" />
+		<field name="endingTime" type="hidden" />
+		
+		<field name="address" type="textarea" label="COM_EASYAPPOINTMENT_APPOINTMENTS_CLIENT_ADDRESS"
+ 			description="COM_EASYAPPOINTMENT_APPOINTMENTS_CLIENT_ADDRESS" class="input-sm"  />
+ 			
+ 		<field name="comments" type="textarea" label="COM_EASYAPPOINTMENT_APPOINTMENTS_CLIENT_COMMENTS"
+ 			description="COM_EASYAPPOINTMENT_APPOINTMENTS_CLIENT_COMMENTS" class="input-sm"  />
+		
+	</fieldset>
+</form>

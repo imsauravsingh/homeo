@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details" addfieldpath="/components/com_easyappointment/models/fields">
+		
+		<field name="email" type="text" required="true"
+			class="form-control booking-form"
+			description="COM_EASYAPPOINTMENT_EMAIL"
+			label="COM_EASYAPPOINTMENT_EMAIL" validate="/^[A-Za-z0-9-\._]{1,}@[\w-\.]*\.[\w]{2,}$/" />
+			
+		<field name="code" type="text" required="true"
+			class="form-control booking-form"
+			description="COM_EASYAPPOINTMENT_CODE"
+			label="COM_EASYAPPOINTMENT_CODE" validate="/^[0-9]{4,}$/" />
+	</fieldset>
+</form>

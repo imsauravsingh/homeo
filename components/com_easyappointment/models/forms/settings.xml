@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="general" addfieldpath="/components/COM_EASYAPPOINTMENT/models/fields">
+		<field name="date_format" type="list" default="Y-m-d" class="input-sm" label="COM_EASYAPPOINTMENT_DATE_FORMAT" xrule="/[\sA-Za-z\-\.\,\/]{1,}/">
+			<option value="Y-m-d">Y-m-d (2014-12-03)</option>
+			<option value="d m Y">d m Y (03 12 2014)</option>
+			<option value="d-m-Y">d-m-Y (03-12-2014)</option>
+			<option value="d/m/Y">d/m/Y (03/12/2014)</option>
+			<option value="m/d/Y">m/d/Y (12/03/2014)</option>
+			<option value="d.m.Y">d.m.Y (03.12.2014)</option>
+			<option value="d M Y">d M Y (03 Dec 2014)</option>
+			<option value="F d, Y">F d, Y (December 03, 2014)</option>
+			<option value="j.n.Y">j.n.Y (3.12.2014)</option>
+		</field>
+
+		<field name="hour_format" type="list" default="24" class="input-sm" label="COM_EASYAPPOINTMENT_HOUR_FORMAT" xrule="/^[0-9]{2}$/">
+			<option value="24">24 (15/16/17...)</option>
+			<option value="12">12 (3 PM/4 PM/5 PM...)</option>
+		</field>
+
+		<field name="starthour" type="defaulthours" class="input-sm" label="COM_EASYAPPOINTMENT_START_HOUR" default="28800" xrule="/^[0-9]{2,}$/" />
+		<field name="endhour" type="defaulthours" class="input-sm" label="COM_EASYAPPOINTMENT_END_HOUR" default="82800" xrule="/^[0-9]{2,}$/" />
+
+		<field name="timeframe" type="list" default="900" class="input-sm" label="COM_EASYAPPOINTMENT_TIMEFRAME" xrule="/^[0-9]{3,}$/" >
+			<option value="300">5</option>
+			<option value="600">10</option>
+			<option value="900">15</option>
+			<option value="1200">20</option>
+			<option value="1500">25</option>
+			<option value="1800">30</option>
+			<option value="2100">35</option>
+			<option value="1400">40</option>
+			<option value="2700">45</option>
+			<option value="3000">50</option>
+			<option value="3300">55</option>
+			<option value="3600">60</option>
+			<option value="5400">90</option>
+		</field>
+
+		<field name="booking_status" type="list" default="1" class="input-sm" label="COM_EASYAPPOINTMENT_DEFAULT_STATUS" xrule="/^[0-9]{1}$/">
+			<option value="0">COM_EASYAPPOINTMENT_UNCONFIRMED</option>
+			<option value="1">COM_EASYAPPOINTMENT_CONFIRMED</option>
+		</field>
+
+		<field name="currency" type="list" default="USD" class="input-sm" label="COM_EASYAPPOINTMENT_DEFAULT_CURRENCY" xrule="/^[A-Z]{3,}$/">
+			<option value="USD">USD (United States dollar)</option>
+			<option value="EUR">EUR (Euro)</option>
+			<option value="GBP">GBP (British pound)</option>
+			<option value="AUD">AUD (Australian dollar)</option>
+			<option value="BGN">BGN (Bulgarian lev)</option>
+			<option value="CAD">CAD (Canadian dollar)</option>
+			<option value="CNY">CNY (Chinese yuan)</option>
+			<option value="HRK">HRK (Croatian kuna)</option>
+			<option value="CZK">CZK (Czech koruna)</option>
+			<option value="DKK">DKK (Danish krone)</option>
+			<option value="HKD">HKD (Hong Kong dollar)</option>
+			<option value="HUF">HUF (Hungarian forint)</option>
+			<option value="ISK">ISK (Icelandic króna)</option>
+			<option value="INR">INR (Indian rupee)</option>
+			<option value="ILS">ILS (Israeli new shekel)</option>
+			<option value="JPY">JPY (Japanese yen)</option>
+			<option value="NOK">NOK (Norwegian krone)</option>
+			<option value="PLN">PLN (Polish złoty)</option>
+			<option value="RON">RON (Romanian leu)</option>
+			<option value="RUB">RUB (Russian ruble)</option>
+			<option value="SGD">SGD (Singapore dollar)</option>
+			<option value="CHF">CHF (Swiss franc)</option>
+			<option value="TRY">TRY (Turkish lira)</option>
+		</field>
+		
+		<field name="booking_export_type" type="list" default="1" class="input-sm" label="COM_EASYAPPOINTMENT_BOOKING_EXPORT_TYPE" xrule="/^[0-9]{1}$/">
+			<option value="0">CSV</option>
+			<option value="1">ICAL</option>
+		</field>
+		
+		<field name="email_format" type="list" default="0" class="input-sm" label="COM_EASYAPPOINTMENT_EMAILS_FORMAT" xrule="/^.*$/">
+			<option value="0">COM_EASYAPPOINTMENT_EMAILS_FORMAT_TXT</option>
+			<option value="1">COM_EASYAPPOINTMENT_EMAILS_FORMAT_HTML</option>
+		</field>
+	</fieldset>
+
+
+	<fieldset name="profile" addfieldpath="/components/COM_EASYAPPOINTMENT/models/fields">
+		<field name="show_form_prices" type="list" default="1" class="input-sm" label="COM_EASYAPPOINTMENT_FORM_SHOW_PRICES" xrule="/^[0-9]{1}$/">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		<field name="show_specializations" type="list" default="1" class="input-sm" label="COM_EASYAPPOINTMENT_SETTINGS_PROFILE_SHOW_SPECIALIZATIONS" xrule="/^[0-9]{1}$/">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="appointmentform">
+
+		<field name="calendar_weeks" type="list" default="1" class="input-sm" label="COM_EASYAPPOINTMENT_AVAILABILITY_CALENDAR" xrule="/^[0-9]{1,}$/" >
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+		</field>
+
+		<field name="show_form_email" type="list" default="1" class="input-sm" label="COM_EASYAPPOINTMENT_FORM_SHOW_EMAIL" xrule="/^[0-9]{1}$/">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field name="mandatory_form_email" type="list" default="1" class="input-sm" label="COM_EASYAPPOINTMENT_FORM_MANDATORY_EMAIL" xrule="/^[0-9]{1}$/">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field name="show_form_phone" type="list" default="0" class="input-sm" label="COM_EASYAPPOINTMENT_FORM_SHOW_PHONE" xrule="/^[0-9]{1}$/">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field name="mandatory_form_phone" type="list" default="0" class="input-sm" label="COM_EASYAPPOINTMENT_FORM_MANDATORY_PHONE" xrule="/^[0-9]{1}$/">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field name="show_form_address" type="list" default="0" class="input-sm" label="COM_EASYAPPOINTMENT_FORM_SHOW_ADDRESS" xrule="/^[0-9]{1}$/">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field name="mandatory_form_address" type="list" default="0" class="input-sm" label="COM_EASYAPPOINTMENT_FORM_MANDATORY_ADDRESS" xrule="/^[0-9]{1}$/">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field name="show_form_comments" type="list" default="0" class="input-sm" label="COM_EASYAPPOINTMENT_FORM_SHOW_COMMENTS" xrule="/^[0-9]{1}$/">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field name="client_must_confirm" type="list" default="1" class="input-sm" label="COM_EASYAPPOINTMENT_CLIENT_MUST_CONFIRM" xrule="/^[0-9]{1}$/">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		<field name="client_must_be_registered" type="list" default="0" class="input-sm" label="COM_EASYAPPOINTMENT_CLIENT_MUST_BE_REGISTERED" xrule="/^[0-9]{1}$/">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+	</fieldset>
+
+
+	<fieldset name="services">
+		<field name="service" type="services" class="services booking-form input-sm" description="COM_EASYAPPOINTMENT_SERVICES_TO_PROVIDE" label="COM_EASYAPPOINTMENT_SERVICES_TO_PROVIDE"/>
+	</fieldset>
+
+
+	<fieldset name="receive_notification">
+		<field name="receive_email" type="list" default="0" class="input-sm" label="COM_EASYAPPOINTMENT_RECEIVE_EMAIL" xrule="/^[0-9]{1}$/">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="receive_email_to" type="text" class="input-sm" label="COM_EASYAPPOINTMENT_EMAIL_ADDRESS" default="" xrule="/^[A-Za-z0-9-\._]{1,}@[\w-\.]*\.[\w]{2,}$/" />
+		<field name="receive_email_subject" type="text" class="input-sm" label="COM_EASYAPPOINTMENT_EMAIL_SUBJECT" default="" />
+		<field name="receive_email_body" type="textarea" class="input-sm" label="COM_EASYAPPOINTMENT_EMAIL_BODY" default="" />
+		<field name="tags" type="spacer" />
+	</fieldset>
+
+
+	<fieldset name="send_notification">
+		<field name="send_email" type="list" default="0" class="input-sm" label="COM_EASYAPPOINTMENT_SEND_EMAIL" xrule="/^[0-9]{1}$/">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="send_email_from" type="text" class="input-sm" label="COM_EASYAPPOINTMENT_EMAIL_SEND_FROM" default="" xrule="/^[A-Za-z0-9-\._]{1,}@[\w-\.]*\.[\w]{2,}$/" />
+		<field name="send_email_subject" type="text" class="input-sm" label="COM_EASYAPPOINTMENT_EMAIL_SUBJECT" default="" />
+		<field name="send_email_body" type="textarea" class="input-sm" label="COM_EASYAPPOINTMENT_EMAIL_BODY" default="" />
+		<field name="tags" type="spacer" />
+	</fieldset>
+
+</form>
