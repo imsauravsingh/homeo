@@ -42,7 +42,7 @@ else
 JHtml::_('bootstrap.framework');
 
 $doc->addScriptVersion($this->baseurl . '/templates/' . $this->template . '/js/template.js');
-
+$doc->addScriptVersion($this->baseurl . '/templates/' . $this->template . '/js/masonry.pkgd.min.js');
 //$doc->addScriptVersion($this->baseurl . '/templates/' . $this->template . '/js/jquery.min.js');
 //$doc->addScriptVersion($this->baseurl . '/templates/' . $this->template . '/js/bootstrap.min.js');
 
@@ -188,6 +188,7 @@ $doc->addScriptDeclaration($bottomScript);
 	<!--[if lt IE 9]><script src="<?php echo JUri::root(true); ?>/media/jui/js/html5.js"></script><![endif]-->
 
 </head>
+
 <body class="<?php if (!$this->countModules('position-1')) : ?> site <?php endif; echo $option
 	. ' view-' . $view
 	. ($layout ? ' layout-' . $layout : ' no-layout')

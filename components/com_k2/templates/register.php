@@ -165,13 +165,14 @@ defined('_JEXEC') or die;
 							<tr><td colspan="2"><?php echo $field->input;?></td></tr>
 						<?php else:?>
 							<tr>
-								<td class="key">
+								<td class="key"><?php echo $field->input;?></td>
+								<td>
 									<?php echo $field->label; ?>
 									<?php if (!$field->required && $field->type != 'Spacer'): ?>
 										<span class="optional"><?php echo JText::_('COM_USERS_OPTIONAL');?></span>
 									<?php endif; ?>
 								</td>
-								<td><?php echo $field->input;?></td>
+							
 							</tr>
 						<?php endif;?>
 					<?php endforeach;?>

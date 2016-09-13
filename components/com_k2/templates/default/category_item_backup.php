@@ -14,9 +14,9 @@ defined('_JEXEC') or die;
 K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 
 ?>
-<div id="masonry">
+
 <!-- Start K2 Item Layout -->
-<div class="health_item catItemView group<?php echo ucfirst($this->item->itemGroup); ?><?php echo ($this->item->featured) ? ' catItemIsFeatured' : ''; ?><?php if($this->item->params->get('pageclass_sfx')) echo ' '.$this->item->params->get('pageclass_sfx'); ?>">
+<div class="catItemView group<?php echo ucfirst($this->item->itemGroup); ?><?php echo ($this->item->featured) ? ' catItemIsFeatured' : ''; ?><?php if($this->item->params->get('pageclass_sfx')) echo ' '.$this->item->params->get('pageclass_sfx'); ?>">
 
 	<!-- Plugins: BeforeDisplay -->
 	<?php echo $this->item->event->BeforeDisplay; ?>
@@ -28,7 +28,7 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 		<?php if($this->item->params->get('catItemDateCreated')): ?>
 		<!-- Date created -->
 		<span class="catItemDateCreated">
-			<i class="fa fa-calendar fa-fw"></i> <?php echo JHTML::_('date', $this->item->created , JText::_('K2_DATE_FORMAT_LC2')); ?>
+			<?php echo JHTML::_('date', $this->item->created , JText::_('K2_DATE_FORMAT_LC2')); ?>
 		</span>
 		<?php endif; ?>
 
@@ -272,7 +272,7 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 	<?php if ($this->item->params->get('catItemReadMore')): ?>
 	<!-- Item "read more..." link -->
 	<div class="catItemReadMore">
-		<a class="k2ReadMore" id="readmore" href="<?php echo $this->item->link; ?>">
+		<a class="k2ReadMore" href="<?php echo $this->item->link; ?>">
 			<?php echo JText::_('K2_READ_MORE'); ?>
 		</a>
 	</div>
@@ -297,6 +297,4 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 
 	<div class="clr"></div>
 </div>
-</div>
-
 <!-- End K2 Item Layout -->

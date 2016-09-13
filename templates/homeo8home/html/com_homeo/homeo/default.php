@@ -12,6 +12,48 @@ defined('_JEXEC') or die;
 
 ?>
 <?php if ($this->item or 1==1) : ?>
+	<div class="row bg">
+        <div class="container">
+            <div class="sections sections_white">
+				<div class="col-lg-8 col-lg-offset-2 text-center">
+					<span class="text"> Some Cool Facts</span>
+					<h1>WHY YOU SHOULD CHOOSE US</h1>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean finibus interdum urna. Phasellus ac lorem ut tellus 			                    ornare condimentum. Nulla facilisi. Nulla at facilisis nibh, in ultricies arcu. Fusce elementum mollis eros, vel                    ultricies enim consequat in.
+					</p>
+                  
+                </div>
+				<div class="clearfix"></div>
+                <div>               
+					<div class="col-md-4 col-xs-12 text-center division">
+						<img src="images/icon1.png" alt="img"/>
+						<h3>Space barrier is broken</h3>
+						<p>Now patients can choose the doctors from anywhere in the world.</p> 
+					</div>
+					<div class="col-md-4 col-xs-12 text-center division">
+						<img src="images/icon2.png" alt="img"/>
+						<h3>Space barrier is broken</h3>
+						<p>Now patients can choose the doctors from anywhere in the world.</p> 
+					</div>
+					<div class="col-md-4 col-xs-12 text-center division">
+						<img src="images/icon3.png" alt="img"/>
+						<h3>Space barrier is broken</h3>
+						<p>Now patients can choose the doctors from anywhere in the world.</p> 
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="text-center">
+					<ul class="list-inline">
+						<li class="read_more"><a href="#">READ MORE</a></li>
+						<li class="book_appointment"><a href="#">BOOK APPOINTMENT</a></li>
+					</ul>
+				</div>   
+			</div>
+		</div>
+		<svg class="bot_triangle" xmlns="#" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+			<path class="white" d="M0 0 L50 100 L100 0 Z" />
+		</svg>
+	</div>
 	<div class="row bg_lightpurple">
 			<div class="container">
 					<div class="sections">
