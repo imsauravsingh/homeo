@@ -215,7 +215,11 @@ class UsersControllerProfile extends UsersController
 
 				if (!$redirect)
 				{
-					$redirect = 'index.php?option=com_users&view=profile&user_id=' . $return;
+                                    if(JRequest::getVar('Itemid')){
+					$redirect = 'index.php?option=com_users&view=profile&user_id=' . $return.'&Itemid='.JRequest::getVar('Itemid');                                        
+                                    }else{
+					$redirect = 'index.php?option=com_users&view=profile&user_id=' . $return;                                        
+                                    }
 				}
 
 				// Redirect to the list screen.

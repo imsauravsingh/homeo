@@ -11,7 +11,46 @@
 defined('_JEXEC') or die;
 
 ?>
+<?php if($this->item->params->get('itemAuthorBlock') && empty($this->item->created_by_alias)): ?>
+	<!-- Author Block -->
+	<div class="itemAuthorBlock">
+		<?php if($this->item->params->get('itemAuthorImage') && !empty($this->item->author->avatar)): ?>
+		<img class="itemAuthorAvatar" src="<?php echo $this->item->author->avatar; ?>" alt="<?php echo K2HelperUtilities::cleanHtml($this->item->author->name); ?>" />
+		<?php endif; ?>
 
+		<div class="itemAuthorDetails">
+			<h3 class="itemAuthorName">
+				<a rel="author" href="<?php echo $this->item->author->link; ?>"><?php echo $this->item->author->name; ?></a>
+			</h3>
+
+			<?php if($this->item->params->get('itemAuthorDescription') && !empty($this->item->author->profile->description)): ?>
+			<p><?php echo $this->item->author->profile->description; ?></p>
+			<?php endif; ?>
+
+			<?php if($this->item->params->get('itemAuthorURL') && !empty($this->item->author->profile->url)): ?>
+			<span class="itemAuthorUrl"><i class="k2icon-globe"></i> <a rel="me" href="<?php echo $this->item->author->profile->url; ?>" target="_blank"><?php echo str_replace('http://','',$this->item->author->profile->url); ?></a></span>
+			<?php endif; ?>
+			
+			<?php if($this->item->params->get('itemAuthorURL') && !empty($this->item->author->profile->url) && $this->item->params->get('itemAuthorEmail')): ?>
+			<span class="k2HorizontalSep">|</span>
+			<?php endif; ?>
+			
+			<?php if($this->item->params->get('itemAuthorEmail')): ?>
+			<span class="itemAuthorEmail"><i class="k2icon-envelope"></i> <?php echo JHTML::_('Email.cloak', $this->item->author->email); ?></span>
+			<?php endif; ?>
+
+			<div class="clr"></div>
+
+			<!-- K2 Plugins: K2UserDisplay -->
+			<?php echo $this->item->event->K2UserDisplay; ?>
+
+			<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
+		<div class="divider_line"></div>
+	</div>
+	<?php endif; ?>
+	
 <?php if(JRequest::getInt('print')==1): ?>
 <!-- Print button at the top of the print page only -->
 <a class="itemPrintThisPage" rel="nofollow" href="#" onclick="window.print();return false;">
@@ -22,7 +61,7 @@ defined('_JEXEC') or die;
 <!-- Start K2 Item Layout -->
 <span id="startOfPageId<?php echo JRequest::getInt('id'); ?>"></span>
 
-<div id="k2Container" class="itemView<?php echo ($this->item->featured) ? ' itemIsFeatured' : ''; ?><?php if($this->item->params->get('pageclass_sfx')) echo ' '.$this->item->params->get('pageclass_sfx'); ?>">
+<div id="k2Container" class="h_background itemView<?php echo ($this->item->featured) ? ' itemIsFeatured' : ''; ?><?php if($this->item->params->get('pageclass_sfx')) echo ' '.$this->item->params->get('pageclass_sfx'); ?>">
 
 	<!-- Plugins: BeforeDisplay -->
 	<?php echo $this->item->event->BeforeDisplay; ?>
@@ -65,6 +104,7 @@ defined('_JEXEC') or die;
 	<?php if($this->item->params->get('itemAuthor')): ?>
 	<!-- Item Author -->
 	<span class="itemAuthor">
+	<i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
 		<?php echo K2HelperUtilities::writtenBy($this->item->author->profile->gender); ?>
 		<?php if(empty($this->item->created_by_alias)): ?>
 		<a rel="author" href="<?php echo $this->item->author->link; ?>"><?php echo $this->item->author->name; ?></a>
@@ -108,7 +148,7 @@ defined('_JEXEC') or die;
 
 			<?php if($this->item->params->get('itemPrintButton') && !JRequest::getInt('print')): ?>
 			<!-- Print Button -->
-			<li>
+			<li><i class="fa fa-print fa-fw"></i>
 				<a class="itemPrintLink" rel="nofollow" href="<?php echo $this->item->printLink; ?>" onclick="window.open(this.href,'printWindow','width=900,height=600,location=no,menubar=no,resizable=yes,scrollbars=yes'); return false;">
 					<span><?php echo JText::_('K2_PRINT'); ?></span>
 				</a>
@@ -117,7 +157,7 @@ defined('_JEXEC') or die;
 
 			<?php if($this->item->params->get('itemEmailButton') && !JRequest::getInt('print')): ?>
 			<!-- Email Button -->
-			<li>
+			<li><i class="fa fa-envelope fa-fw" aria-hidden="true"></i>
 				<a class="itemEmailLink" rel="nofollow" href="<?php echo $this->item->emailLink; ?>" onclick="window.open(this.href,'emailWindow','width=400,height=350,location=no,menubar=no,resizable=no,scrollbars=no'); return false;">
 					<span><?php echo JText::_('K2_EMAIL'); ?></span>
 				</a>
@@ -147,7 +187,7 @@ defined('_JEXEC') or die;
 
 			<?php if($this->item->params->get('itemCommentsAnchor') && $this->item->params->get('itemComments') && ( ($this->item->params->get('comments') == '2' && !$this->user->guest) || ($this->item->params->get('comments') == '1')) ): ?>
 			<!-- Anchor link to comments below - if enabled -->
-			<li>
+			<li><i class="fa fa-comments-o fa-fw" aria-hidden="true"></i>
 				<?php if(!empty($this->item->event->K2CommentsCounter)): ?>
 				<!-- K2 Plugins: K2CommentsCounter -->
 				<?php echo $this->item->event->K2CommentsCounter; ?>
@@ -165,27 +205,7 @@ defined('_JEXEC') or die;
 		</ul>
 		<div class="clr"></div>
 	</div>
-	<?php endif; ?>
 
-	<?php if($this->item->params->get('itemRating')): ?>
-	<!-- Item Rating -->
-	<div class="itemRatingBlock">
-		<span><?php echo JText::_('K2_RATE_THIS_ITEM'); ?></span>
-		<div class="itemRatingForm">
-			<ul class="itemRatingList">
-				<li class="itemCurrentRating" id="itemCurrentRating<?php echo $this->item->id; ?>" style="width:<?php echo $this->item->votingPercentage; ?>%;"></li>
-				<li><a href="#" data-id="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_1_STAR_OUT_OF_5'); ?>" class="one-star">1</a></li>
-				<li><a href="#" data-id="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_2_STARS_OUT_OF_5'); ?>" class="two-stars">2</a></li>
-				<li><a href="#" data-id="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_3_STARS_OUT_OF_5'); ?>" class="three-stars">3</a></li>
-				<li><a href="#" data-id="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_4_STARS_OUT_OF_5'); ?>" class="four-stars">4</a></li>
-				<li><a href="#" data-id="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_5_STARS_OUT_OF_5'); ?>" class="five-stars">5</a></li>
-			</ul>
-			<div id="itemRatingLog<?php echo $this->item->id; ?>" class="itemRatingLog"><?php echo $this->item->numOfvotes; ?></div>
-			<div class="clr"></div>
-		</div>
-		<div class="clr"></div>
-	</div>
-	<?php endif; ?>
 
 	<div class="itemBody">
 
@@ -385,48 +405,11 @@ defined('_JEXEC') or die;
 	</div>
 	<?php endif; ?>
 
-	<?php if($this->item->params->get('itemAuthorBlock') && empty($this->item->created_by_alias)): ?>
-	<!-- Author Block -->
-	<div class="itemAuthorBlock">
-		<?php if($this->item->params->get('itemAuthorImage') && !empty($this->item->author->avatar)): ?>
-		<img class="itemAuthorAvatar" src="<?php echo $this->item->author->avatar; ?>" alt="<?php echo K2HelperUtilities::cleanHtml($this->item->author->name); ?>" />
-		<?php endif; ?>
-
-		<div class="itemAuthorDetails">
-			<h3 class="itemAuthorName">
-				<a rel="author" href="<?php echo $this->item->author->link; ?>"><?php echo $this->item->author->name; ?></a>
-			</h3>
-
-			<?php if($this->item->params->get('itemAuthorDescription') && !empty($this->item->author->profile->description)): ?>
-			<p><?php echo $this->item->author->profile->description; ?></p>
-			<?php endif; ?>
-
-			<?php if($this->item->params->get('itemAuthorURL') && !empty($this->item->author->profile->url)): ?>
-			<span class="itemAuthorUrl"><i class="k2icon-globe"></i> <a rel="me" href="<?php echo $this->item->author->profile->url; ?>" target="_blank"><?php echo str_replace('http://','',$this->item->author->profile->url); ?></a></span>
-			<?php endif; ?>
-			
-			<?php if($this->item->params->get('itemAuthorURL') && !empty($this->item->author->profile->url) && $this->item->params->get('itemAuthorEmail')): ?>
-			<span class="k2HorizontalSep">|</span>
-			<?php endif; ?>
-			
-			<?php if($this->item->params->get('itemAuthorEmail')): ?>
-			<span class="itemAuthorEmail"><i class="k2icon-envelope"></i> <?php echo JHTML::_('Email.cloak', $this->item->author->email); ?></span>
-			<?php endif; ?>
-
-			<div class="clr"></div>
-
-			<!-- K2 Plugins: K2UserDisplay -->
-			<?php echo $this->item->event->K2UserDisplay; ?>
-
-			<div class="clr"></div>
-		</div>
-		<div class="clr"></div>
-	</div>
-	<?php endif; ?>
+	
 
 	<?php if($this->item->params->get('itemAuthorLatest') && empty($this->item->created_by_alias) && isset($this->authorLatestItems)): ?>
 	<!-- Latest items from author -->
-	<div class="itemAuthorLatest">
+	<!--<div class="itemAuthorLatest">
 		<h3><?php echo JText::_('K2_LATEST_FROM'); ?> <?php echo $this->item->author->name; ?></h3>
 		<ul>
 			<?php foreach($this->authorLatestItems as $key=>$item): ?>
@@ -436,7 +419,7 @@ defined('_JEXEC') or die;
 			<?php endforeach; ?>
 		</ul>
 		<div class="clr"></div>
-	</div>
+	</div>-->
 	<?php endif; ?>
 
 	<?php
@@ -541,7 +524,7 @@ defined('_JEXEC') or die;
 
 	<?php if($this->item->params->get('itemNavigation') && !JRequest::getCmd('print') && (isset($this->item->nextLink) || isset($this->item->previousLink))): ?>
 	<!-- Item navigation -->
-	<div class="itemNavigation">
+	<!--<div class="itemNavigation">
 		<span class="itemNavigationTitle"><?php echo JText::_('K2_MORE_IN_THIS_CATEGORY'); ?></span>
 
 		<?php if(isset($this->item->previousLink)): ?>
@@ -551,7 +534,29 @@ defined('_JEXEC') or die;
 		<?php if(isset($this->item->nextLink)): ?>
 		<a class="itemNext" href="<?php echo $this->item->nextLink; ?>"><?php echo $this->item->nextTitle; ?> &raquo;</a>
 		<?php endif; ?>
+	</div>-->
+		<?php endif; ?>
+
+	<?php if($this->item->params->get('itemRating')): ?>
+	<!-- Item Rating -->
+	<div class="itemRatingBlock">
+		<span><?php echo JText::_('K2_RATE_THIS_ITEM'); ?></span>
+		<div class="itemRatingForm">
+			<ul class="itemRatingList">
+				<li class="itemCurrentRating" id="itemCurrentRating<?php echo $this->item->id; ?>" style="width:<?php echo $this->item->votingPercentage; ?>%;"></li>
+				<li><a href="#" data-id="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_1_STAR_OUT_OF_5'); ?>" class="one-star">1</a></li>
+				<li><a href="#" data-id="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_2_STARS_OUT_OF_5'); ?>" class="two-stars">2</a></li>
+				<li><a href="#" data-id="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_3_STARS_OUT_OF_5'); ?>" class="three-stars">3</a></li>
+				<li><a href="#" data-id="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_4_STARS_OUT_OF_5'); ?>" class="four-stars">4</a></li>
+				<li><a href="#" data-id="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_5_STARS_OUT_OF_5'); ?>" class="five-stars">5</a></li>
+			</ul>
+			<div id="itemRatingLog<?php echo $this->item->id; ?>" class="itemRatingLog"><?php echo $this->item->numOfvotes; ?></div>
+			<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
 	</div>
+	<?php endif; ?>
+	
 	<?php endif; ?>
 
 	<!-- Plugins: AfterDisplay -->
@@ -566,8 +571,8 @@ defined('_JEXEC') or die;
 	): ?>
 	<!-- K2 Plugins: K2CommentsBlock -->
 	<?php echo $this->item->event->K2CommentsBlock; ?>
-	<?php endif; ?>
-
+	<?php endif; ?>	
+	
 	<?php if(
 		$this->item->params->get('itemComments') &&
 		($this->item->params->get('comments') == '1' || ($this->item->params->get('comments') == '2')) && empty($this->item->event->K2CommentsBlock)
@@ -668,15 +673,16 @@ defined('_JEXEC') or die;
 	</div>
 	<?php endif; ?>
 
-	<?php if(!JRequest::getCmd('print')): ?>
-	<div class="itemBackToTop">
-		<a class="k2Anchor" href="<?php echo $this->item->link; ?>#startOfPageId<?php echo JRequest::getInt('id'); ?>">
-			<?php echo JText::_('K2_BACK_TO_TOP'); ?>
-		</a>
-	</div>
-	<?php endif; ?>
+	
 
 	<div class="clr"></div>
 
 </div>
+<?php if(!JRequest::getCmd('print')): ?>
+	<div class="itemBackToTop">
+		<a class="k2Anchor" href="<?php echo $this->item->link; ?>#startOfPageId<?php echo JRequest::getInt('id'); ?>">
+			<?php echo JText::_(''); ?><img src="components/com_k2/images/top-arrow.png" alt="back to top"/>
+		</a>
+	</div>
+	<?php endif; ?>
 <!-- End K2 Item Layout -->

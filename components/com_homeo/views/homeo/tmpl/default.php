@@ -12,6 +12,7 @@ defined('_JEXEC') or die;
 
 ?>
 <?php if ($this->item or 1==1) : ?>
+    
 	<div class="row bg_lightpurple">
 			<div class="container">
 					<div class="sections">

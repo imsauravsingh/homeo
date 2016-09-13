@@ -9,9 +9,9 @@
 
 // no direct access
 defined('_JEXEC') or die;
-
 ?>
 
+<div>
 <!-- K2 user profile form -->
 <form action="<?php echo JURI::root(true); ?>/index.php" enctype="multipart/form-data" method="post" name="userform" autocomplete="off" class="form-validate well">
 	<?php if($this->params->def('show_page_title',1)): ?>
@@ -29,13 +29,26 @@ defined('_JEXEC') or die;
 			</tr>
 			<tr>
 				<td class="key">
+					<label id="imagemsg" for="image"><?php echo JText::_( 'K2_USER_IMAGE_AVATAR' ); ?></label>
+				</td>
+				<td>
+					<?php if ($this->K2User->image): ?>
+					<img class="k2AccountPageImage" src="<?php echo JURI::root(true).'/media/k2/users/'.$this->K2User->image; ?>" alt="<?php echo $this->user->name; ?>" />
+					<?php endif; ?>
+					<input type="file" id="image" name="image" />
+					<input style="display: none;" type="checkbox" name="del_image" id="del_image"/>
+					<label style="display:none;" for="del_image"><?php echo JText::_('K2_CHECK_THIS_BOX_TO_DELETE_CURRENT_IMAGE_OR_JUST_UPLOAD_A_NEW_IMAGE_TO_REPLACE_THE_EXISTING_ONE'); ?></label>
+				</td>
+			</tr>
+			<tr style="display:none;">
+				<td class="key">
 					<label for="username"><?php echo JText::_('K2_USER_NAME'); ?></label>
 				</td>
 				<td>
 					<span><b><?php echo $this->user->get('username'); ?></b></span>
 				</td>
 			</tr>
-			<tr>
+			<tr style="display:none;">
 				<td class="key">
 					<label id="namemsg" for="name"><?php echo JText::_('K2_NAME'); ?></label>
 				</td>
@@ -43,7 +56,7 @@ defined('_JEXEC') or die;
 					<input type="text" name="<?php echo $this->nameFieldName; ?>" id="name" size="40" value="<?php echo $this->escape($this->user->get( 'name' )); ?>" class="inputbox required" maxlength="50" />
 				</td>
 			</tr>
-			<tr>
+			<tr style="display:none;">
 				<td class="key">
 					<label id="emailmsg" for="email"><?php echo JText::_('K2_EMAIL'); ?></label>
 				</td>
@@ -52,7 +65,7 @@ defined('_JEXEC') or die;
 				</td>
 			</tr>
 			<?php if(version_compare(JVERSION, '2.5', 'ge')): ?>
-			<tr>
+			<tr style="display:none;">
 				<td class="key">
 					<label id="email2msg" for="email2"><?php echo JText::_('K2_CONFIRM_EMAIL'); ?></label>
 				</td>
@@ -62,7 +75,7 @@ defined('_JEXEC') or die;
 				</td>
 			</tr>
 			<?php endif; ?>
-			<tr>
+			<!--<tr>
 				<td class="key">
 					<label id="pwmsg" for="password"><?php echo JText::_('K2_PASSWORD'); ?></label>
 				</td>
@@ -77,7 +90,7 @@ defined('_JEXEC') or die;
 				<td>
 					<input class="inputbox validate-passverify" type="password" id="password2" name="<?php echo $this->passwordVerifyFieldName; ?>" size="40" value="" />
 				</td>
-			</tr>
+			</tr>-->
 			<!--<tr>
 				<th colspan="2" class="k2ProfileHeading">
 					<?php echo JText::_('K2_PERSONAL_DETAILS'); ?>
@@ -98,19 +111,6 @@ defined('_JEXEC') or die;
 				</td>
 				<td>
 					<?php echo $this->editor; ?>
-				</td>
-			</tr>
-			<tr>
-				<td class="key">
-					<label id="imagemsg" for="image"><?php echo JText::_( 'K2_USER_IMAGE_AVATAR' ); ?></label>
-				</td>
-				<td>
-					<input type="file" id="image" name="image" />
-					<?php if ($this->K2User->image): ?>
-					<img class="k2AccountPageImage" src="<?php echo JURI::root(true).'/media/k2/users/'.$this->K2User->image; ?>" alt="<?php echo $this->user->name; ?>" />
-					<input type="checkbox" name="del_image" id="del_image" />
-					<label for="del_image"><?php echo JText::_('K2_CHECK_THIS_BOX_TO_DELETE_CURRENT_IMAGE_OR_JUST_UPLOAD_A_NEW_IMAGE_TO_REPLACE_THE_EXISTING_ONE'); ?></label>
-					<?php endif; ?>
 				</td>
 			</tr>
 			<!--<tr>
@@ -167,7 +167,7 @@ defined('_JEXEC') or die;
 						<?php if ($field->hidden):// If the field is hidden, just display the input.?>
 							<!--<tr><td colspan="2"><?php echo $field->input;?></td></tr>-->
 						<?php else:?>
-							<tr>
+							<!--<tr>
 								<td class="key">
 									<?php echo $field->label; ?>
 									<?php if (!$field->required && $field->type != 'Spacer'): ?>
@@ -175,7 +175,7 @@ defined('_JEXEC') or die;
 									<?php endif; ?>
 								</td>
 								<td><?php echo $field->input;?></td>
-							</tr>
+							</tr>-->
 						<?php endif;?>
 					<?php endforeach;?>
 				<?php endif;?>
@@ -194,6 +194,8 @@ defined('_JEXEC') or die;
 	<input type="hidden" name="gid" value="<?php echo $this->user->get('gid'); ?>" />
 	<input type="hidden" name="option" value="<?php echo $this->optionValue; ?>" />
 	<input type="hidden" name="task" value="<?php echo $this->taskValue; ?>" />
+	<input type="hidden" name="Itemid" value="<?php echo JRequest::getVar('Itemid'); ?>" />
 	<input type="hidden" name="K2UserForm" value="1" />
 	<?php echo JHTML::_( 'form.token' ); ?>
-</form>
+</form>    
+</div>

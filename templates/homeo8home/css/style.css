@@ -18,6 +18,10 @@
     font-style: normal;
 
 }
+
+a:focus{
+	text-decoration:none !important;
+}
 h1{
 	font-size:30px;
     font-weight:bold;
@@ -224,11 +228,11 @@ svg.bot_triangle {
 	color:white;
 	}
 .book_appointment{
-	background:#10ada7;
+	background:#10ada7 !important;
 	padding:6px 20px !important;
-	border-radius:13px;
+	border-radius:13px !important;
 	margin:10px;
-	text-transform:uppercase;
+	text-transform:uppercase !important;
 	}
 .book_appointment a{
 	color:white;
@@ -571,7 +575,7 @@ button#helpsite-refresh {
 }
 .profile {
     padding: 20px;
-    margin-top: 30px;
+/*    margin-top: 30px; */
     margin-bottom: 30px;
     background: #f2f2f2;
     border-radius: 6px;
@@ -666,12 +670,15 @@ div#system-message-container {
     z-index: 9999;
 	margin-right:10px;
 }
-.controls.termchkbox {
+/*.controls.termchkbox {
     margin-left: 29px !important;
     margin-top: 20px;
+}*/
+.control-label.termtext {
+    margin-top: -36px;
 }
 .control-label.termtext {
-    margin-top: -40px;
+    margin-left: 161px;
 }
 
 
@@ -795,3 +802,203 @@ label#genderf-lbl{
 	float:left;
 	margin-top:15px;
 }
+
+/*health_tips_design*/
+.catItemView.groupPrimary {
+    background: #f2f2f2;
+    margin: 10px 15px;
+    padding: 15px;
+	box-shadow: 0px 2px 4px #ccc;
+}
+h3.catItemTitle a {
+    color: #777;
+}
+div.catItemHeader span.catItemAuthor a {
+    color: #57585c;
+}
+div.catItemCategory a {
+	color:#57585c;
+}
+div.catItemCommentsLink a {
+    color: #656669;
+}
+div.catItemReadMore a {
+    background: #00a99e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 13px;
+}
+div.catItemReadMore a:hover {
+    background: #03c1b5;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 13px;
+}
+div.catItemLinks {
+    margin: 0 0 10px 0 !important;
+}
+div.catItemImageBlock {
+    margin: 0 0 0px 0!important;
+}
+div.itemAuthorBlock {
+    background: #f2f2f2 !important;
+	border-top:0px none !important;
+	border-left:0px none !important;
+	border-right:0px none !important;
+    border-bottom: 0px none !important;
+    border-radius: 0px !important;
+    margin: 0 0 16px 0;
+    padding: 8px;
+	margin: 0px !important;
+    padding: 20px;
+	padding-bottom:0px !important;
+}
+.h_background{
+	background:#f2f2f2;
+	padding:20px 20px 40px !important;
+	
+}
+div.itemComments{
+	background:#fff !important;
+}
+.divider_line {
+    border-top: 2px solid #ddd;
+    margin: 20px 0px 0px;
+}
+div.itemToolbar{
+	background:transparent !important;
+}
+.itemImage img{
+	width:100% !important;
+}
+.itemAuthorName a {
+    color: #57585c !important;
+}
+.itemBackToTop{
+	padding-bottom:20px;
+}
+.itemBackToTop img{
+	width:50px;
+}
+input#submitCommentButton {
+    background: #00a99e !important;
+    border-radius: 13px !important;
+    text-shadow: 0px 0px 0px !important;
+    font-weight: 100 !important;
+    text-transform: capitalize !important;
+}
+.even img{
+	width:100px!important;
+}
+
+/*Dashboard style*/
+.Quick_icons i{
+	font-size:40px;
+	margin:10px 0px;
+	color:#00a99e;
+}
+div.add_icons a {
+    background-color: #fff;
+    background-position: -30px;
+    display: block;
+    float: left;
+    height:100px;
+    width: 100%;
+    color: #565656;
+    vertical-align: middle;
+    text-decoration: none;
+    border: 1px solid #CCC;
+   -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition-property: background-position, 0 0;
+    -moz-transition-property: background-position, 0 0;
+    -webkit-transition-duration: .8s;
+    -moz-transition-duration: .8s;
+	color:#57585c !important;
+	margin-bottom:15px;
+}
+div.add_icons a:hover, div.add_icons a:focus, div.add_icons a:active {
+    background-position: 0;
+    -webkit-border-bottom-left-radius: 50% 20px;
+    -moz-border-radius-bottomleft: 50% 20px;
+    border-bottom-left-radius: 50% 20px;
+    -webkit-box-shadow: -5px 10px 15px rgba(0,0,0,0.25);
+    -moz-box-shadow: -5px 10px 15px rgba(0,0,0,0.25);
+    box-shadow: -5px 10px 15px rgba(0,0,0,0.25);
+    position: relative;
+    z-index: 10;
+}
+
+/*health tips section*/
+
+#itemListPrimary{
+  -webkit-column-count:3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap:1px;
+  -moz-column-gap:1px;
+  column-gap:1px;
+  max-width:100%;
+  margin: 0 auto;
+  width: 100%;
+}
+.health_item {
+  display:inline-block; /* prevent unexpected item cropping */
+  vertical-align: top; /* Set vertical align to top for old IE versions */
+  margin:0 0 1px 0;
+  padding:0;
+}
+
+.health_item{
+  width: 100%;
+}
+.health_item img{
+	width:100%;
+}
+#itemListPrimary .itemContainer{
+	width:90% !important;
+}
+
+
+@media (max-width: 1200px) {
+  #itemListPrimary {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
+  }
+}
+@media (max-width: 1000px) {
+  #itemListPrimary{
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  #itemListPrimary {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  #itemListPrimary {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+  #itemListPrimary .itemContainer{
+	width:100% !important;
+}
+}
+
+/*registration*/
+#jform_profile_tos #jform_profile_tos0 {
+    margin:2px 0px 0px 0px !important;
+    width: 17px !important;
+}
+label#jform_profile_tos-lbl {
+    margin-left: 21px;
+}
+

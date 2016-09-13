@@ -10,6 +10,7 @@
 defined('_JEXEC') or die('Restricted access');
 
 ?>
+
 <div id="easyapp">
 
 	<form action="<?php echo JRoute::_('index.php?option=com_easyappointment&view=management', false);?>" method="post" name="adminForm" id="adminForm" class="form-horizontal">
@@ -64,7 +65,108 @@ defined('_JEXEC') or die('Restricted access');
 
 		<input type="hidden" name="task" value="" />
 		<?php echo JHtml::_('form.token'); ?>
+				
 	</form>
+	<div class="Quick_icons">
+		<div class="col-md-2 col-sm-4 col-xs-6">
+			<div class="add_icons text-center">
+			 <a href="#">
+			  <i class="fa fa-file-o" aria-hidden="true"></i>
+			  <p>Add new item</p>	
+			 </a>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-4 col-xs-6">
+			<div class="add_icons text-center">
+			 <a href="#">
+			  <i class="fa fa-files-o fa-fw" aria-hidden="true"></i>
+			  <p>item</p>	
+			 </a>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-4 col-xs-6">
+			<div class="add_icons text-center">
+			 <a href="#">
+			  <i class="fa fa-star-o" aria-hidden="true"></i>
+			  <p>Featured items</p>	
+			 </a>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-4 col-xs-6">
+			<div class="add_icons text-center">
+			 <a href="#">
+			  <i class="fa fa-trash-o" aria-hidden="true"></i>
+			  <p> Trashed items</p>	
+			 </a>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-4 col-xs-6">
+			<div class="add_icons text-center">
+			 <a href="#">
+			  <i class="fa fa-folder-open-o" aria-hidden="true"></i>
+			  <p>Categories</p>	
+			 </a>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-4 col-xs-6">
+			<div class="add_icons text-center">
+			 <a href="#">
+			  <i class="fa fa-tags" aria-hidden="true"></i>
+			  <p>Tags</p>	
+			 </a>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<div class="col-md-2 col-sm-4 col-xs-6">
+			<div class="add_icons text-center">
+			 <a href="#">
+			  <i class="fa fa-comments-o" aria-hidden="true"></i>
+			  <p>Comments</p>	
+			 </a>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-4 col-xs-6">
+			<div class="add_icons text-center">
+			 <a href="#">
+			  <i class="fa fa-object-ungroup" aria-hidden="true"></i>
+			  <p>Extra fields</p>	
+			 </a>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-4 col-xs-6">
+			<div class="add_icons text-center">
+			 <a href="#">
+			  <i class="fa fa-object-group" aria-hidden="true"></i>
+			  <p>Extra fields group</p>	
+			 </a>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-4 col-xs-6">
+			<div class="add_icons text-center">
+			 <a href="#">
+			  <i class="fa fa-film" aria-hidden="true"></i>
+			  <p>Media manager</p>	
+			 </a>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-4 col-xs-6">
+			<div class="add_icons text-center">
+			 <a href="#">
+			  <i class="fa fa-picture-o" aria-hidden="true"></i>
+			  <p>Online image editor</p>	
+			 </a>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-4 col-xs-6">
+			<div class="add_icons text-center">
+			 <a href="#">
+			  <i class="fa fa-file-text" aria-hidden="true"></i>
+			  <p>Document</p>	
+			 </a>
+			</div>
+		</div>
+		<div class="clr"></div>
+	</div>
 </div>
 
 
