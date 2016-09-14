@@ -351,7 +351,7 @@ div.itemComments {background:#fafafa;border:1px solid #ddd;border-radius:4px;pad
 	div.itemComments ul.itemCommentsList li {display:block;padding:4px;margin:0 0 8px 0;border-bottom:1px solid #ddd;background:#fff;}
 	div.itemComments ul.itemCommentsList li.authorResponse {background:#f5fdff;}
 	div.itemComments ul.itemCommentsList li.unpublishedComment {background:#ffeaea;}
-	div.itemComments ul.itemCommentsList li img {float:left;margin:4px 4px 4px 0;padding:4px;}
+	div.itemComments ul.itemCommentsList li img {float:left;margin:0px 10px 5px 0;padding:4px;}
 	div.itemComments ul.itemCommentsList li span.commentDate {padding:0 4px 0 0;margin:0 8px 0 0;border-right:1px solid #ccc;font-weight:bold;font-size:14px;}
 	div.itemComments ul.itemCommentsList li span.commentAuthorName {font-weight:bold;font-size:14px;}
 	div.itemComments ul.itemCommentsList li p {padding:4px 0;}
@@ -540,12 +540,12 @@ div.catItemVideoBlock {margin:0 0 16px 0;padding:16px;background:#010101 url(../
 div.catItemImageGallery {margin:0 0 16px 0;padding:0;}
 
 /* Anchor link to comments */
-div.catItemCommentsLink {display:inline;margin:0 8px 0 0;padding:0 8px 0 0;border-right:1px solid #ccc;}
+div.catItemCommentsLink {/*display:inline;*/margin:0 8px 15px 0;padding:0 8px 0 0;}
 	div.catItemCommentsLink a {}
 	div.catItemCommentsLink a:hover {}
 
 /* Read more link */
-div.catItemReadMore {display:inline;}
+div.catItemReadMore {/*display:inline;*/text-align:center}
 	div.catItemReadMore a {}
 	div.catItemReadMore a:hover {}
 

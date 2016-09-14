@@ -11,6 +11,7 @@
 defined('_JEXEC') or die;
 
 ?>
+<span id="startOfPageId<?php echo JRequest::getInt('id'); ?>"></span>
 <?php if($this->item->params->get('itemAuthorBlock') && empty($this->item->created_by_alias)): ?>
 	<!-- Author Block -->
 	<div class="itemAuthorBlock">
@@ -59,7 +60,7 @@ defined('_JEXEC') or die;
 <?php endif; ?>
 
 <!-- Start K2 Item Layout -->
-<span id="startOfPageId<?php echo JRequest::getInt('id'); ?>"></span>
+
 
 <div id="k2Container" class="h_background itemView<?php echo ($this->item->featured) ? ' itemIsFeatured' : ''; ?><?php if($this->item->params->get('pageclass_sfx')) echo ' '.$this->item->params->get('pageclass_sfx'); ?>">
 
@@ -131,11 +132,11 @@ defined('_JEXEC') or die;
 		($this->item->params->get('itemImageGalleryAnchor') && !empty($this->item->gallery)) ||
 		($this->item->params->get('itemCommentsAnchor') && $this->item->params->get('itemComments') && $this->item->params->get('comments'))
 	): ?>
-	<div class="itemToolbar">
-		<ul>
+	<!--<div class="itemToolbar">
+		<ul>-->
 			<?php if($this->item->params->get('itemFontResizer')): ?>
 			<!-- Font Resizer -->
-			<li>
+			<!--<li>
 				<span class="itemTextResizerTitle"><?php echo JText::_('K2_FONT_SIZE'); ?></span>
 				<a href="#" id="fontDecrease">
 					<span><?php echo JText::_('K2_DECREASE_FONT_SIZE'); ?></span>
@@ -143,51 +144,51 @@ defined('_JEXEC') or die;
 				<a href="#" id="fontIncrease">
 					<span><?php echo JText::_('K2_INCREASE_FONT_SIZE'); ?></span>
 				</a>
-			</li>
+			</li>-->
 			<?php endif; ?>
 
 			<?php if($this->item->params->get('itemPrintButton') && !JRequest::getInt('print')): ?>
 			<!-- Print Button -->
-			<li><i class="fa fa-print fa-fw"></i>
+			<!--<li><i class="fa fa-print fa-fw"></i>
 				<a class="itemPrintLink" rel="nofollow" href="<?php echo $this->item->printLink; ?>" onclick="window.open(this.href,'printWindow','width=900,height=600,location=no,menubar=no,resizable=yes,scrollbars=yes'); return false;">
 					<span><?php echo JText::_('K2_PRINT'); ?></span>
 				</a>
-			</li>
+			</li>-->
 			<?php endif; ?>
 
 			<?php if($this->item->params->get('itemEmailButton') && !JRequest::getInt('print')): ?>
 			<!-- Email Button -->
-			<li><i class="fa fa-envelope fa-fw" aria-hidden="true"></i>
+			<!--<li><i class="fa fa-envelope fa-fw" aria-hidden="true"></i>
 				<a class="itemEmailLink" rel="nofollow" href="<?php echo $this->item->emailLink; ?>" onclick="window.open(this.href,'emailWindow','width=400,height=350,location=no,menubar=no,resizable=no,scrollbars=no'); return false;">
 					<span><?php echo JText::_('K2_EMAIL'); ?></span>
 				</a>
-			</li>
+			</li>-->
 			<?php endif; ?>
 
 			<?php if($this->item->params->get('itemSocialButton') && !is_null($this->item->params->get('socialButtonCode', NULL))): ?>
 			<!-- Item Social Button -->
-			<li>
+			<!--<li>
 				<?php echo $this->item->params->get('socialButtonCode'); ?>
-			</li>
+			</li>-->
 			<?php endif; ?>
 
 			<?php if($this->item->params->get('itemVideoAnchor') && !empty($this->item->video)): ?>
 			<!-- Anchor link to item video below - if it exists -->
-			<li>
+			<!--<li>
 				<a class="itemVideoLink k2Anchor" href="<?php echo $this->item->link; ?>#itemVideoAnchor"><?php echo JText::_('K2_MEDIA'); ?></a>
-			</li>
+			</li>-->
 			<?php endif; ?>
 
 			<?php if($this->item->params->get('itemImageGalleryAnchor') && !empty($this->item->gallery)): ?>
 			<!-- Anchor link to item image gallery below - if it exists -->
-			<li>
+			<!--<li>
 				<a class="itemImageGalleryLink k2Anchor" href="<?php echo $this->item->link; ?>#itemImageGalleryAnchor"><?php echo JText::_('K2_IMAGE_GALLERY'); ?></a>
-			</li>
+			</li>-->
 			<?php endif; ?>
 
 			<?php if($this->item->params->get('itemCommentsAnchor') && $this->item->params->get('itemComments') && ( ($this->item->params->get('comments') == '2' && !$this->user->guest) || ($this->item->params->get('comments') == '1')) ): ?>
 			<!-- Anchor link to comments below - if enabled -->
-			<li><i class="fa fa-comments-o fa-fw" aria-hidden="true"></i>
+			<!--<li><i class="fa fa-comments-o fa-fw" aria-hidden="true"></i>
 				<?php if(!empty($this->item->event->K2CommentsCounter)): ?>
 				<!-- K2 Plugins: K2CommentsCounter -->
 				<?php echo $this->item->event->K2CommentsCounter; ?>
@@ -200,11 +201,11 @@ defined('_JEXEC') or die;
 				<a class="itemCommentsLink k2Anchor" href="<?php echo $this->item->link; ?>#itemCommentsAnchor"><?php echo JText::_('K2_BE_THE_FIRST_TO_COMMENT'); ?></a>
 				<?php endif; ?>
 				<?php endif; ?>
-			</li>
+			</li>-->
 			<?php endif; ?>
-		</ul>
+		<!--</ul>
 		<div class="clr"></div>
-	</div>
+	</div>-->
 
 
 	<div class="itemBody">

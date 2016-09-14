@@ -14,7 +14,6 @@ defined('_JEXEC') or die;
 K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 
 ?>
-<div id="masonry">
 <!-- Start K2 Item Layout -->
 <div class="health_item catItemView group<?php echo ucfirst($this->item->itemGroup); ?><?php echo ($this->item->featured) ? ' catItemIsFeatured' : ''; ?><?php if($this->item->params->get('pageclass_sfx')) echo ' '.$this->item->params->get('pageclass_sfx'); ?>">
 
@@ -251,7 +250,7 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 
 	<?php if($this->item->params->get('catItemCommentsAnchor') && ( ($this->item->params->get('comments') == '2' && !$this->user->guest) || ($this->item->params->get('comments') == '1')) ): ?>
 	<!-- Anchor link to comments below -->
-	<div class="catItemCommentsLink">
+	<div class="catItemCommentsLink col-md-12">
 		<?php if(!empty($this->item->event->K2CommentsCounter)): ?>
 			<!-- K2 Plugins: K2CommentsCounter -->
 			<?php echo $this->item->event->K2CommentsCounter; ?>
@@ -296,7 +295,6 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
   <?php echo $this->item->event->K2AfterDisplay; ?>
 
 	<div class="clr"></div>
-</div>
 </div>
 
 <!-- End K2 Item Layout -->

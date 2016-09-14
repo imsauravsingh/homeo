@@ -2193,9 +2193,10 @@ table th[class*="span"],
 	-o-transition: height .35s ease;
 	transition: height .35s ease;
 }
+/*
 .collapse.in {
-	height: auto;
-}
+	height: auto; 
+}*/
 .close {
 	float: right;
 	font-size: 20px;
@@ -3437,7 +3438,7 @@ input[type="submit"].btn.btn-mini {
 	margin-right: 0;
 }
 .navbar .nav > li {
-	float: left;
+	/*float: left;*/
 }
 .navbar .nav > li > a {
 	float: none;
