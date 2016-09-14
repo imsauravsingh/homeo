@@ -692,6 +692,8 @@ div#system-message-container {
 }
 .profile-detail img{
 	border: 5px solid #00a99e;
+	width: 100px;
+    height: 100px;
 }
 .profile-text{
 	margin-top:20px;
@@ -854,9 +856,11 @@ div.itemAuthorBlock {
 	padding-bottom:0px !important;
 }
 .h_background{
-	background:#f2f2f2;
-	padding:20px 20px 40px !important;
+	padding:20px 0px 40px !important;
 	
+}
+div.itemFullText span {
+    background: transparent !important;
 }
 div.itemComments{
 	background:#fff !important;
@@ -887,7 +891,10 @@ input#submitCommentButton {
     font-weight: 100 !important;
     text-transform: capitalize !important;
 }
-.even img{
+.itemCommentsList .even img{
+	width:100px!important;
+}
+.itemCommentsList .odd img{
 	width:100px!important;
 }
 
