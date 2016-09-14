@@ -1,0 +1,101 @@
+@font-face {
+	font-family: 'medial';
+	src:url('fonts/medial.eot?ybxd7o');
+	src:url('fonts/medial.eot?#iefixybxd7o') format('embedded-opentype'),
+		url('fonts/medial.woff?ybxd7o') format('woff'),
+		url('fonts/medial.ttf?ybxd7o') format('truetype'),
+		url('fonts/medial.svg?ybxd7o#medial') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class*=" ico-"] {
+	font-family: 'medial';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	top:1px;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.ico-user:before {
+	content: "\e600";
+}
+.ico-trash:before {
+	content: "\e601";
+}
+.ico-tables:before {
+	content: "\e602";
+}
+.ico-settings:before {
+	content: "\e603";
+}
+.ico-right:before {
+	content: "\e604";
+}
+.ico-restaurant:before {
+	content: "\e605";
+}
+.ico-refresh:before {
+	content: "\e606";
+}
+.ico-question:before {
+	content: "\e607";
+}
+.ico-lock:before {
+	content: "\e608";
+}
+.ico-length:before {
+	content: "\e609";
+}
+.ico-left:before {
+	content: "\e60a";
+}
+.ico-home:before {
+	content: "\e60b";
+}
+.ico-go-to-arrow-right:before {
+	content: "\e60c";
+}
+.ico-go-to-arrow-left:before {
+	content: "\e60d";
+}
+.ico-go-right-circle:before {
+	content: "\e60e";
+}
+.ico-go-left-circle:before {
+	content: "\e60f";
+}
+.ico-eye:before {
+	content: "\e610";
+}
+.ico-export:before {
+	content: "\e611";
+}
+.ico-exit:before {
+	content: "\e612";
+}
+.ico-close:before {
+	content: "\e613";
+}
+.ico-clock:before {
+	content: "\e614";
+}
+.ico-calendar:before {
+	content: "\e615";
+}
+.ico-bookings:before {
+	content: "\e616";
+}
+.ico-add:before {
+	content: "\e617";
+}
+.ico-accept:before {
+	content: "\e618";
+}

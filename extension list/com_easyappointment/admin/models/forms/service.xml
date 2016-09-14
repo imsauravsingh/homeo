@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details"
+		addfieldpath="/administrator/components/com_easyappointment/models/fields">
+		
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+			description="JGLOBAL_FIELD_ID_DESC" readonly="true" class="readonly input-sm" />
+			
+		<field name="name" type="text" label="COM_EASYAPPOINTMENT_SERVICES_NAME"
+			description="COM_EASYAPPOINTMENT_SERVICES_NAME" class="input-sm" required="true" />
+
+		<field name="parent" type="service" label="COM_EASYAPPOINTMENT_SERVICES_PARENT"
+			description="COM_EASYAPPOINTMENT_SERVICES_PARENT" class="input-sm" required="true" />
+			
+		<field name="description" type="editor" label="COM_EASYAPPOINTMENT_SERVICES_DESCRIPTION"
+			description="COM_EASYAPPOINTMENT_SERVICES_DESCRIPTION" class="span4" filter="raw"/>
+			
+		<field name="length" type="list" label="COM_EASYAPPOINTMENT_SERVICES_LENGTH" default="15"
+			description="COM_EASYAPPOINTMENT_SERVICES_LENGTH" class="input-sm" required="true">
+			<option value="5">5</option>
+			<option value="10">10</option>
+			<option value="15">15</option>
+			<option value="20">20</option>
+			<option value="25">25</option>
+			<option value="30">30</option>
+			<option value="35">35</option>
+			<option value="40">40</option>
+			<option value="45">45</option>
+			<option value="50">50</option>
+			<option value="55">55</option>
+			<option value="60">60</option>
+			<option value="90">90</option>
+			<option value="120">120</option>
+			<option value="180">180</option>
+			<option value="240">240</option>
+			<option value="360">360</option>
+		</field>
+
+		<field name="price" type="text" label="COM_EASYAPPOINTMENT_SERVICES_PRICE"
+			description="COM_EASYAPPOINTMENT_SERVICES_PRICE_HELP" class="input-sm" />
+			
+	</fieldset>
+</form>

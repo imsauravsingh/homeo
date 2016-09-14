@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_EASYAPPOINTMENT_BROWSE">
+		<message>
+		</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request"
+			addfieldpath="/administrator/components/com_easyappointment/models/fields">
+
+			<field name="category" type="jmenuservice"
+				label="COM_EASYAPPOINTMENT_CATEGORY" description="COM_EASYAPPOINTMENT_CATEGORY" />
+		</fieldset>
+	</fields>
+</metadata>
