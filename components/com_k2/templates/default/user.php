@@ -9,9 +9,16 @@
 
 // no direct access
 defined('_JEXEC') or die;
-
+$document = JFactory::getDocument();
+ 
+// Add styles
+$style = 'body.site {'
+        . 'background: #eee !important;'
+        . '}'; 
+$document->addStyleDeclaration($style);
 // Get user stuff (do not change)
 $user = JFactory::getUser();
+
 
 ?>
 
@@ -92,7 +99,7 @@ $user = JFactory::getUser();
 		<?php foreach ($this->items as $item): ?>
 
 		<!-- Start K2 Item Layout -->
-		<div class="userItemView<?php if(!$item->published || ($item->publish_up != $this->nullDate && $item->publish_up > $this->now) || ($item->publish_down != $this->nullDate && $item->publish_down < $this->now)) echo ' userItemViewUnpublished'; ?><?php echo ($item->featured) ? ' userItemIsFeatured' : ''; ?>">
+		<div class="userItemView health_item<?php if(!$item->published || ($item->publish_up != $this->nullDate && $item->publish_up > $this->now) || ($item->publish_down != $this->nullDate && $item->publish_down < $this->now)) echo ' userItemViewUnpublished'; ?><?php echo ($item->featured) ? ' userItemIsFeatured' : ''; ?>">
 
 			<!-- Plugins: BeforeDisplay -->
 			<?php echo $item->event->BeforeDisplay; ?>
@@ -100,43 +107,7 @@ $user = JFactory::getUser();
 			<!-- K2 Plugins: K2BeforeDisplay -->
 			<?php echo $item->event->K2BeforeDisplay; ?>
 
-			<div class="userItemHeader">
-				<?php if($this->params->get('userItemDateCreated')): ?>
-				<!-- Date created -->
-				<span class="userItemDateCreated">
-					<?php echo JHTML::_('date', $item->created , JText::_('K2_DATE_FORMAT_LC2')); ?>
-				</span>
-				<?php endif; ?>
-
-			  <?php if($this->params->get('userItemTitle')): ?>
-			  <!-- Item title -->
-			  <h3 class="userItemTitle">
-					<?php if(isset($item->editLink)): ?>
-					<!-- Item edit link -->
-					<span class="userItemEditLink">
-						<a data-k2-modal="edit" href="<?php echo $item->editLink; ?>">
-							<?php echo JText::_('K2_EDIT_ITEM'); ?>
-						</a>
-					</span>
-					<?php endif; ?>
-
-			  	<?php if ($this->params->get('userItemTitleLinked') && $item->published): ?>
-					<a href="<?php echo $item->link; ?>">
-			  		<?php echo $item->title; ?>
-			  	</a>
-			  	<?php else: ?>
-			  	<?php echo $item->title; ?>
-			  	<?php endif; ?>
-			  	<?php if(!$item->published || ($item->publish_up != $this->nullDate && $item->publish_up > $this->now) || ($item->publish_down != $this->nullDate && $item->publish_down < $this->now)): ?>
-			  	<span>
-		  			<sup>
-		  				<?php echo JText::_('K2_UNPUBLISHED'); ?>
-		  			</sup>
-	  			</span>
-	  			<?php endif; ?>
-			  </h3>
-			  <?php endif; ?>
-		  </div>
+			
 
 		  <!-- Plugins: AfterDisplayTitle -->
 		  <?php echo $item->event->AfterDisplayTitle; ?>
@@ -162,12 +133,47 @@ $user = JFactory::getUser();
 				  </span>
 				  <div class="clr"></div>
 			  </div>
+			  <div class="clr"></div>
 			  <?php endif; ?>
+			  
+			<div class="userItemHeader">
+			  <?php if($this->params->get('userItemTitle')): ?>
+			  <!-- Item title -->
+			  <h3 class="userItemTitle text-center">
+					<?php if(isset($item->editLink)): ?>
+					<!-- Item edit link -->
+					<span class="userItemEditLink">
+						<a data-k2-modal="edit" href="<?php echo $item->editLink; ?>">
+						<!--	<?php echo JText::_('K2_EDIT_ITEM'); ?>-->
+						<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+						</a>
+					</span>
+					<?php endif; ?>
 
+			  	<?php if ($this->params->get('userItemTitleLinked') && $item->published): ?>
+					<a href="<?php echo $item->link; ?>">
+			  		<?php echo $item->title; ?>
+			  	</a>
+			  	<?php else: ?>
+			  	<?php echo $item->title; ?>
+			  	<?php endif; ?>
+			  	<?php if(!$item->published || ($item->publish_up != $this->nullDate && $item->publish_up > $this->now) || ($item->publish_down != $this->nullDate && $item->publish_down < $this->now)): ?>
+			  	<span>
+		  			<sup>
+		  				<?php echo JText::_('K2_UNPUBLISHED'); ?>
+		  			</sup>
+	  			</span>
+	  			<?php endif; ?>
+			  </h3>
+			  <?php endif; ?>
+		    </div>
 			  <?php if($this->params->get('userItemIntroText')): ?>
 			  <!-- Item introtext -->
 			  <div class="userItemIntroText">
 			  	<?php echo $item->introtext; ?>
+				<a class="k2ReadMore d_readmore" href="<?php echo $item->link; ?>">
+					<?php echo JText::_('K2_READ_MORE'); ?>
+				</a>
 			  </div>
 			  <?php endif; ?>
 
@@ -187,24 +193,20 @@ $user = JFactory::getUser();
 
 				<?php if($this->params->get('userItemCategory')): ?>
 				<!-- Item category name -->
-				<div class="userItemCategory">
-					<span><?php echo JText::_('K2_PUBLISHED_IN'); ?></span>
-					<a href="<?php echo $item->category->link; ?>"><?php echo $item->category->name; ?></a>
-				</div>
+				
 				<?php endif; ?>
 
 			  <?php if($this->params->get('userItemTags') && isset($item->tags)): ?>
 			  <!-- Item tags -->
 			  <div class="userItemTagsBlock">
-				  <span><?php echo JText::_('K2_TAGGED_UNDER'); ?></span>
+				 <!-- <span><?php echo JText::_('K2_TAGGED_UNDER'); ?></span>-->
 				  <ul class="userItemTags">
 				    <?php foreach ($item->tags as $tag): ?>
 				    <li><a href="<?php echo $tag->link; ?>"><?php echo $tag->name; ?></a></li>
 				    <?php endforeach; ?>
 				  </ul>
 				  <div class="clr"></div>
-			  </div>
-			  <?php endif; ?>
+			  </div>		  <?php endif; ?>
 
 				<div class="clr"></div>
 		  </div>
@@ -214,29 +216,14 @@ $user = JFactory::getUser();
 
 			<?php if($this->params->get('userItemCommentsAnchor') && ( ($this->params->get('comments') == '2' && !$this->user->guest) || ($this->params->get('comments') == '1')) ): ?>
 			<!-- Anchor link to comments below -->
-			<div class="userItemCommentsLink">
-				<?php if(!empty($item->event->K2CommentsCounter)): ?>
-					<!-- K2 Plugins: K2CommentsCounter -->
-					<?php echo $item->event->K2CommentsCounter; ?>
-				<?php else: ?>
-					<?php if($item->numOfComments > 0): ?>
-					<a href="<?php echo $item->link; ?>#itemCommentsAnchor">
-						<?php echo $item->numOfComments; ?> <?php echo ($item->numOfComments>1) ? JText::_('K2_COMMENTS') : JText::_('K2_COMMENT'); ?>
-					</a>
-					<?php else: ?>
-					<a href="<?php echo $item->link; ?>#itemCommentsAnchor">
-						<?php echo JText::_('K2_BE_THE_FIRST_TO_COMMENT'); ?>
-					</a>
-					<?php endif; ?>
-				<?php endif; ?>
-			</div>
+			
 			<?php endif; ?>
 
 			<?php if ($this->params->get('userItemReadMore')): ?>
 			<!-- Item "read more..." link -->
-			<div class="userItemReadMore">
+			<div class="userItemReadMore text-center col-md-12">
 				<a class="k2ReadMore" href="<?php echo $item->link; ?>">
-					<?php echo JText::_('K2_READ_MORE'); ?>
+					<?php echo JText::_('VIEW TIPS'); ?>
 				</a>
 			</div>
 			<?php endif; ?>
@@ -258,7 +245,7 @@ $user = JFactory::getUser();
 
 	<!-- Pagination -->
 	<?php if(count($this->pagination->getPagesLinks())): ?>
-	<div class="k2Pagination">
+	<div class="k2Pagination" id="user_itemlist">
 		<?php echo $this->pagination->getPagesLinks(); ?>
 		<div class="clr"></div>
 		<?php echo $this->pagination->getPagesCounter(); ?>

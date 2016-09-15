@@ -23,14 +23,14 @@ defined('_JEXEC') or die('Restricted access');
 		    </div>
 		</div>
 
-		<div class="text-center">
+		<!--<div class="text-center">
 			<button class="btn btn-lg" onclick="bnew();return false;"><i class="ico ico-add"></i> <?php echo JText::_('COM_EASYAPPOINTMENT_NEW_BOOKING');?></button>
-		</div>
+		</div>-->
 
 		<div class="spacer"></div>
 
 		<?php if ($this->bookings) { ?>
-		<h4 class="text-center"><?php echo JText::_('COM_EASYAPPOINTMENT_YOUR_TODAY_BOOKINGS');?></h4>
+		<!--<h4 class="text-center"><?php echo JText::_('COM_EASYAPPOINTMENT_YOUR_TODAY_BOOKINGS');?></h4>
 		<table class="table table-hover">
 			<thead>
 				<tr>
@@ -51,10 +51,10 @@ defined('_JEXEC') or die('Restricted access');
 					</tr>
 				<?php } ?>
 			</tbody>
-		</table>
+		</table>-->
 		<?php } ?>
 
-		<div class="row spacer"></div>
+		<!--<div class="row spacer"></div>
 
 		<div class="row">
 			<h4 class="text-center"><?php echo JText::_('COM_EASYAPPOINTMENT_YOUR_SERVICES');?></h4>
@@ -63,7 +63,7 @@ defined('_JEXEC') or die('Restricted access');
 			<?php } } }  ?>
 		</div>
 
-		<input type="hidden" name="task" value="" />
+		<input type="hidden" name="task" value="" />-->
 		<?php echo JHtml::_('form.token'); ?>
 				
 	</form>

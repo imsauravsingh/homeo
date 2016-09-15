@@ -9,7 +9,13 @@
 
 // no direct access
 defined('_JEXEC') or die;
-
+ $document = JFactory::getDocument();
+ 
+// Add styles
+$style = 'body.site {'
+        . 'background: #eee !important;'
+        . '}'; 
+$document->addStyleDeclaration($style);
 // Define default image size (do not change)
 K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 
@@ -23,57 +29,6 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 	<!-- K2 Plugins: K2BeforeDisplay -->
 	<?php echo $this->item->event->K2BeforeDisplay; ?>
 
-	<div class="catItemHeader">
-		<?php if($this->item->params->get('catItemDateCreated')): ?>
-		<!-- Date created -->
-		<span class="catItemDateCreated">
-			<i class="fa fa-calendar fa-fw"></i> <?php echo JHTML::_('date', $this->item->created , JText::_('K2_DATE_FORMAT_LC2')); ?>
-		</span>
-		<?php endif; ?>
-
-	  <?php if($this->item->params->get('catItemTitle')): ?>
-	  <!-- Item title -->
-	  <h3 class="catItemTitle">
-			<?php if(isset($this->item->editLink)): ?>
-			<!-- Item edit link -->
-			<span class="catItemEditLink">
-				<a data-k2-modal="edit" href="<?php echo $this->item->editLink; ?>">
-					<?php echo JText::_('K2_EDIT_ITEM'); ?>
-				</a>
-			</span>
-			<?php endif; ?>
-
-	  	<?php if ($this->item->params->get('catItemTitleLinked')): ?>
-			<a href="<?php echo $this->item->link; ?>">
-	  		<?php echo $this->item->title; ?>
-	  	</a>
-	  	<?php else: ?>
-	  	<?php echo $this->item->title; ?>
-	  	<?php endif; ?>
-
-	  	<?php if($this->item->params->get('catItemFeaturedNotice') && $this->item->featured): ?>
-	  	<!-- Featured flag -->
-	  	<span>
-		  	<sup>
-		  		<?php echo JText::_('K2_FEATURED'); ?>
-		  	</sup>
-	  	</span>
-	  	<?php endif; ?>
-	  </h3>
-	  <?php endif; ?>
-
-		<?php if($this->item->params->get('catItemAuthor')): ?>
-		<!-- Item Author -->
-		<span class="catItemAuthor">
-			<?php echo K2HelperUtilities::writtenBy($this->item->author->profile->gender); ?>
-			<?php if(isset($this->item->author->link) && $this->item->author->link): ?>
-			<a rel="author" href="<?php echo $this->item->author->link; ?>"><?php echo $this->item->author->name; ?></a>
-			<?php else: ?>
-			<?php echo $this->item->author->name; ?>
-			<?php endif; ?>
-		</span>
-		<?php endif; ?>
-  </div>
 
   <!-- Plugins: AfterDisplayTitle -->
   <?php echo $this->item->event->AfterDisplayTitle; ?>
@@ -120,14 +75,52 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 		  <div class="clr"></div>
 	  </div>
 	  <?php endif; ?>
+	  
+	  	  <?php if($this->item->params->get('catItemTitle')): ?>
+	  <!-- Item title -->
+	  <h3 class="catItemTitle text-center">
+			<?php if(isset($this->item->editLink)): ?>
+			<!-- Item edit link -->
+			<span class="catItemEditLink">
+				<a data-k2-modal="edit" title="Edit" href="<?php echo $this->item->editLink; ?>">
+					<!--<?php echo JText::_('K2_EDIT_ITEM'); ?>-->
+					<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+				</a>
+			</span>
+			<?php endif; ?>
+
+	  	<?php if ($this->item->params->get('catItemTitleLinked')): ?>
+			<a href="<?php echo $this->item->link; ?>">
+	  		<?php echo $this->item->title; ?>
+	  	</a>
+	  	<?php else: ?>
+	  	<?php echo $this->item->title; ?>
+	  	<?php endif; ?>
+
+	  	<?php if($this->item->params->get('catItemFeaturedNotice') && $this->item->featured): ?>
+	  	<!-- Featured flag -->
+	  	<span>
+		  	<sup>
+		  		<?php echo JText::_('K2_FEATURED'); ?>
+		  	</sup>
+	  	</span>
+	  	<?php endif; ?>
+	  </h3>
+	  <?php endif; ?>
 
 	  <?php if($this->item->params->get('catItemIntroText')): ?>
 	  <!-- Item introtext -->
 	  <div class="catItemIntroText">
 	  	<?php echo $this->item->introtext; ?>
-	  </div>
-	  <?php endif; ?>
-
+	  
+	    <?php if ($this->item->params->get('catItemReadMore')): ?>
+	<!-- Item "read more..." link -->
+		<a class="k2ReadMore d_readmore" id="readmore" href="<?php echo $this->item->link; ?>">
+			<?php echo JText::_('K2_READ_MORE'); ?>
+		</a>
+	    <?php endif; ?>
+	    <?php endif; ?>
+     </div>
 		<div class="clr"></div>
 
 	  <?php if($this->item->params->get('catItemExtraFields') && count($this->item->extra_fields)): ?>
@@ -167,59 +160,7 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
   $this->item->params->get('catItemTags') ||
   $this->item->params->get('catItemAttachments')
   ): ?>
-  <div class="catItemLinks">
 
-		<?php if($this->item->params->get('catItemHits')): ?>
-		<!-- Item Hits -->
-		<div class="catItemHitsBlock">
-			<span class="catItemHits">
-				<?php echo JText::_('K2_READ'); ?> <b><?php echo $this->item->hits; ?></b> <?php echo JText::_('K2_TIMES'); ?>
-			</span>
-		</div>
-		<?php endif; ?>
-
-		<?php if($this->item->params->get('catItemCategory')): ?>
-		<!-- Item category name -->
-		<div class="catItemCategory">
-			<span><?php echo JText::_('K2_PUBLISHED_IN'); ?></span>
-			<a href="<?php echo $this->item->category->link; ?>"><?php echo $this->item->category->name; ?></a>
-		</div>
-		<?php endif; ?>
-
-	  <?php if($this->item->params->get('catItemTags') && count($this->item->tags)): ?>
-	  <!-- Item tags -->
-	  <div class="catItemTagsBlock">
-		  <span><?php echo JText::_('K2_TAGGED_UNDER'); ?></span>
-		  <ul class="catItemTags">
-		    <?php foreach ($this->item->tags as $tag): ?>
-		    <li><a href="<?php echo $tag->link; ?>"><?php echo $tag->name; ?></a></li>
-		    <?php endforeach; ?>
-		  </ul>
-		  <div class="clr"></div>
-	  </div>
-	  <?php endif; ?>
-
-	  <?php if($this->item->params->get('catItemAttachments') && count($this->item->attachments)): ?>
-	  <!-- Item attachments -->
-	  <div class="catItemAttachmentsBlock">
-		  <span><?php echo JText::_('K2_DOWNLOAD_ATTACHMENTS'); ?></span>
-		  <ul class="catItemAttachments">
-		    <?php foreach ($this->item->attachments as $attachment): ?>
-		    <li>
-			    <a title="<?php echo K2HelperUtilities::cleanHtml($attachment->titleAttribute); ?>" href="<?php echo $attachment->link; ?>">
-			    	<?php echo $attachment->title ; ?>
-			    </a>
-			    <?php if($this->item->params->get('catItemAttachmentsCounter')): ?>
-			    <span>(<?php echo $attachment->hits; ?> <?php echo ($attachment->hits==1) ? JText::_('K2_DOWNLOAD') : JText::_('K2_DOWNLOADS'); ?>)</span>
-			    <?php endif; ?>
-		    </li>
-		    <?php endforeach; ?>
-		  </ul>
-	  </div>
-	  <?php endif; ?>
-
-		<div class="clr"></div>
-  </div>
   <?php endif; ?>
 
 	<div class="clr"></div>
@@ -248,31 +189,13 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 
   <div class="clr"></div>
 
-	<?php if($this->item->params->get('catItemCommentsAnchor') && ( ($this->item->params->get('comments') == '2' && !$this->user->guest) || ($this->item->params->get('comments') == '1')) ): ?>
-	<!-- Anchor link to comments below -->
-	<div class="catItemCommentsLink col-md-12">
-		<?php if(!empty($this->item->event->K2CommentsCounter)): ?>
-			<!-- K2 Plugins: K2CommentsCounter -->
-			<?php echo $this->item->event->K2CommentsCounter; ?>
-		<?php else: ?>
-			<?php if($this->item->numOfComments > 0): ?>
-			<a href="<?php echo $this->item->link; ?>#itemCommentsAnchor">
-				<?php echo $this->item->numOfComments; ?> <?php echo ($this->item->numOfComments>1) ? JText::_('K2_COMMENTS') : JText::_('K2_COMMENT'); ?>
-			</a>
-			<?php else: ?>
-			<a href="<?php echo $this->item->link; ?>#itemCommentsAnchor">
-				<?php echo JText::_('K2_BE_THE_FIRST_TO_COMMENT'); ?>
-			</a>
-			<?php endif; ?>
-		<?php endif; ?>
-	</div>
-	<?php endif; ?>
+	
 
 	<?php if ($this->item->params->get('catItemReadMore')): ?>
 	<!-- Item "read more..." link -->
 	<div class="catItemReadMore">
 		<a class="k2ReadMore" id="readmore" href="<?php echo $this->item->link; ?>">
-			<?php echo JText::_('K2_READ_MORE'); ?>
+			<?php echo JText::_('VIEW TIPS'); ?>
 		</a>
 	</div>
 	<?php endif; ?>

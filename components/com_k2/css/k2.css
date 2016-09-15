@@ -166,10 +166,10 @@ div.userItemIsFeatured:before {position:absolute;top:10px;right:10px;color:#CF19
 /* --- Edit Buttons --- */
 span.itemEditLink,
 span.catItemEditLink,
-span.userItemEditLink {float:right;display:block;padding:0;margin:0;width:120px;text-align:right;}
+span.userItemEditLink {float:right;display:block;padding:0;margin:0;width:120px;text-align:right;margin-right:20px;}
 	span.itemEditLink a,
 	span.catItemEditLink a,
-	span.userItemEditLink a {display:inline-block;padding:4px 8px;margin:0;background:#2d96dd;color:#fff;border:0;border-radius:4px;font-size:11px;line-height:100%;font-weight:bold;text-align:center;text-decoration:none;}
+	span.userItemEditLink a {display:inline-block;padding:4px 8px;margin:0;background:transparent !important;color:#fff;border:0;border-radius:4px;font-size:11px;line-height:100%;font-weight:bold;text-align:center;text-decoration:none;font-size:20px;}
 	span.itemEditLink a:hover,
 	span.catItemEditLink a:hover,
 	span.userItemEditLink a:hover {background:#217dbb;}
@@ -191,7 +191,7 @@ span.itemEditLink {}
 
 div.itemHeader {}
 	div.itemHeader span.itemDateCreated {color:#999;font-size:11px;}
-	div.itemHeader h2.itemTitle {padding:10px 0 4px 0;margin:0;}
+	div.itemHeader h2.itemTitle {padding:10px 0 10px 0;margin:0;text-transform:uppercase;}
 	div.itemHeader h2.itemTitle span {}
 	div.itemHeader h2.itemTitle span sup {font-size:12px;color:#CF1919;text-decoration:none;} /* "Featured" presented in superscript */
 	div.itemHeader span.itemAuthor {display:block;padding:0;margin:0;}
@@ -259,9 +259,9 @@ div.itemContentFooter {display:block;text-align:right;padding:4px 0;margin:16px 
 	span.itemHits {float:left;}
 	span.itemDateModified {}
 
-div.itemSocialSharing {padding:8px 0;}
-	div.itemTwitterButton {float:left;margin:2px 24px 0 0;}
-	div.itemFacebookButton {float:left;margin-right:24px;width:200px;}
+div.itemSocialSharing {padding:8px 0;margin-top:30px;}
+	div.itemTwitterButton {float:left;margin:0px 24px 0 0;}
+	div.itemFacebookButton {float:left;margin-right:24px;/*width:200px;*/}
 	div.itemGooglePlusOneButton {}
 
 div.itemLinks {margin:16px 0;padding:0;}
@@ -459,7 +459,7 @@ div.itemList {}
 		}
 
 /* --- Item block for each item group --- */
-div.catItemView {margin-bottom:48px;padding:4px;} /* this is the container for each K2 item on this view */
+div.catItemView {margin-bottom:48px;/*padding:4px;*/} /* this is the container for each K2 item on this view */
 
 	/* Additional class appended to the element above for further styling per group item */
 	div.groupLeading {}
@@ -485,13 +485,13 @@ div.catItemHeader {}
 div.catItemRatingBlock {padding:8px 0;}
 	div.catItemRatingBlock span {display:block;float:left;font-style:normal;padding:0 4px 0 0;margin:0;color:#999;}
 
-div.catItemBody {padding:8px 0;margin:0;}
+div.catItemBody {padding:0px 0px 20px;margin:0;}
 
-div.catItemImageBlock {padding:8px 0;margin:0 0 16px 0;}
+div.catItemImageBlock {padding:0px 0;margin:0 0 16px 0;}
 	span.catItemImage {display:block;text-align:center;margin:0 0 8px 0;}
 	span.catItemImage img {max-width:100%;height:auto;}
 
-div.catItemIntroText {font-size:inherit;font-weight:normal;line-height:inherit;padding:4px 0 12px 0;}
+div.catItemIntroText {font-size:inherit;font-weight:normal;line-height:inherit;padding:0px 15px;text-align:center;}
 	div.catItemIntroText img {}
 
 div.catItemExtraFields,
@@ -576,7 +576,7 @@ div.userView {}
 		div.userItemList {}
 
 /* User items */
-div.userItemView {margin-bottom:48px;} /* this is the item container for this view */
+div.userItemView {margin:10px 15px;} /* this is the item container for this view */
 div.userItemIsFeatured {} /* Attach a class for each featured item */
 
 div.userItemViewUnpublished {opacity:0.9;border:4px dashed #ccc;background:#fffff2;padding:8px;margin:8px 0;}
@@ -590,13 +590,13 @@ div.userItemHeader {}
 	div.userItemHeader h3.userItemTitle {padding:10px 0 4px 0;margin:0;}
 	div.userItemHeader h3.userItemTitle span sup {font-size:12px;color:#CF1919;text-decoration:none;} /* "Unpublished" presented in superscript */
 
-div.userItemBody {padding:8px 0;margin:0;}
+div.userItemBody {padding: 0;margin:0;}
 
-div.userItemImageBlock {padding:0;margin:0;float:left;}
-	span.userItemImage {display:block;text-align:center;margin:0 8px 8px 0;}
+div.userItemImageBlock {padding:0;margin:0;float:left;width:100%;}
+	span.userItemImage {display:block;text-align:center;margin:0px;}
 	span.userItemImage img {max-width:100%;height:auto;}
 
-div.userItemIntroText {font-size:inherit;font-weight:normal;line-height:inherit;padding:4px 0 12px 0;}
+div.userItemIntroText {font-size:inherit;font-weight:normal;line-height:inherit;padding:0px 15px;text-align:center;    margin-top: 6px;}
 	div.userItemIntroText img {}
 
 div.userItemLinks {margin:0 0 16px 0;padding:0;}
@@ -619,7 +619,7 @@ div.userItemCommentsLink {display:inline;margin:0 8px 0 0;padding:0 8px 0 0;bord
 	div.userItemCommentsLink a:hover {}
 
 /* Read more link */
-div.userItemReadMore {display:inline;}
+div.userItemReadMore {/*display:inline;*/}
 	div.userItemReadMore a {}
 	div.userItemReadMore a:hover {}
 
@@ -659,7 +659,7 @@ div.tagItemIntroText {font-size:inherit;font-weight:normal;line-height:inherit;p
 		div.tagItemCategory a {}
 
 /* Read more link */
-div.tagItemReadMore {display:inline;}
+div.tagItemReadMore {/*display:inline;*/}
 	div.tagItemReadMore a {}
 	div.tagItemReadMore a:hover {}
 

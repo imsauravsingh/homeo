@@ -14,7 +14,6 @@ defined('_JEXEC') or die;
 
 <!-- Start K2 Tag Layout -->
 <div id="k2Container" class="tagView<?php if($this->params->get('pageclass_sfx')) echo ' '.$this->params->get('pageclass_sfx'); ?>">
-
 	<?php if($this->params->get('show_page_title')): ?>
 	<!-- Page title -->
 	<div class="componentheading<?php echo $this->params->get('pageclass_sfx')?>">
