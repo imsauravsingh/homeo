@@ -496,7 +496,7 @@ input[type="color"],
   border-radius: 8px;
 }
 body.site{
-    background-color: #fff!important;
+    background-color: #fff !important;
 }
 .col-lg-4.col-md-6.col-xs-12.pull-left.logo-top {
     position: fixed;
@@ -807,9 +807,9 @@ label#genderf-lbl{
 
 /*health_tips_design*/
 .catItemView.groupPrimary {
-    background: #f2f2f2;
+    background: #fff;
     margin: 10px 15px;
-    padding: 15px;
+    padding-bottom:20px;
 	box-shadow: 0px 2px 4px #ccc;
 }
 h3.catItemTitle a {
@@ -825,16 +825,17 @@ div.catItemCommentsLink a {
     color: #656669;
 }
 div.catItemReadMore a {
-    background: #00a99e;
-    color: white;
+    color:#00a99e;
     padding: 5px 10px;
     border-radius: 13px;
+	border:1px solid #00a99e;
 }
 div.catItemReadMore a:hover {
-    background: #03c1b5;
+    background:#00a99e;
     color: white;
     padding: 5px 10px;
     border-radius: 13px;
+	border:1px solid #00a99e;
 }
 div.catItemLinks {
     margin: 0 0 10px 0 !important;
@@ -843,17 +844,14 @@ div.catItemImageBlock {
     margin: 0 0 0px 0!important;
 }
 div.itemAuthorBlock {
-    background: #f2f2f2 !important;
-	border-top:0px none !important;
+    background: #eee !important;
 	border-left:0px none !important;
 	border-right:0px none !important;
-    border-bottom: 0px none !important;
     border-radius: 0px !important;
     margin: 0 0 16px 0;
     padding: 8px;
 	margin: 0px !important;
-    padding: 20px;
-	padding-bottom:0px !important;
+    padding: 10px;
 }
 .h_background{
 	padding:20px 0px 40px !important;
@@ -865,10 +863,7 @@ div.itemFullText span {
 div.itemComments{
 	background:#fff !important;
 }
-.divider_line {
-    border-top: 2px solid #ddd;
-    margin: 20px 0px 0px;
-}
+
 div.itemToolbar{
 	background:transparent !important;
 }
@@ -967,39 +962,6 @@ div.add_icons a:hover, div.add_icons a:focus, div.add_icons a:active {
 	width:90% !important;
 }
 
-
-@media (max-width: 1200px) {
-  #itemListPrimary {
-  -moz-column-count:    4;
-  -webkit-column-count: 4;
-  column-count:         4;
-  }
-}
-@media (max-width: 1000px) {
-  #itemListPrimary{
-  -moz-column-count:    3;
-  -webkit-column-count: 3;
-  column-count:         3;
-  }
-}
-@media (max-width: 800px) {
-  #itemListPrimary {
-  -moz-column-count:    2;
-  -webkit-column-count: 2;
-  column-count:         2;
-  }
-}
-@media (max-width: 400px) {
-  #itemListPrimary {
-  -moz-column-count:    1;
-  -webkit-column-count: 1;
-  column-count:         1;
-  }
-  #itemListPrimary .itemContainer{
-	width:100% !important;
-}
-}
-
 /*registration*/
 #jform_profile_tos #jform_profile_tos0 {
     margin:2px 0px 0px 0px !important;
@@ -1008,4 +970,57 @@ div.add_icons a:hover, div.add_icons a:focus, div.add_icons a:active {
 label#jform_profile_tos-lbl {
     margin-left: 21px;
 }
-
+.catItemIntroText p{
+	margin:0px 0px 0px !important;
+}
+.userItemList{
+  -webkit-column-count:3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap:1px;
+  -moz-column-gap:1px;
+  column-gap:1px;
+  max-width:100%;
+  margin: 0 auto;
+  width: 100%;
+}
+div.userItemView{
+	background: #FFF;
+    margin: 10px 15px;
+    padding-bottom: 20px;
+    box-shadow: 0px 2px 4px #ccc;
+	width:90%;
+}
+.userItemImage img{
+	width:100%!important;
+}
+div.userItemReadMore a{
+	color: #00a99e;
+    padding: 5px 10px;
+    border-radius: 13px;
+    border: 1px solid #00a99e; 
+}
+div.userItemReadMore a:hover{
+	background: #00a99e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 13px;
+    border: 1px solid #00a99e;
+}
+.catItemIntroText  span{
+	background:transparent !important;
+	color:#57585c !important;
+}
+a.d_readmore {
+    color: #57585c !important;
+}
+.userItemIntroText span{
+	background:transparent !important;
+	color:#57585c !important;
+}
+.userItemTitle a{
+	color:#777 !important;
+}
+span.itemEditLink a, span.catItemEditLink a, span.userItemEditLink i{
+	    color: #0d8a82;
+}

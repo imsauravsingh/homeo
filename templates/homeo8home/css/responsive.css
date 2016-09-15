@@ -14,3 +14,69 @@
 	}
 
 }
+/*heath tips*/
+
+
+@media (max-width: 1200px) {
+  #itemListPrimary {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+  .userItemList {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 1000px) {
+  #itemListPrimary{
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+  .userItemList{
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  #itemListPrimary {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+    .userItemList {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  #itemListPrimary {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+  #itemListPrimary .itemContainer{
+	width:100% !important;
+	
+}
+.userItemList {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+ .userItemList .itemContainer{
+	width:100% !important;
+	
+}
+.catItemView.groupPrimary{
+	margin:10px 0px;
+}
+div.userItemView{
+	width:100%;
+	margin:10px 0px;
+}
+}

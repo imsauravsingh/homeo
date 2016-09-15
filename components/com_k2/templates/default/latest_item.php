@@ -11,10 +11,8 @@
 defined('_JEXEC') or die;
 
 ?>
-
 <!-- Start K2 Item Layout -->
 <div class="latestItemView">
-
 	<!-- Plugins: BeforeDisplay -->
 	<?php echo $this->item->event->BeforeDisplay; ?>
 

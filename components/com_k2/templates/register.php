@@ -15,7 +15,7 @@ defined('_JEXEC') or die;
 <!-- K2 user register form -->
 <?php if(isset($this->message)) $this->display('message'); ?>
 
-<form action="<?php echo version_compare(JVERSION, '3.0', 'ge') ? JRoute::_('index.php?option=com_users&task=registration.register') : JURI::root(true).'/index.php'; ?>" enctype="multipart/form-data" method="post" id="josForm" name="josForm" class="col-lg-5 col-md-5 col-sm-5 col-xs-12 form-validate well hh_registration_form">
+<form action="<?php echo version_compare(JVERSION, '3.0', 'ge') ? JRoute::_('index.php?option=com_users&task=registration.register') : JURI::root(true).'/index.php'; ?>" enctype="multipart/form-data" method="post" id="josForm" name="josForm" class="col-lg-5 col-md-6 col-sm-8 col-sm-offset-2 col-xs-12 form-validate well hh_registration_form">
 	<?php if($this->params->def('show_page_title',1)): ?>
 	<!--<div class="componentheading<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
 		<?php echo $this->escape($this->params->get('page_title')); ?>
