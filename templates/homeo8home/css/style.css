@@ -278,6 +278,7 @@ small{
 	color:white;
 	padding:60px 0px;
 	border-top:10px solid #886895;
+	margin-top: 30px;
 }
 .footer_heading{
 	color:#10ada7;
@@ -1023,4 +1024,19 @@ a.d_readmore {
 }
 span.itemEditLink a, span.catItemEditLink a, span.userItemEditLink i{
 	    color: #0d8a82;
+}
+.navbar-collapse.in{
+	height:auto;
+}
+
+/*header menu*/
+#bm-cool-menu-93 .bm-cool-menu{
+	background-color:#886895 !important;
+	padding:0px 0px 10px !important;
+}
+#bm-cool-menu-93 .bm-cool-menu li{
+	margin:0px !important;
+}
+#bm-cool-menu-93 .bm-cool-menu li a{
+	padding:10px;
 }

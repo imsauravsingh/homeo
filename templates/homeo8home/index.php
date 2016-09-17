@@ -42,9 +42,8 @@ else
 JHtml::_('bootstrap.framework');
 
 $doc->addScriptVersion($this->baseurl . '/templates/' . $this->template . '/js/template.js');
-$doc->addScriptVersion($this->baseurl . '/templates/' . $this->template . '/js/masonry.pkgd.min.js');
 //$doc->addScriptVersion($this->baseurl . '/templates/' . $this->template . '/js/jquery.min.js');
-//$doc->addScriptVersion($this->baseurl . '/templates/' . $this->template . '/js/bootstrap.min.js');
+$doc->addScriptVersion($this->baseurl . '/templates/' . $this->template . '/js/bootstrap.min.js');
 
 // Add Stylesheets
 $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/css/template.css');
@@ -236,8 +235,7 @@ $doc->addScriptDeclaration($bottomScript);
 				<nav class="navbar" role="navigation">
 					<div class="">
 						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse"
-									data-target="#menu" style="z-index:9999;">
+							 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
 
 								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span>
@@ -252,7 +250,7 @@ $doc->addScriptDeclaration($bottomScript);
 							</div>
 						</div>
 
-						<div class="collapse navbar-collapse" id="menu">
+						 <div class="collapse navbar-collapse" id="menu">
 							<jdoc:include type="modules" name="position-1" style="none" />
 						</div>
 					</div>
@@ -303,7 +301,7 @@ $doc->addScriptDeclaration($bottomScript);
       }
      ?>
 
-		<div <?php if (!$this->countModules('position-1') && ($itemid!='495' && $itemid!='496' && $itemid!='497' && $itemid!='498' && $itemid!='518' && $itemid!='201')) : echo "class='".$divcomclass." comp_div'";  endif;?> >
+		<div <?php if (!$this->countModules('position-1') && ($itemid!='495' && $itemid!='496' && $itemid!='497' && $itemid!='498' && $itemid!='518' && $itemid!='501' && $itemid!='201')) : echo "class='".$divcomclass." comp_div'";  endif;?> >
 			<!-- Begin Content -->
 			<jdoc:include type="component" />
 			<!-- End Content -->

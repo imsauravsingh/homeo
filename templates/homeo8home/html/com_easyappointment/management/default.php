@@ -13,21 +13,21 @@ defined('_JEXEC') or die('Restricted access');
 
 <div id="easyapp">
 
-	<form action="<?php echo JRoute::_('index.php?option=com_easyappointment&view=management', false);?>" method="post" name="adminForm" id="adminForm" class="form-horizontal">
+	<!--<form action="<?php echo JRoute::_('index.php?option=com_easyappointment&view=management', false);?>" method="post" name="adminForm" id="adminForm" class="form-horizontal">-->
 
 		<?php //echo MedialDisplay::loadMenu() ;?>
 
-		<div id="tb-controls">
+		<!--<div id="tb-controls">
 		    <div class="col-md-4 pull-left">
 			<h3><i class="ico ico-home"></i> <?php echo JText::_('COM_EASYAPPOINTMENT_DASHBOARD');?></h3>
 		    </div>
-		</div>
+		</div>-->
 
 		<!--<div class="text-center">
 			<button class="btn btn-lg" onclick="bnew();return false;"><i class="ico ico-add"></i> <?php echo JText::_('COM_EASYAPPOINTMENT_NEW_BOOKING');?></button>
 		</div>-->
 
-		<div class="spacer"></div>
+		<!--<div class="spacer"></div>-->
 
 		<?php if ($this->bookings) { ?>
 		<!--<h4 class="text-center"><?php echo JText::_('COM_EASYAPPOINTMENT_YOUR_TODAY_BOOKINGS');?></h4>
@@ -66,53 +66,53 @@ defined('_JEXEC') or die('Restricted access');
 		<input type="hidden" name="task" value="" />-->
 		<?php echo JHtml::_('form.token'); ?>
 				
-	</form>
+	<!--</form>-->
 	<div class="Quick_icons">
 		<div class="col-md-2 col-sm-4 col-xs-6">
 			<div class="add_icons text-center">
 			 <a href="#">
-			  <i class="fa fa-file-o" aria-hidden="true"></i>
-			  <p>Add new item</p>	
+			  <i class="fa fa-user-md fa-fw" aria-hidden="true"></i>
+			  <p>My Profile</p>	
 			 </a>
 			</div>
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
 			<div class="add_icons text-center">
 			 <a href="#">
-			  <i class="fa fa-files-o fa-fw" aria-hidden="true"></i>
-			  <p>item</p>	
+			  <i class="fa fa-calendar-check-o fa-fw" aria-hidden="true"></i>
+			  <p>Booking</p>	
 			 </a>
 			</div>
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
 			<div class="add_icons text-center">
 			 <a href="#">
-			  <i class="fa fa-star-o" aria-hidden="true"></i>
-			  <p>Featured items</p>	
+			  <i class="fa fa-cogs" aria-hidden="true"></i>
+			  <p>Setting</p>	
 			 </a>
 			</div>
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
 			<div class="add_icons text-center">
 			 <a href="#">
-			  <i class="fa fa-trash-o" aria-hidden="true"></i>
-			  <p> Trashed items</p>	
+			  <i class="fa fa-calendar-plus-o fa-fw" aria-hidden="true"></i>
+			  <p>Schedule</p>	
+			 </a>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-4 col-xs-6">
+			<div class="add_icons text-center">
+			 <a href="/homeo/index.php?option=com_users&amp;view=profile&amp;Itemid=518">
+			  <i class="fa fa-heartbeat" aria-hidden="true"></i>
+			  <p>Health Tips</p>	
 			 </a>
 			</div>
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
 			<div class="add_icons text-center">
 			 <a href="#">
-			  <i class="fa fa-folder-open-o" aria-hidden="true"></i>
-			  <p>Categories</p>	
-			 </a>
-			</div>
-		</div>
-		<div class="col-md-2 col-sm-4 col-xs-6">
-			<div class="add_icons text-center">
-			 <a href="#">
-			  <i class="fa fa-tags" aria-hidden="true"></i>
-			  <p>Tags</p>	
+			  <i class="fa fa-comments-o" aria-hidden="true"></i>
+			  <p>Chat</p>	
 			 </a>
 			</div>
 		</div>
@@ -120,48 +120,8 @@ defined('_JEXEC') or die('Restricted access');
 		<div class="col-md-2 col-sm-4 col-xs-6">
 			<div class="add_icons text-center">
 			 <a href="#">
-			  <i class="fa fa-comments-o" aria-hidden="true"></i>
-			  <p>Comments</p>	
-			 </a>
-			</div>
-		</div>
-		<div class="col-md-2 col-sm-4 col-xs-6">
-			<div class="add_icons text-center">
-			 <a href="#">
-			  <i class="fa fa-object-ungroup" aria-hidden="true"></i>
-			  <p>Extra fields</p>	
-			 </a>
-			</div>
-		</div>
-		<div class="col-md-2 col-sm-4 col-xs-6">
-			<div class="add_icons text-center">
-			 <a href="#">
-			  <i class="fa fa-object-group" aria-hidden="true"></i>
-			  <p>Extra fields group</p>	
-			 </a>
-			</div>
-		</div>
-		<div class="col-md-2 col-sm-4 col-xs-6">
-			<div class="add_icons text-center">
-			 <a href="#">
-			  <i class="fa fa-film" aria-hidden="true"></i>
-			  <p>Media manager</p>	
-			 </a>
-			</div>
-		</div>
-		<div class="col-md-2 col-sm-4 col-xs-6">
-			<div class="add_icons text-center">
-			 <a href="#">
-			  <i class="fa fa-picture-o" aria-hidden="true"></i>
-			  <p>Online image editor</p>	
-			 </a>
-			</div>
-		</div>
-		<div class="col-md-2 col-sm-4 col-xs-6">
-			<div class="add_icons text-center">
-			 <a href="#">
-			  <i class="fa fa-file-text" aria-hidden="true"></i>
-			  <p>Document</p>	
+			  <i class="fa fa-book" aria-hidden="true"></i>
+			  <p>Success stories</p>	
 			 </a>
 			</div>
 		</div>
