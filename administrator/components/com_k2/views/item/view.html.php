@@ -571,7 +571,7 @@ class K2ViewItem extends K2View
 			JToolBarHelper::apply();
 			JToolBarHelper::cancel();
 		}
-		// ACE ACL integration has been removed. We keep this flag to avoid php notices for users who have overrides 
+		// ACE ACL integration has been removed. We keep this flag to avoid php notices for users who have overrides
 		$aceAclFlag = false;
 		$this->assignRef('aceAclFlag', $aceAclFlag);
 

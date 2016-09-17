@@ -12,8 +12,9 @@ defined('_JEXEC') or die;
 
 ?>
 	<!-- K2 Plugins: K2BeforeDisplay -->
-	<?php echo $this->item->event->K2BeforeDisplay; ?>
+	finally...
 
+	<?php echo $this->item->event->K2BeforeDisplay; ?>
 	<div class="itemHeader col-md-9 col-sm-8 col-xs-12">
 	<div class="row">
 	<?php if($this->item->params->get('itemDateCreated')): ?>
@@ -66,7 +67,7 @@ defined('_JEXEC') or die;
 		$this->item->params->get('itemGooglePlusOneButton',1)
 	): ?>
 	<!-- Social sharing -->
-	
+
 	<div class="itemSocialSharing col-md-3 col-sm-4 col-xs-12">
 		<div class="row">
 		<?php if($this->item->params->get('itemTwitterButton',1)): ?>
@@ -99,7 +100,7 @@ defined('_JEXEC') or die;
 	</div>
 	<div class="clr"></div>
 	<?php endif; ?>
-	
+
 <span id="startOfPageId<?php echo JRequest::getInt('id'); ?>"></span>
 <?php if($this->item->params->get('itemAuthorBlock') && empty($this->item->created_by_alias)): ?>
 	<!-- Author Block -->
@@ -120,11 +121,11 @@ defined('_JEXEC') or die;
 			<?php if($this->item->params->get('itemAuthorURL') && !empty($this->item->author->profile->url)): ?>
 			<span class="itemAuthorUrl"><i class="k2icon-globe"></i> <a rel="me" href="<?php echo $this->item->author->profile->url; ?>" target="_blank"><?php echo str_replace('http://','',$this->item->author->profile->url); ?></a></span>
 			<?php endif; ?>
-			
+
 			<?php if($this->item->params->get('itemAuthorURL') && !empty($this->item->author->profile->url) && $this->item->params->get('itemAuthorEmail')): ?>
 			<span class="k2HorizontalSep">|</span>
 			<?php endif; ?>
-			
+
 			<?php if($this->item->params->get('itemAuthorEmail')): ?>
 			<span class="itemAuthorEmail"><i class="k2icon-envelope"></i> <?php echo JHTML::_('Email.cloak', $this->item->author->email); ?></span>
 			<?php endif; ?>
@@ -140,7 +141,7 @@ defined('_JEXEC') or die;
 		<div class="divider_line"></div>
 	</div>
 	<?php endif; ?>
-	
+
 <?php if(JRequest::getInt('print')==1): ?>
 <!-- Print button at the top of the print page only -->
 <a class="itemPrintThisPage" rel="nofollow" href="#" onclick="window.print();return false;">
@@ -410,7 +411,7 @@ defined('_JEXEC') or die;
 	</div>
 	<?php endif; ?>
 
-	
+
 
 	<?php if($this->item->params->get('itemAuthorLatest') && empty($this->item->created_by_alias) && isset($this->authorLatestItems)): ?>
 	<!-- Latest items from author -->
@@ -561,7 +562,7 @@ defined('_JEXEC') or die;
 		<div class="clr"></div>
 	</div>
 	<?php endif; ?>
-	
+
 	<?php endif; ?>
 
 	<!-- Plugins: AfterDisplay -->
@@ -576,8 +577,8 @@ defined('_JEXEC') or die;
 	): ?>
 	<!-- K2 Plugins: K2CommentsBlock -->
 	<?php echo $this->item->event->K2CommentsBlock; ?>
-	<?php endif; ?>	
-	
+	<?php endif; ?>
+
 	<?php if(
 		$this->item->params->get('itemComments') &&
 		($this->item->params->get('comments') == '1' || ($this->item->params->get('comments') == '2')) && empty($this->item->event->K2CommentsBlock)
@@ -678,7 +679,7 @@ defined('_JEXEC') or die;
 	</div>
 	<?php endif; ?>
 
-	
+
 
 	<div class="clr"></div>
 

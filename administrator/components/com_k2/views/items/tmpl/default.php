@@ -264,7 +264,7 @@ $document->addScriptDeclaration("
 		</div>
 	</div>
 	</div>
-	
+
 	<input type="hidden" name="option" value="com_k2" />
 	<input type="hidden" name="view" value="<?php echo JRequest::getVar('view'); ?>" />
 	<input type="hidden" name="task" value="<?php echo JRequest::getVar('task'); ?>" />

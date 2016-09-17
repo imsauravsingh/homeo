@@ -301,7 +301,7 @@ $doc->addScriptDeclaration($bottomScript);
       }
      ?>
 
-		<div <?php if (!$this->countModules('position-1') && ($itemid!='495' && $itemid!='496' && $itemid!='497' && $itemid!='498' && $itemid!='518' && $itemid!='501' && $itemid!='201')) : echo "class='".$divcomclass." comp_div'";  endif;?> >
+		<div <?php if (!$this->countModules('position-1') && ($itemid!='495' && $itemid!='517' && $itemid!='496' && $itemid!='497' && $itemid!='498' && $itemid!='518' && $itemid!='501' && $itemid!='201')) : echo "class='".$divcomclass." comp_div'";  endif;?> >
 			<!-- Begin Content -->
 			<jdoc:include type="component" />
 			<!-- End Content -->

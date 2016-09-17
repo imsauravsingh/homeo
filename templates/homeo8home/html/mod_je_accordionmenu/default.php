@@ -99,9 +99,9 @@ $name_prefix = "Mr. ";
 if(in_array(14, $user->groups)){
     $name_prefix = "Dr. ";
 }elseif($K2User->gender=='m'){
-    $name_prefix = "Mr. ";    
+    $name_prefix = "Mr. ";
 }else{
-    $name_prefix = "Mrs. ";    
+    $name_prefix = "Mrs. ";
 }
 
 ?>
@@ -110,11 +110,11 @@ if(in_array(14, $user->groups)){
 	<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
             <?php if ($K2User->image): ?>
                 <img class="k2AccountPageImage img-circle" src="<?php echo JURI::root(true).'/media/k2/users/'.$K2User->image; ?>" alt="<?php echo $user->name; ?>" />
-            <?php elseif($K2User->gender=='m'): ?> 
-                <img src="<?php echo JURI::root(true).'/images/User2.jpg'; ?>" alt="img" class="img-circle"/>                
-            <?php elseif($K2User->gender!='m'): ?> 
-                <img src="<?php echo JURI::root(true).'/images/User.jpg'; ?>" alt="img" class="img-circle"/>                
-            <?php endif; ?>            
+            <?php elseif($K2User->gender=='m'): ?>
+                <img src="<?php echo JURI::root(true).'/images/User2.jpg'; ?>" alt="img" class="img-circle"/>
+            <?php elseif($K2User->gender!='m'): ?>
+                <img src="<?php echo JURI::root(true).'/images/User.jpg'; ?>" alt="img" class="img-circle"/>
+            <?php endif; ?>
 	</div>
 
 	<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
@@ -169,8 +169,12 @@ foreach ($list as $i => &$item) :
 		$class = ' class="'.trim($class) .'"';
 	}
 
+if($item->id==517){
+$item517_class = $class;
+$item517_class_hide = "style='display:none;'";
+}
 
-	echo '<li'.$class.'>';
+	echo '<li'.$class.' '.$item517_class_hide.'>';
 
 	// Render the menu item.
 	switch ($item->type) :
@@ -200,7 +204,12 @@ foreach ($list as $i => &$item) :
 	}
 
 endforeach;
-?>
+
+if(in_array("14",$user->groups)){ ?>
+	<li<?php echo $item517_class; ?>>
+		<a href="<?php echo JURI::root(); ?>index.php?option=com_k2&view=itemlist&task=user&id=<?php echo $user->id; ?>&Itemid=517">Health Tips</a>
+	</li>
+<?php } ?>
 </ul>
 </div>
 </div>
