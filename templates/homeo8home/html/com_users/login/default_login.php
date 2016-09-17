@@ -11,7 +11,16 @@ defined('_JEXEC') or die;
  
 JHtml::_('behavior.keepalive');
 JHtml::_('behavior.formvalidator');
-?>
+
+jimport('joomla.application.module.helper');
+$module = JModuleHelper::getModule('mod_k2_user');
+if(count($module)){
+    echo JModuleHelper::renderModule($module);
+    
+}else{ ?>
+
+    
+
 <div class="h8hlogin">
 	<div class="login<?php echo $this->pageclass_sfx; ?>">
 	<?php if ($this->params->get('show_page_heading')) : ?>
@@ -114,3 +123,4 @@ JHtml::_('behavior.formvalidator');
 	</form>
 </div>	
 </div>
+<?php } ?>

@@ -56,7 +56,7 @@ class JConfig {
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
 	public $feed_email = 'none';
-	public $log_path = '/Applications/MAMP/htdocs/homeo/administrator/logs';
+	public $log_path = '/var/www/html/homeo/administrator/logs';
 	public $tmp_path = '/Applications/MAMP/htdocs/homeo/tmp';
 	public $lifetime = '30';
 	public $session_handler = 'database';
