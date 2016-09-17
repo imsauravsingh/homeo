@@ -79,4 +79,8 @@ div.userItemView{
 	width:100%;
 	margin:10px 0px;
 }
+#menu{
+	margin: 0PX -15px;
+    background: #555;
+}
 }
