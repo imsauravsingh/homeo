@@ -19,6 +19,10 @@ class EasyappointmentControllerSettings extends JControllerLegacy {
 		JSession::checkToken() or jexit(JText::_('JINVALID_TOKEN'));
 
 		$data = JRequest::getVar('jform', array(), '', 'array');
+		//$consult_online = $data['consult_online'];
+		//echo "<pre>";
+		//print_r($data);
+		//print_r($consult_online); die;
 		$data['prices'] = JRequest::getVar('service_price', array(), '', 'array');
 		$data['service_length'] = JRequest::getVar('service_length', array(), '', 'array');
 		$app = JFactory::getApplication();

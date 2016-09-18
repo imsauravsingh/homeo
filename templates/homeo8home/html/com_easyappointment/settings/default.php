@@ -23,34 +23,80 @@ defined('_JEXEC') or die('Restricted access');
 		</div>
 
 		<div class="topdiv list-inline">
-		<li id="tab_general" class="dashboard_li" align="center"><input type="button" value="Genral Setting"/></li>
-		<li id="tab_profile" class="dashboard_li" align="center"><input type="button" value="Profile Display"/></li>
-		<li id="tab_appointmentform" class="dashboard_li" align="center"><input type="button" value="Client Booking Process"/></li>
-		<li id="tab_services" class="dashboard_li" align="center"><input type="button" value="Services"/></li>
-		<li id="tab_receive_notification" class="dashboard_li" align="center"><input type="button" value="Receive Notifications"/></li>
-		<li id="tab_send_notification"class="dashboard_li" align="center"><input type="button" value="Send Notification"/></li>
+      <li id="tab_book_appointment" class="dashboard_li" align="center"><input type="button" value="Book Appointment"/></li>
+  		<li style="display:none;" id="tab_general" class="dashboard_li" align="center"><input type="button" value="Genral Setting"/></li>
+  		<li style="display:none;" id="tab_profile" class="dashboard_li" align="center"><input type="button" value="Profile Display"/></li>
+  		<li style="display:none;" id="tab_appointmentform" class="dashboard_li" align="center"><input type="button" value="Client Booking Process"/></li>
+  		<li id="tab_services" class="dashboard_li" align="center"><input type="button" value="Services"/></li>
+  		<li style="display:none;" id="tab_receive_notification" class="dashboard_li" align="center"><input type="button" value="Receive Notifications"/></li>
+  		<li style="display:none;" id="tab_send_notification"class="dashboard_li" align="center"><input type="button" value="Send Notification"/></li>
+      <li id="tab_consult_online" class="dashboard_li" align="center"><input type="button" value="Consult Online"/></li>
+      <li id="tab_home_visit" class="dashboard_li" align="center"><input type="button" value="Home Visit"/></li>
+      <li id="tab_profile_display" class="dashboard_li" align="center"><input type="button" value="Profile Display"/></li>
 		</div>
 
 		<div class="tbb-content settings tab-content">
-		<?php $fieldsets = $this->form->getFieldsets(); foreach ($fieldsets as $fieldset) { ?>
-			<div class="well dashboard_divli" id="tab_<?php echo strtolower($fieldset->name); ?>">
-			<legend><?php echo JText::_('COM_EASYAPPOINTMENT_SETTINGS_' . strtoupper($fieldset->name));?></legend>
-			<?php $fields = $this->form->getFieldset($fieldset->name); foreach ( $fields as $field ) { ?>
-				<div class="form-group col-md-6 col-sm-6 col-xs-12">
-					<label class="control-label col-md-6 f_left"> <?php echo $field->label; ?> </label>
-					<div class="controls cold-md-6">
-						<?php echo $field->fieldname == 'tags' ? JText::_('COM_EASYAPPOINTMENT_NOTIFICATIONS_TAGS') : $field->input; ?>
-					</div>
-				</div>
-			<?php } ?>
-			
-			<div class="row tbb-action">				
-				<div class="col-md-12 text-center">	
-				<div class="col-md-offset-3 input_line text-center"></div>
-					<button class="btn" onclick="tbb.save();"><i class="ico ico-accept"></i> <?php echo JText::_('COM_EASYAPPOINTMENT_SAVE');?></button>
-				</div>
-			</div>
-			</div>
+		<?php $fieldsets = $this->form->getFieldsets(); foreach ($fieldsets as $fieldset) {
+
+if($fieldset->name=="consult_online" || $fieldset->name=="home_visit"){ ?>
+  <div class="well dashboard_divli" id="tab_<?php echo strtolower($fieldset->name); ?>">
+  <legend><?php echo JText::_('COM_EASYAPPOINTMENT_SETTINGS_' . strtoupper($fieldset->name));?></legend>
+  <?php $fields = $this->form->getFieldset($fieldset->name); foreach ( $fields as $field ) { ?>
+    <div class="form-group col-md-12 col-sm-6 col-xs-12">
+      <label class="control-label col-md-6 f_left"> <?php echo $field->label; ?> </label>
+      <div class="controls cold-md-6">
+        <?php echo $field->fieldname == 'tags' ? JText::_('COM_EASYAPPOINTMENT_NOTIFICATIONS_TAGS') : $field->input; ?>
+      </div>
+    </div>
+  <?php } ?>
+
+  <div class="row tbb-action">
+    <div class="col-md-12 text-center">
+    <div class="col-md-offset-3 input_line text-center"></div>
+      <button class="btn" onclick="tbb.save();"><i class="ico ico-accept"></i> <?php echo JText::_('COM_EASYAPPOINTMENT_SAVE');?></button>
+    </div>
+  </div>
+  </div>
+  <?php }elseif($fieldset->name=="profile_display"){ ?>
+    <div class="well dashboard_divli" id="tab_<?php echo strtolower($fieldset->name); ?>">
+    <legend><?php echo JText::_('COM_EASYAPPOINTMENT_SETTINGS_' . strtoupper($fieldset->name));?></legend>
+    <?php $fields = $this->form->getFieldset($fieldset->name); foreach ( $fields as $field ) { ?>
+      <div class="form-group col-md-12 col-sm-6 col-xs-12">
+        <label class="control-label col-md-3 f_left"> <?php echo $field->label; ?> </label>
+        <div class="controls cold-md-9">
+          <?php echo $field->fieldname == 'tags' ? JText::_('COM_EASYAPPOINTMENT_NOTIFICATIONS_TAGS') : $field->input; ?>
+        </div>
+      </div>
+    <?php } ?>
+
+    <div class="row tbb-action">
+      <div class="col-md-12 text-center">
+      <div class="col-md-offset-3 input_line text-center"></div>
+        <button class="btn" onclick="tbb.save();"><i class="ico ico-accept"></i> <?php echo JText::_('COM_EASYAPPOINTMENT_SAVE');?></button>
+      </div>
+    </div>
+    </div>
+<?php }else{ ?>
+  <div class="well dashboard_divli" id="tab_<?php echo strtolower($fieldset->name); ?>">
+  <legend><?php echo JText::_('COM_EASYAPPOINTMENT_SETTINGS_' . strtoupper($fieldset->name));?></legend>
+  <?php $fields = $this->form->getFieldset($fieldset->name); foreach ( $fields as $field ) { ?>
+    <div class="form-group col-md-6 col-sm-6 col-xs-12">
+      <label class="control-label col-md-6 f_left"> <?php echo $field->label; ?> </label>
+      <div class="controls cold-md-6">
+        <?php echo $field->fieldname == 'tags' ? JText::_('COM_EASYAPPOINTMENT_NOTIFICATIONS_TAGS') : $field->input; ?>
+      </div>
+    </div>
+  <?php } ?>
+
+  <div class="row tbb-action">
+    <div class="col-md-12 text-center">
+    <div class="col-md-offset-3 input_line text-center"></div>
+      <button class="btn" onclick="tbb.save();"><i class="ico ico-accept"></i> <?php echo JText::_('COM_EASYAPPOINTMENT_SAVE');?></button>
+    </div>
+  </div>
+  </div>
+
+<?php } ?>
 		<?php } ?>
 		</div>
 

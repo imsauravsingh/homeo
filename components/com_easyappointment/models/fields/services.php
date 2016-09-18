@@ -5,8 +5,8 @@
  * @copyright  Ionut Lupu. All rights reserved.
  * @license : http://www.gnu.org/copyleft/gpl.html GNU/GPL , see license.txt
  */
- 
- 
+
+
 // Check to ensure this file is included in Joomla!
 defined('_JEXEC') or die('Restricted access');
 
@@ -15,7 +15,7 @@ JFormHelper::loadFieldClass('list');
 class JFormFieldServices extends JFormField
 {
 
-	public function getInput() 
+	public function getInput()
 	{	
 		$user = MedialStaff::getInstance();
 		$services = MedialServices::getInstance()->getTree();
@@ -24,13 +24,13 @@ class JFormFieldServices extends JFormField
 		$service_length = $user->getParams()->get('service_length');
 
 		$html = '';
-		
-		if ($services) 
+
+		if ($services)
 		{
 			foreach ($services as $service)
 			{
 				// if last level, staff can select the service
-				if (!$service->hasChildren) 
+				if (!$service->hasChildren)
 				{
 					$price = isset($prices->{$service->id}) ? $prices->{$service->id} : $service->price;
 					$length = isset($service_length->{$service->id}) ? $service_length->{$service->id} : $service->length;
@@ -57,13 +57,13 @@ class JFormFieldServices extends JFormField
 			}
 		}
 		return $html;
-	} 
+	}
 
 
 	protected function getLengths($service,$length)
 	{
 		$html = '<select class="input-sm" name="service_length['.$service.']">';
-		for ($i=5;$i<=360;$i+=5) 
+		for ($i=5;$i<=360;$i+=5)
 		{
 			$extra = ($i == $length) ? 'selected="selected"' : '';
 			$html .= '<option '.$extra.' value="'.$i.'">'.$i.' '. JText::_('COM_EASYAPPOINTMENT_MINUTES') . '</option>';
@@ -82,5 +82,5 @@ class JFormFieldServices extends JFormField
 		}
 		return '';
 	}
-	
+
 }

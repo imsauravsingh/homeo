@@ -164,8 +164,8 @@ $(window).ready(function() {
 											$("div#main_bg_banner").addClass($(this).attr("data-banner"));
 									});
     $("div.dashboard_divli").hide();
-    $("div#tab_general").show();
-    $("li#tab_general").addClass("active_tab");
+    $("div#tab_book_appointment").show();
+    $("li#tab_book_appointment").addClass("active_tab");
 
     $("li.dashboard_li").on("click", function(){
       $("li.dashboard_li").removeClass("active_tab");
@@ -301,7 +301,7 @@ $doc->addScriptDeclaration($bottomScript);
       }
      ?>
 
-		<div <?php if (!$this->countModules('position-1') && ($itemid!='495' && $itemid!='517' && $itemid!='496' && $itemid!='497' && $itemid!='498' && $itemid!='518' && $itemid!='501' && $itemid!='201')) : echo "class='".$divcomclass." comp_div'";  endif;?> >
+		<div <?php if (!$this->countModules('position-1') && ($itemid!='495' && $itemid!='493' && $itemid!='517' && $itemid!='496' && $itemid!='497' && $itemid!='498' && $itemid!='518' && $itemid!='501' && $itemid!='201')) : echo "class='".$divcomclass." comp_div'";  endif;?> >
 			<!-- Begin Content -->
 			<jdoc:include type="component" />
 			<!-- End Content -->
