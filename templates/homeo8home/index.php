@@ -224,27 +224,32 @@ $doc->addScriptDeclaration($bottomScript);
 				</div>
 				<div class="cleafix"></div>
 				<a id="menu-toggle" href="#" class="toggle">
-				<button type="">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-
-				</button>
+				 <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+    			<span class="hamb-middle"></span>
+				<span class="hamb-bottom"></span>
+                </button>
 				</a>
 				<div id="sidebar-wrapper">
 				  <ul class="sidebar-nav">
-					<a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="glyphicon glyphicon-remove"></i></a>
+					<a id="menu-close" href="#" class="pull-right toggle"><p>&#10060;</p></a>
 					<li class="sidebar-brand">
-					  <a href="#">Project name</a>
+					  
 					</li>
 					<li>
-					  <a href="#">Home</a>
+					  <a href="/homeo/index.php?option=com_k2&view=itemlist&layout=category&task=category&id=1&Itemid=485">Healthy Tips</a>
 					</li>
 					<li>
-					  <a href="#about">About</a>
+					  <a href="#Our-Events">Our Events</a>
 					</li>
 					<li>
-					  <a href="#contact">Contact</a>
+					  <a href="#Expert-Team-Opinion">Expert Team Opinion</a>
+					</li>
+					<li>
+					  <a href="#Case-Studies">Case Studies</a>
+					</li>
+					<li>
+					  <a href="#Contact-Us">Contact Us</a>
 					</li>
 				  </ul>
 				  <script>
