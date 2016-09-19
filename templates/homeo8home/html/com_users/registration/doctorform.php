@@ -105,7 +105,7 @@ JHtml::_('behavior.formvalidator');
 		<div class="container">
 			<div class="rg_sections">
 			<div class="text-center"><h2>How To Sign-Up</h2></div>
-			<div class="panel panel-default col-xs-12 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-lg-6 col-lg-offset-3">
+			<div class="panel panel-default col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
 			  <div class="row panel-heading">Fill out this form</div>
 			  <div class="panel-body">
 				<form id="member-registration" action="<?php echo JRoute::_('index.php?option=com_users&task=registration.register'); ?>" method="post" class="form-validate form-horizontal " enctype="multipart/form-data">
@@ -126,10 +126,10 @@ JHtml::_('behavior.formvalidator');
 					<?php else:?>
 						<div class="control-group">
 							<?php if($field->id=='jform_profile_tos'){ ?>
-								<div class="controls termchkbox">
+								<div class="controls termchkbox col-md-offset-5 col-lg-offset-5 col-md-offset-5 col-sm-offset-5">
 									<?php echo $field->input;?>
 								</div>
-								<div class="control-label termtext">
+								<div class="control-label termtext col-md-offset-5 col-lg-offset-5 col-md-offset-5 col-sm-offset-5">
 								<?php echo $field->label; ?>
 								<?php if (!$field->required && $field->type != 'Spacer') : ?>
 									<span class="optional"><?php echo JText::_('COM_USERS_OPTIONAL');?></span>
@@ -142,7 +142,7 @@ JHtml::_('behavior.formvalidator');
 									<span class="optional"><?php echo JText::_('COM_USERS_OPTIONAL');?></span>
 								<?php endif; ?>
 								</div>
-								<div class="controls">
+								<div class="controls col-lg-offset-5 col-md-offset-5 col-sm-offset-5">
 									<?php echo $field->input;?>
 								</div>
 							<?php } ?>

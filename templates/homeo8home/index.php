@@ -187,7 +187,6 @@ $doc->addScriptDeclaration($bottomScript);
 	<!--[if lt IE 9]><script src="<?php echo JUri::root(true); ?>/media/jui/js/html5.js"></script><![endif]-->
 
 </head>
-
 <body class="<?php if (!$this->countModules('position-1')) : ?> site <?php endif; echo $option
 	. ' view-' . $view
 	. ($layout ? ' layout-' . $layout : ' no-layout')
@@ -196,6 +195,7 @@ $doc->addScriptDeclaration($bottomScript);
 	. ($params->get('fluidContainer') ? ' fluid' : '');
 	echo ($this->direction == 'rtl' ? ' rtl' : '');
 ?>">
+
     <div class="<?php if (!$this->countModules('position-1')) : ?> body <?php endif; ?>">
 <div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : '-fluid'); ?>">
     <div class="common">
@@ -213,7 +213,6 @@ $doc->addScriptDeclaration($bottomScript);
 
 				<div class="col-lg-10 col-md-10 col-xs-12 pull-right">
 					<jdoc:include type="modules" name="position-0" style="none" />
-
 					<?php if (!$this->countModules('position-1') && 1!=1) : ?>
 						<li><button type="button" class="hamburger is-closed" data-toggle="offcanvas">
 						<span class="hamb-top"></span>
@@ -224,6 +223,41 @@ $doc->addScriptDeclaration($bottomScript);
 					<?php endif; ?>
 				</div>
 				<div class="cleafix"></div>
+				<a id="menu-toggle" href="#" class="toggle">
+				<button type="">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+
+				</button>
+				</a>
+				<div id="sidebar-wrapper">
+				  <ul class="sidebar-nav">
+					<a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="glyphicon glyphicon-remove"></i></a>
+					<li class="sidebar-brand">
+					  <a href="#">Project name</a>
+					</li>
+					<li>
+					  <a href="#">Home</a>
+					</li>
+					<li>
+					  <a href="#about">About</a>
+					</li>
+					<li>
+					  <a href="#contact">Contact</a>
+					</li>
+				  </ul>
+				  <script>
+				$("#menu-close").click(function(e) {
+					e.preventDefault();
+					$("#sidebar-wrapper").toggleClass("active");
+				  });
+				  $("#menu-toggle").click(function(e) {
+					e.preventDefault();
+					$("#sidebar-wrapper").toggleClass("active");
+				  });
+				</script>
+				</div>
 			</div>
   	</div>
 	  <?php endif; ?>
@@ -301,7 +335,7 @@ $doc->addScriptDeclaration($bottomScript);
       }
      ?>
 
-		<div <?php if (!$this->countModules('position-1') && ($itemid!='495' && $itemid!='493' && $itemid!='517' && $itemid!='496' && $itemid!='497' && $itemid!='498' && $itemid!='518' && $itemid!='501' && $itemid!='201')) : echo "class='".$divcomclass." comp_div'";  endif;?> >
+		<div <?php if (!$this->countModules('position-1') && ($itemid!='495' && $itemid!='493' && $itemid!='517' && $itemid!='496' && $itemid!='497' && $itemid!='498' && $itemid!='499' &&  $itemid!='518' && $itemid!='501' && $itemid!='201')) : echo "class='".$divcomclass." comp_div'";  endif;?> >
 			<!-- Begin Content -->
 			<jdoc:include type="component" />
 			<!-- End Content -->
