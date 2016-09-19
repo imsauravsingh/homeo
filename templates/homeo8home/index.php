@@ -140,6 +140,7 @@ else
 if ($this->params->get('logoFile'))
 {
 	$logo = '<img src="' . JUri::root() . $this->params->get('logoFile') . '" alt="' . $sitename . '" />';
+	$logo2 = '<img src="' . JUri::root() . $this->params->get('logoFile') . '" style="width: 57%; margin-top: -9px;" alt="' . $sitename . '" />';
 }
 elseif ($this->params->get('sitetitle'))
 {
@@ -173,7 +174,10 @@ $(window).ready(function() {
       $("div.dashboard_divli").hide();
       $("div#"+$(this).attr("id")).show();
     });
-	});';
+        if($("div#system-message").is(":visible")!=undefined && $("div#system-message").is(":visible")==true){  $("div#system-message").fadeOut(5000); }        
+});
+
+';
 $doc->addScriptDeclaration($bottomScript);
 
 ?>
@@ -206,7 +210,7 @@ $doc->addScriptDeclaration($bottomScript);
 				<?php if (!$this->countModules('position-1')) : ?>
 					<div class="col-lg-2 col-md-2 col-xs-2 pull-left logo-top">
 						<div id='tp-logo'><a class="navbar-brand" href="<?php echo JUri::root(); ?>">
-							<?php echo $logo; ?>
+							<?php echo $logo2; ?>
 						</a></div>
 					</div>
 				<?php endif; ?>

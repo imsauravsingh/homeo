@@ -457,7 +457,7 @@ div#stafflist1 {
     margin-left: 0px !important;
 }
 .maintop {
-    margin-top: 8%;
+    margin-top: 4.5%;
 }
 .h8hregistration, .h8hlogin{
   /*margin-left: 30%;
@@ -1191,4 +1191,9 @@ label#jform_consult_online__onlinevideo-lbl{
 
   .toggle {
     margin: 5px 5px 0 0;
+  }
+  
+  #bm-cool-menu-93 .bm-cool-menu{
+      margin:0px!important;
+      padding-bottom:0px!important;
   }
