@@ -70,7 +70,7 @@ defined('_JEXEC') or die('Restricted access');
 	<div class="Quick_icons">
 		<div class="col-md-2 col-sm-4 col-xs-6">
 			<div class="add_icons text-center">
-			 <a href="/homeo/index.php?option=com_users&view=profile&Itemid=518">
+			 <a href="<?php echo JUri::root(true); ?>/index.php?option=com_users&view=profile&Itemid=518">
 			  <i class="fa fa-user-md fa-fw" aria-hidden="true"></i>
 			  <p>My Profile</p>	
 			 </a>
@@ -78,7 +78,7 @@ defined('_JEXEC') or die('Restricted access');
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
 			<div class="add_icons text-center">
-			 <a href="?option=com_easyappointment&view=bookings&Itemid=496">
+			 <a href="<?php echo JUri::root(true); ?>?option=com_easyappointment&view=bookings&Itemid=496">
 			  <i class="fa fa-calendar-check-o fa-fw" aria-hidden="true"></i>
 			  <p>Booking</p>	
 			 </a>
@@ -86,7 +86,7 @@ defined('_JEXEC') or die('Restricted access');
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
 			<div class="add_icons text-center">
-			 <a href="?option=com_easyappointment&view=settings&Itemid=497">
+			 <a href="<?php echo JUri::root(true); ?>/index.php?option=com_easyappointment&view=settings&Itemid=497">
 			  <i class="fa fa-cogs" aria-hidden="true"></i>
 			  <p>Setting</p>	
 			 </a>
@@ -94,7 +94,7 @@ defined('_JEXEC') or die('Restricted access');
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
 			<div class="add_icons text-center">
-			 <a href="?option=com_easyappointment&view=schedules&Itemid=498">
+			 <a href="<?php echo JUri::root(true); ?>/index.php?option=com_easyappointment&view=schedules&Itemid=498">
 			  <i class="fa fa-calendar-plus-o fa-fw" aria-hidden="true"></i>
 			  <p>Schedule</p>	
 			 </a>
@@ -102,7 +102,7 @@ defined('_JEXEC') or die('Restricted access');
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
 			<div class="add_icons text-center">
-			 <a href="http://localhost/homeo/index.php?option=com_k2&view=itemlist&task=user&id=316&Itemid=517">
+			 <a href="<?php echo JUri::root(true); ?>/index.php?option=com_k2&view=itemlist&task=user&id=316&Itemid=517">
 			  <i class="fa fa-heartbeat" aria-hidden="true"></i>
 			  <p>Health Tips</p>	
 			 </a>

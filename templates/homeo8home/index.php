@@ -140,7 +140,7 @@ else
 if ($this->params->get('logoFile'))
 {
 	$logo = '<img src="' . JUri::root() . $this->params->get('logoFile') . '" alt="' . $sitename . '" />';
-	$logo2 = '<img src="' . JUri::root() . $this->params->get('logoFile') . '" style="width: 57%; margin-top: -9px;" alt="' . $sitename . '" />';
+	$logo2 = '<img src="' . JUri::root() . $this->params->get('logoFile') . '" style="width: 45%; margin-top: -4px;" alt="' . $sitename . '" />';
 }
 elseif ($this->params->get('sitetitle'))
 {
@@ -226,7 +226,7 @@ $doc->addScriptDeclaration($bottomScript);
 					</li>
 					<?php endif; ?>
 				</div>
-				<div class="cleafix"></div>
+				<!--<div class="cleafix"></div>
 				<a id="menu-toggle" href="#" class="toggle">
 				 <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
                 <span class="hamb-top"></span>
@@ -266,7 +266,7 @@ $doc->addScriptDeclaration($bottomScript);
 					$("#sidebar-wrapper").toggleClass("active");
 				  });
 				</script>
-				</div>
+				</div>-->
 			</div>
   	</div>
 	  <?php endif; ?>
