@@ -23,30 +23,24 @@ class JFormFieldExperience extends JFormField
 		return $html;
 	}
 
+
   public function getExperience($data){
+    if($data->experience1) $experience1 = $data->experience1; 
 
-    if($data->experience1) $experience1 = $data->experience1;
-    if($data->experience2) $experience2 = $data->experience2;
-    if($data->experience3) $experience3 = $data->experience3;
-    if($data->experience4) $experience4 = $data->experience4;
-    if($data->experience5) $experience5 = $data->experience5;
-    if($data->experience6) $experience6 = $data->experience6;
-    if($data->experience7) $experience7 = $data->experience7;
-    if($data->experience8) $experience8 = $data->experience8;
-    if($data->experience9) $experience9 = $data->experience9;
-    if($data->experience10) $experience10 = $data->experience10;
+    $html ='<div class="main_experience_group">';
+    $html .= '<div class="experience" id="div_experience1"><input type="text" id="jform_profile_display__experience1" name="jform[profile_display][experience1]" value="'.$experience1.'" class="input-sm" placeholder="Experience"></div>';
+    
+    for($i=2; $i<=20; $i++){
+        $experience ="";
 
-    $html ='';
-    $html .= '<div class="experience"><input type="text" id="jform_profile_display__experience1" name="jform[profile_display][experience1]" value="'.$experience1.'" class="input-sm" placeholder="experience"></div>';
-    $html .= '<div class="experience"><input type="text" id="jform_profile_display__experience2" name="jform[profile_display][experience2]" value="'.$experience2.'" class="input-sm" placeholder="experience"></div>';
-    $html .= '<div class="experience"><input type="text" id="jform_profile_display__experience3" name="jform[profile_display][experience3]" value="'.$experience3.'" class="input-sm" placeholder="experience"></div>';
-    $html .= '<div class="experience"><input type="text" id="jform_profile_display__experience4" name="jform[profile_display][experience4]" value="'.$experience4.'" class="input-sm" placeholder="experience"></div>';
-    $html .= '<div class="experience"><input type="text" id="jform_profile_display__experience5" name="jform[profile_display][experience5]" value="'.$experience5.'" class="input-sm" placeholder="experience"></div>';
-    $html .= '<div class="experience"><input type="text" id="jform_profile_display__experience6" name="jform[profile_display][experience6]" value="'.$experience6.'" class="input-sm" placeholder="experience"></div>';
-    $html .= '<div class="experience"><input type="text" id="jform_profile_display__experience7" name="jform[profile_display][experience7]" value="'.$experience7.'" class="input-sm" placeholder="experience"></div>';
-    $html .= '<div class="experience"><input type="text" id="jform_profile_display__experience8" name="jform[profile_display][experience8]" value="'.$experience8.'" class="input-sm" placeholder="experience"></div>';
-    $html .= '<div class="experience"><input type="text" id="jform_profile_display__experience9" name="jform[profile_display][experience9]" value="'.$experience9.'" class="input-sm" placeholder="experience"></div>';
-    $html .= '<div class="experience"><input type="text" id="jform_profile_display__experience10" name="jform[profile_display][experience10]" value="'.$experience10.'" class="input-sm" placeholder="experience"></div>';
+        $awardz ='style="display:none;"'; if(!empty($data->{experience.$i})){ $experience  = $data->{experience.$i}; $awardz = ''; }
+
+        $html .= '<div class="experience" '.$awardz.' id="div_experience'.$i.'"><input type="text" id="jform_profile_display__experience'.$i.'" name="jform[profile_display][experience'.$i.']" value="'.$experience.'" class="input-sm" placeholder="Experience"><span class="remove" onclick="javascript:experienceRemove('.$i.')">Remove</span></div>';
+    }
+
+    $html .= '<span id="experience_addmore" onclick="javascript:experienceAddMore();">Add More+</span>';
+
+    $html .='</div>';
 
     return $html;
   }

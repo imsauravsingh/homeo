@@ -29,3 +29,40 @@ window.addEventListener('load',function() {
         });
     }    
 });
+
+    var $ = jQuery.noConflict();
+    function specializationAddMore(){
+      $("div.main_specialization_group div:hidden:first").show();        
+    }
+
+    function specializationRemove(id){
+      $("div#div_specialization"+id+" input").val('');    
+      $("div.main_specialization_group div#div_specialization"+id).hide();    
+    }
+
+    function awardsAddMore(){
+      $("div.main_awards_group div:hidden:first").show();                
+    }
+
+    function awardsRemove(id){
+      $("div#div_awards"+id+" input").val('');    
+      $("div.main_awards_group div#div_awards"+id).hide();    
+    }
+
+    function educationAddMore(){
+      $("div.main_education_group div:hidden:first").show();                
+    }
+
+    function educationRemove(id){
+      $("div#div_education"+id+" input").val('');    
+      $("div.main_education_group div#div_education"+id).hide();    
+    }
+
+    function experienceAddMore(){
+      $("div.main_experience_group div:hidden:first").show();                
+    }
+
+    function experienceRemove(id){
+      $("div#div_experience"+id+" input").val('');    
+      $("div.main_experience_group div#div_experience"+id).hide();    
+    }
