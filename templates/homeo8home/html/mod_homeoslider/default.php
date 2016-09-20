@@ -147,11 +147,11 @@ $speciality .= '</select>';
 								<br>
 								<div class="form-group">
 									<label for="comment">Your Question :</label>
-									<textarea class="form-control" rows="3" id="comment"></textarea>
+									<textarea class="form-control question_area" rows="3" id="comment"></textarea>
 								</div>
 								<div class="ask-button"><a href="#">Get your Answers</a></div>
 								<div class="clearfix"></div>
-								<div class="step">
+								<div class="step30">
 									<div class="row">
 										<div class="col-md-4 col-xs-12">
 											<img src="images/s.no1.png" alt="1."/>

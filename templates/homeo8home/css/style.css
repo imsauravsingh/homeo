@@ -120,6 +120,7 @@ span.icon-bar{
     text-transform: uppercase;
 	height:46px !important;
 	border-radius:0px !important;
+    padding: 5px !important;
 }
 button.submit.button {
     width: 100%;
@@ -135,8 +136,11 @@ button.submit.button {
 .step{
 	margin-top:60px;
 }
-.step1{
+.step30{
 	margin-top:30px;
+}
+.question_area{
+    height:60px !important;
 }
 ul.nav.nav-pills>li{
 	border-top-left-radius: 4px;
@@ -510,7 +514,7 @@ body.site{
 .well {
     background-color: #f2f2f2;
     color: #886895;
-	margin-bottom:60px;
+	margin-bottom:0px;
 }
 label{
 	font-weight: 100;
@@ -753,6 +757,7 @@ div#system-message-container {
 }
 .listing.staff {
     margin-bottom: 80px !important;
+    margin-top: 46px !important;
 }
 .bottom{
 margin-bottom:0px !important;
@@ -1135,6 +1140,7 @@ label#jform_consult_online__onlinevideo-lbl{
     color: #999999;
     display: block;
     text-decoration: none;
+    font-size: 14px !important;
   }
 
   .sidebar-nav li a:hover {
@@ -1142,8 +1148,11 @@ label#jform_consult_online__onlinevideo-lbl{
     background: rgba(255,255,255,0.2);
     text-decoration: none;
   }
-
-  .sidebar-nav li a:active, .sidebar-nav li a:focus {
+    
+  .sidebar-nav.active li a:active, .sidebar-nav li a:focus {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
     text-decoration: none;
   }
 
@@ -1165,10 +1174,11 @@ label#jform_consult_online__onlinevideo-lbl{
   }
 
   #menu-toggle {
-    top: 16px;
-    right: 0;
+    top: 8px;
+    right: 12px;
     position: fixed;
     z-index: 1;
+	width:30px;
   }
 
   #sidebar-wrapper.active {
@@ -1247,18 +1257,55 @@ label#jform_consult_online__onlinevideo-lbl{
   height:2px;
 }
 .hamburger.is-closed .hamb-top {
-  top: 5px;
+  top:0px;
   -webkit-transition: all 0.35s ease-in-out;
 }
 .hamburger.is-closed .hamb-middle {
   top: 50%;
-  margin-top: -2px;
+  margin-top:-3px;
 }
 .hamburger.is-closed .hamb-bottom {
-  bottom: 5px;
+  bottom: 3px;
   -webkit-transition: all 0.35s ease-in-out;
 }
   #bm-cool-menu-93 .bm-cool-menu{
       margin:0px!important;
       padding-bottom:0px!important;
   }
+.unstyled_button{
+	background:transparent !important;
+	border:0px none !important;
+}
+
+/*header menu*/
+.bm-cool-menu .nav-child.unstyled.small li{
+    border-right: 0px none !important;
+}
+
+/*setting*/
+span.remove {   
+    color: red;
+    padding: 2px 15px;
+    margin: 11px;
+    position:relative;
+    cursor: pointer;
+}
+span.remove:before {   
+   position: absolute;
+  font-family: 'FontAwesome';
+  top: 0;
+  left: 0px;
+  content: "\f1f8";    
+}
+span#speclztn_addmore,span#awards_addmore,span#education_addmore,span#experience_addmore {
+    border: 1px solid #eeeeee;
+    padding: 5px 8px;
+    background: #eeeeee;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.border {
+    border: 1px solid #ddd;
+    margin-left: 0px !important;
+    padding: 20px;
+}

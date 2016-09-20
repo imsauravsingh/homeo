@@ -63,7 +63,7 @@ if($fieldset->name=="consult_online" || $fieldset->name=="home_visit"){ ?>
     <div class="well dashboard_divli" id="tab_<?php echo strtolower($fieldset->name); ?>">
     <legend><?php echo JText::_('COM_EASYAPPOINTMENT_SETTINGS_' . strtoupper($fieldset->name));?></legend>
     <?php $fields = $this->form->getFieldset($fieldset->name); foreach ( $fields as $field ) { ?>
-      <div class="form-group col-md-12 col-sm-6 col-xs-12">
+      <div class="form-group col-md-12 col-sm-6 col-xs-12 border">
         <label class="control-label col-md-4 f_left"> <?php echo $field->label; ?> </label>
         <div class="controls cold-md-6 col-md-offset-4 specialization_group">
           <?php echo $field->fieldname == 'tags' ? JText::_('COM_EASYAPPOINTMENT_NOTIFICATIONS_TAGS') : $field->input; ?>

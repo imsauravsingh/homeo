@@ -22,9 +22,9 @@ if(in_array(14, $user->groups)){
 
 ?>
 <div id="easyapp">
-	<h3 class="list-title"> 
+	<!--<h3 class="list-title"> 
 		<i class="fa fa-user-md fa-fw"></i><span class="main"><span class="second"><?php echo sprintf(JText::_('COM_EASYAPPOINTMENT_USERS'), $this->category->name);?></span></span>
-	</h3>
+	</h3>-->
 
 	<?php foreach ($this->items as $item) { 
             $K2User = K2HelperPermissions::getK2User($item->id);
