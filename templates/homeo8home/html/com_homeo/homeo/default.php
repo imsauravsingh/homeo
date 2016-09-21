@@ -15,6 +15,7 @@ defined('_JEXEC') or die;
 	<div class="row bg">
         <div class="container">
             <div class="sections sections_white">
+                
 				<div class="col-lg-8 col-lg-offset-2 text-center">
 					<span class="text"> Some Cool Facts</span>
 					<h1>WHY YOU SHOULD CHOOSE US</h1>
@@ -25,17 +26,17 @@ defined('_JEXEC') or die;
                 </div>
 				<div class="clearfix"></div>
                 <div>               
-					<div class="col-md-4 col-xs-12 text-center division">
+					<div class="col-md-4 col-sm-4 col-xs-12 text-center division">
 						<img src="images/icon1.png" alt="img"/>
 						<h3>Space barrier is broken</h3>
 						<p>Now patients can choose the doctors from anywhere in the world.</p> 
 					</div>
-					<div class="col-md-4 col-xs-12 text-center division">
+					<div class="col-md-4 col-sm-4 col-xs-12 text-center division">
 						<img src="images/icon2.png" alt="img"/>
 						<h3>Space barrier is broken</h3>
 						<p>Now patients can choose the doctors from anywhere in the world.</p> 
 					</div>
-					<div class="col-md-4 col-xs-12 text-center division">
+					<div class="col-md-4 col-sm-4 col-xs-12 text-center division">
 						<img src="images/icon3.png" alt="img"/>
 						<h3>Space barrier is broken</h3>
 						<p>Now patients can choose the doctors from anywhere in the world.</p> 
@@ -57,7 +58,8 @@ defined('_JEXEC') or die;
 	<div class="row bg_lightpurple">
 			<div class="container">
 					<div class="sections">
-			<div class="col-lg-8 col-lg-offset-2 text-center clearfix">
+                    <div class="row">
+			<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 text-center clearfix">
 				<span class="text">Categories</span>
 				<h1>PLEASE EXPLORE THE OUR CATEGORIES</h1>
 				<p>
@@ -71,27 +73,27 @@ defined('_JEXEC') or die;
 					<ul class="list-inline text-center">
 						<li>
 							<a href="#" class="unit">
-								<div class="unit_text">Allergy Disease Treatment</div>
+								<div class="unit_text">Allergy</div>
 							</a>
 						</li>
 						<li>
-							<a href="#" class="unit">
-								<div class="unit_text">Allergy Disease Treatment</div>
+							<a href="#" class="unit1">
+								<div class="unit_text">appendicitis</div>
 							</a>
 						</li>
 						<li>
-							<a href="#" class="unit">
-								<div class="unit_text">Allergy Disease Treatment</div>
+							<a href="#" class="unit2">
+								<div class="unit_text">Arenal</div>
 							</a>
 						</li>
 						<li>
-							<a href="#" class="unit">
-								<div class="unit_text">Allergy Disease Treatment</div>
+							<a href="#" class="unit3">
+								<div class="unit_text">Cataract</div>
 							</a>
 						</li>
 						<li>
-							<a href="#" class="unit">
-								<div class="unit_text">Allergy Disease Treatment</div>
+							<a href="#" class="unit4">
+								<div class="unit_text">Gastro</div>
 							</a>
 						</li>
 					</ul>
@@ -104,6 +106,7 @@ defined('_JEXEC') or die;
 				</ul>
 			</div>
 					</div>
+                </div>
 			</div>
 	<svg class="bot_triangle" xmlns="#" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
 		<path class="fade_white" d="M0 0 L50 100 L100 0 Z" />

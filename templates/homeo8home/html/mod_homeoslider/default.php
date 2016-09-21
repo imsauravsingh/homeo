@@ -77,7 +77,9 @@ $speciality .= '</select>';
 	<!--<jdoc:include type="modules" name="position-2" style="none" /> -->
 			<div id="main_bg_banner" class="banner_tab0_img">
 		<div class="container">
-			<div class="col-md-7 col-md-offset-1 col-xs-12 Tabs">
+                <div class="row">
+			         <div class="col-lg-8 col-lg-offset-2 col-md-offset-2 col-md-8 col-xs-12">
+                <div class=" Tabs">
 				<div class="active">
 					<ul class="nav nav-pills" id="banner_li">
 						<li class="active" data-banner="banner_tab0_img"><a data-toggle="pill" href="#banner_tab0">Consult Online</a></li>
@@ -93,47 +95,49 @@ $speciality .= '</select>';
 								<div class="input">
 									<div id="imaginary_container">
 										<div class="form-group">
-											<div class=" col-md-3 col-xs-12 icon-addon addon-md">
+											<div class=" col-md-3 col-sm-3 col-xs-12 icon-addon addon-md">
 												<div class="row">
 													<?php echo $city; ?>
 													<!--<label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>-->
 												</div>
+                                                <div class="clr"></div>
 											</div>
-											<div class=" col-md-3 col-xs-12 icon-addon addon-md">
+											<div class=" col-md-3 col-sm-3 col-xs-12 icon-addon addon-md">
 												<div class="row">
 													<?php echo $locality; ?>
 													<!--<label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>-->
 												</div>
 											</div>
-											<div class=" col-md-3 col-xs-12 icon-addon addon-md">
+											<div class=" col-md-3 col-sm-3 col-xs-12 icon-addon addon-md">
 												<div class="row">
 													<?php echo $speciality; ?>
 													<!--<label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>-->
 												</div>
 											</div>
-											<div class=" col-md-2 col-xs-12 icon-addon addon-md">
+											<div class=" col-md-2 col-sm-2 col-xs-12 icon-addon addon-md">
 												<div class="row">
 													<button type="button" id="searchOnlineDoctors" class="submit button">SEARCH</button>
 													<!--<label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>-->
 												</div>
 											</div>
+                                            <div class="clearfix"></div>
 										</div>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 								<div class="step">
 									<div class="row">
-										<div class="col-md-3 col-xs-12">
+										<div class="col-md-4 col-xs-4">
 											<img src="<?php echo JURI::base() . 'templates/homeo8home/images/s.no1.png'; ?>" alt="1."/>
 											<img src="<?php echo JURI::base() . 'templates/homeo8home/images/doctor.png'; ?>" alt="doctor" class="icons"/>
 											<p>CHOOSE A DOCTOR</p>
 										</div>
-										<div class="col-md-4 col-lg-offset-1 col-xs-12">
+										<div class="col-md-4 col-xs-4">
 											<img src="<?php echo JURI::base() . 'templates/homeo8home/images/s.no2.png'; ?>" alt="1."/>
 											<img src="<?php echo JURI::base() . 'templates/homeo8home/images/money.png'; ?>" alt="doctor" class="icons"/>
 											<p>PAY CONSULTATION FEE</p>
 										</div>
-										<div class="col-md-3 col-lg-offset-1 col-xs-12">
+										<div class="col-md-4 col-xs-4 ">
 											<img src="<?php echo JURI::base() . 'templates/homeo8home/images/s.no3.png'; ?>" alt="1."/>
 											<img src="<?php echo JURI::base() . 'templates/homeo8home/images/msg.png'; ?>" alt="doctor" class="icons"/>
 											<p>TALK TO THE DOCTOR</p>
@@ -177,25 +181,25 @@ $speciality .= '</select>';
 								<div class="input">
 									<div id="imaginary_container">
 										<div class="form-group">
-											<div class=" col-md-3 col-xs-12 icon-addon addon-md">
+											<div class=" col-md-3 col-sm-3 col-xs-12 icon-addon addon-md">
 												<div class="row">
 													<?php echo $city; ?>
 													<!--<label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>-->
 												</div>
 											</div>
-											<div class=" col-md-3 col-xs-12 icon-addon addon-md">
+											<div class=" col-md-3 col-sm-3 col-xs-12 icon-addon addon-md">
 												<div class="row">
 													<?php echo $locality; ?>
 													<!--<label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>-->
 												</div>
 											</div>
-											<div class=" col-md-3 col-xs-12 icon-addon addon-md">
+											<div class=" col-md-3 col-sm-3 col-xs-12 icon-addon addon-md">
 												<div class="row">
 													<?php echo $speciality; ?>
 													<!--<label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>-->
 												</div>
 											</div>
-											<div class=" col-md-2 col-xs-12 icon-addon addon-md">
+											<div class=" col-md-2 col-sm-2 col-xs-12 icon-addon addon-md">
 												<div class="row">
 													<button type="button" id="searchAppointmentDoctors" class="submit button">SEARCH</button>
 													<!--<label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>-->
@@ -231,25 +235,25 @@ $speciality .= '</select>';
 								<div class="input">
 									<div id="imaginary_container">
 										<div class="form-group">
-											<div class=" col-md-3 col-xs-12 icon-addon addon-md">
+											<div class=" col-md-3 col-sm-3 col-xs-12 icon-addon addon-md">
 												<div class="row">
 													<?php echo $city; ?>
 													<!--<label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>-->
 												</div>
 											</div>
-											<div class=" col-md-3 col-xs-12 icon-addon addon-md">
+											<div class=" col-md-3 col-sm-3 col-xs-12 icon-addon addon-md">
 												<div class="row">
 													<?php echo $locality; ?>
 													<!--<label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>-->
 												</div>
 											</div>
-											<div class=" col-md-3 col-xs-12 icon-addon addon-md">
+											<div class=" col-md-3 col-sm-3 col-xs-12 icon-addon addon-md">
 												<div class="row">
 													<?php echo $speciality; ?>
 													<!--<label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>-->
 												</div>
 											</div>
-											<div class=" col-md-2 col-xs-12 icon-addon addon-md">
+											<div class=" col-md-2 col-sm-2 col-xs-12 icon-addon addon-md">
 												<div class="row">
 													<button type="button" id="searchHomevisitDoctors" class="submit button">SEARCH</button>
 													<!--<label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>-->
@@ -267,22 +271,26 @@ $speciality .= '</select>';
 											<img src="images/home.png" alt="doctor" class="icons"/>
 											<p class="">AT HOME SERVICE</p>
 										</div>
-										<div class="col-md-3 col-xs-12">
+										<div class="col-md-4 col-xs-12">
 											<img src="images/s.no1.png" alt="1."/>
 											<img src="images/doctor.png" alt="doctor" class="icons"/>
 											<p>CHOOSE A DOCTOR</p>
 										</div>
-										<div class="col-md-4 col-lg-offset-1 col-xs-12">
+										<div class="col-md-4 col-xs-12">
 											<img src="images/s.no2.png" alt="1."/>
 											<img src="images/medical-result.png" alt="doctor" class="icons"/>
-											<p class="text-center">100% VERIFIED RESULT</p>
+											<p class="">100% VERIFIED RESULT</p>
 										</div>
 									</div>
 								</div>
 						</div>
 						</div>
+                    <div class="clearfix"></div>
 					</div>
+                    
 				</div>
+                </div>
+                </div>
 			</div>
 		</div>
 	</div>

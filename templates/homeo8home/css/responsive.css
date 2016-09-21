@@ -17,7 +17,7 @@
 /*heath tips*/
 
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1600px) {
   #itemListPrimary {
   -moz-column-count:    3;
   -webkit-column-count: 3;
@@ -29,7 +29,7 @@
   column-count:         3;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width:1200) {
   #itemListPrimary{
   -moz-column-count:    3;
   -webkit-column-count: 3;
@@ -44,7 +44,8 @@
 	width:60% !important;
   }
 }
-@media (max-width: 800px) {
+@media screen and (min-width:768px) and (max-width:979px)/*tab view*/
+  {
   #itemListPrimary {
   -moz-column-count:    2;
   -webkit-column-count: 2;
@@ -62,7 +63,9 @@
 	margin-top:20px;
 }
 }
-@media (max-width: 400px) {
+@media screen and (max-width:767px)/*mobile view*/ 
+{
+      
   #itemListPrimary {
   -moz-column-count:    1;
   -webkit-column-count: 1;
@@ -118,5 +121,22 @@ label.rrr {
 }
  .control-label.termtext {
     margin-top: -30px;
-}   
+} 
+.banner_tab0_img,.banner_tab1_img,.banner_tab2_img,.banner_tab3_img{
+        height:auto;
+    }
+.unit,.unit1,.unit2,.unit3,.unit4{
+    width:290px;
+    /*margin:7px 0px;*/
+    padding: 69px 33px;
+    }
+.bm-cool-menu-trigger{
+        border:0px none !important;
+    }
+ .Tabs{
+      margin:124px 0px 60px;  
+    }
+}
+@media screen and (min-width:980px) and (max-width:1024px)/*tab landscape css*/{
+    
 }
