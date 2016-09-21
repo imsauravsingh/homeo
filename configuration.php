@@ -14,7 +14,7 @@ class JConfig {
 	public $dbtype = 'mysqli';
 	public $host = 'localhost';
 	public $user = 'root';
-	public $password = '';
+	public $password = 'root';
 	public $db = 'homeo';
 	public $dbprefix = 'j362_';
 	public $live_site = '';
@@ -57,7 +57,7 @@ class JConfig {
 	public $feed_limit = '10';
 	public $feed_email = 'none';
 	public $log_path = '/var/www/html/homeo/administrator/logs';
-	public $tmp_path = '/Applications/MAMP/htdocs/homeo/tmp';
+	public $tmp_path = '/var/www/html/homeo/tmp';
 	public $lifetime = '30';
 	public $session_handler = 'database';
 	public $memcache_persist = '1';

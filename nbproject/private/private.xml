@@ -4,12 +4,17 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/var/www/html/homeo/components/com_k2/templates/default/item_comments_form.php</file>
+            <file>file:/var/www/html/homeo/components/com_easyappointment/models/fields/experience.php</file>
+            <file>file:/var/www/html/homeo/components/com_easyappointment/models/fields/education.php</file>
             <file>file:/var/www/html/homeo/components/com_k2/views/itemlist/tmpl/category_item.php</file>
+            <file>file:/var/www/html/homeo/components/com_easyappointment/models/fields/specialization.php</file>
             <file>file:/var/www/html/homeo/components/com_k2/helpers/utilities.php</file>
             <file>file:/var/www/html/homeo/components/com_users/models/profile.php</file>
             <file>file:/var/www/html/homeo/configuration.php</file>
+            <file>file:/var/www/html/homeo/components/com_easyappointment/models/fields/awards.php</file>
             <file>file:/var/www/html/homeo/components/com_k2/helpers/permissions.php</file>
             <file>file:/var/www/html/homeo/templates/homeo8home/index.php</file>
+            <file>file:/var/www/html/homeo/components/com_easyappointment/assets/js/views/settings.js</file>
             <file>file:/var/www/html/homeo/components/com_k2/helpers/route.php</file>
             <file>file:/var/www/html/homeo/components/com_k2/templates/profile.php</file>
             <file>file:/var/www/html/homeo/templates/homeo8home/css/style.css</file>
