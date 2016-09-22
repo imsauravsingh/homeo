@@ -14,6 +14,7 @@ defined('_JEXEC') or die;
 <?php if ($this->item or 1==1) : ?>
 	<div class="row bg">
         <div class="container">
+            <div class="row">
             <div class="sections sections_white">
                 
 				<div class="col-lg-8 col-lg-offset-2 text-center">
@@ -50,6 +51,7 @@ defined('_JEXEC') or die;
 					</ul>
 				</div>   
 			</div>
+            </div>
 		</div>
 		<svg class="bot_triangle" xmlns="#" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
 			<path class="white" d="M0 0 L50 100 L100 0 Z" />
@@ -218,7 +220,7 @@ defined('_JEXEC') or die;
 			<div class="">
 				<ul class="list-inline">
 					<li class="read_more"><a href="#">know MORE</a></li>
-					<li class="book_appointment"><a href="#">join us now</a></li>
+					<li class="book_appointment"><a href="/homeo/index.php?option=com_users&view=registration&Itemid=484">join us now</a></li>
 				</ul>
 			</div>
 

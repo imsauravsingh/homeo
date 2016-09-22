@@ -185,7 +185,7 @@ ul.nav.nav-pills>li.active, ul.nav.nav-pills>li:hover{
 /* Big Triangle */
 svg.bot_triangle {
 	pointer-events: none;
-	position:absolute;left:0;right:0;bottom:-25px; height:25px; z-index:1;
+	position:absolute;left:0;right:0;bottom:-24px; height:25px; z-index:1;
 }
 
 .bot_triangle path.white {

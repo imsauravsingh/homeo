@@ -157,17 +157,17 @@ $speciality .= '</select>';
 								<div class="clearfix"></div>
 								<div class="step30">
 									<div class="row">
-										<div class="col-md-4 col-xs-12">
+										<div class="col-md-4 col-sm-4 col-xs-4">
 											<img src="images/s.no1.png" alt="1."/>
 											<img src="images/doctor.png" alt="doctor" class="icons"/>
 											<p>Verified Doctors</p>
 										</div>
-										<div class="col-md-4 col-xs-12">
+										<div class="col-md-4 col-sm-4 col-xs-4">
 											<img src="images/s.no2.png" alt="1."/>
 											<img src="images/anonyms.png" alt="doctor" class="icons"/>
 											<p>Remain Anonymous</p>
 										</div>
-										<div class="col-md-4 col-xs-12">
+										<div class="col-md-4 col-sm-4 col-xs-4">
 											<img src="images/s.no3.png" alt="1."/>
 											<img src="images/time.png" alt="doctor" class="icons"/>
 											<p>Quick Responses 24-48 hours</p>
@@ -211,17 +211,17 @@ $speciality .= '</select>';
 								<div class="clearfix"></div>
 								<div class="step">
 									<div class="row">
-										<div class="col-md-4 col-xs-12">
+										<div class="col-md-4 col-sm-4 col-xs-4">
 											<img src="images/s.no1.png" alt="1."/>
 											<img src="images/location.png" alt="doctor" class="icons"/>
 											<p>Doctors in Delhi/NCR</p>
 										</div>
-										<div class="col-md-4 col-xs-12">
+										<div class="col-md-4 col-sm-4 col-xs-4">
 											<img src="images/s.no2.png" alt="1."/>
 											<img src="images/verified-patient.png" alt="doctor" class="icons"/>
 											<p>Verified patient reviews</p>
 										</div>
-										<div class="col-md-4 col-xs-12">
+										<div class="col-md-4 col-sm-4 col-xs-4">
 											<img src="images/s.no3.png" alt="1."/>
 											<img src="images/appointments.png" alt="doctor" class="icons"/>
 											<p>Appointments without hassle</p>
@@ -266,17 +266,17 @@ $speciality .= '</select>';
 								<div class="step">
 									<div class="row">
 
-										<div class="col-md-4 col-xs-12">
+										<div class="col-md-4 col-sm-4 col-xs-4">
 											<img src="images/s.no1.png" alt="1."/>
 											<img src="images/home.png" alt="doctor" class="icons"/>
 											<p class="">AT HOME SERVICE</p>
 										</div>
-										<div class="col-md-4 col-xs-12">
+										<div class="col-md-4 col-sm-4 col-xs-4">
 											<img src="images/s.no1.png" alt="1."/>
 											<img src="images/doctor.png" alt="doctor" class="icons"/>
 											<p>CHOOSE A DOCTOR</p>
 										</div>
-										<div class="col-md-4 col-xs-12">
+										<div class="col-md-4 col-sm-4 col-xs-4">
 											<img src="images/s.no2.png" alt="1."/>
 											<img src="images/medical-result.png" alt="doctor" class="icons"/>
 											<p class="">100% VERIFIED RESULT</p>

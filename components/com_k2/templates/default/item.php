@@ -13,7 +13,7 @@ defined('_JEXEC') or die;
 ?>
 	<!-- K2 Plugins: K2BeforeDisplay -->
 	<?php echo $this->item->event->K2BeforeDisplay; ?>
-	<div class="itemHeader col-md-9 col-sm-8 col-xs-12">
+	<div class="itemHeader col-md-9 col-sm-8 col-xs-12 top_header_margin">
 	<div class="row">
 	<?php if($this->item->params->get('itemDateCreated')): ?>
 	<!-- Date created -->
@@ -67,7 +67,7 @@ defined('_JEXEC') or die;
 	<!-- Social sharing -->
 
 	<div class="itemSocialSharing col-md-3 col-sm-4 col-xs-12">
-		<div class="row">
+		<div class="">
 		<?php if($this->item->params->get('itemTwitterButton',1)): ?>
 		<!-- Twitter Button -->
 		<div class="itemTwitterButton">
