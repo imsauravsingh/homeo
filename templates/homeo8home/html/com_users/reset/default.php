@@ -20,8 +20,7 @@ JHtml::_('behavior.formvalidator');
 		</h1>
 	</div>
 	<?php endif; ?>
-
-	<form id="user-registration" action="<?php echo JRoute::_('index.php?option=com_users&task=reset.request'); ?>" method="post" class="col-xs-12 col-md-5  col-sm-6 col-sm-offset-3 form-validate form-horizontal well">
+	<form id="user-registration" action="<?php echo JRoute::_('index.php?option=com_users&task=reset.request'); ?>" method="post" class="col-xs-12 col-md-5  col-sm-8 col-sm-offset-2 form-validate form-horizontal well">
 		<?php foreach ($this->form->getFieldsets() as $fieldset) : ?>
 			<fieldset>
 				<p class="p_black"><?php echo JText::_($fieldset->label); ?></p>

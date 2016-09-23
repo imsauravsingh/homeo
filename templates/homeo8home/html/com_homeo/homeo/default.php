@@ -138,7 +138,7 @@ defined('_JEXEC') or die;
 								<img class="" src="images/aboutdoctor.png">
 								<!--<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">-->
 							</div>
-							<div class="col-sm-8 col-md-offset-2 col-xs-12 text-center">
+							<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 text-center">
 								<small>BHMS</small>
 								<h2>Dr. Shantanu Nigam</h2>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean finibus interdum urna. Phasellus ac lorem ut tellus ornare condimentum. Nulla facilisi. Nulla at facilisis nibh, in ultricies arcu. Fusce elementum mollis eros, vel ultricies enim consequat in.</p>
@@ -153,7 +153,7 @@ defined('_JEXEC') or die;
 							<div class="col-sm-12 text-center">
 								 <img class="" src="images/aboutdoctor.png">
 							</div>
-							<div class="col-sm-8 col-md-offset-2 col-xs-12 text-center">
+							<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 text-center">
 								<small>BHMS</small>
 								<h2>Dr. Shantanu Nigam</h2>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean finibus interdum urna. Phasellus ac lorem ut tellus ornare condimentum. Nulla facilisi. Nulla at facilisis nibh, in ultricies arcu. Fusce elementum mollis eros, vel ultricies enim consequat in.</p>
@@ -168,7 +168,7 @@ defined('_JEXEC') or die;
 							<div class="col-sm-12 text-center">
 								 <img class="" src="images/aboutdoctor.png">
 							</div>
-							<div class="col-sm-8 col-md-offset-2 col-xs-12 text-center">
+							<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 text-center">
 								<small>BHMS</small>
 								<h2>Dr. Shantanu Nigam</h2>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean finibus interdum urna. Phasellus ac lorem ut tellus ornare condimentum. Nulla facilisi. Nulla at facilisis nibh, in ultricies arcu. Fusce elementum mollis eros, vel ultricies enim consequat in.</p>
@@ -183,7 +183,7 @@ defined('_JEXEC') or die;
 							<div class="col-xs-12 text-center">
 								 <img class="" src="images/aboutdoctor.png">
 							</div>
-							<div class="col-sm-8 col-md-offset-2 col-xs-12 text-center">
+							<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 text-center">
 								<small>BHMS</small>
 								<h2>Dr. Shantanu Nigam</h2>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean finibus interdum urna. Phasellus ac lorem ut tellus ornare condimentum. Nulla facilisi. Nulla at facilisis nibh, in ultricies arcu. Fusce elementum mollis eros, vel ultricies enim consequat in.</p>
