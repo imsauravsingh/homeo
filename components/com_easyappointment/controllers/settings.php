@@ -20,9 +20,6 @@ class EasyappointmentControllerSettings extends JControllerLegacy {
 
 		$data = JRequest::getVar('jform', array(), '', 'array');
 		//$consult_online = $data['consult_online'];
-		//echo "<pre>";
-		//print_r($data);
-		//print_r($consult_online); die;
 		$data['prices'] = JRequest::getVar('service_price', array(), '', 'array');
 		$data['service_length'] = JRequest::getVar('service_length', array(), '', 'array');
 		$app = JFactory::getApplication();
@@ -32,6 +29,21 @@ class EasyappointmentControllerSettings extends JControllerLegacy {
 		$this->getModel('Settings')->save( $data );
 		$this->setRedirect( JRoute::_('index.php?option=com_easyappointment&view=settings&Itemid='.$itemId, false), JText::_('COM_EASYAPPOINTMENT_SETTINGS_SAVED'), 'message' );
 		return true;
+	}
+
+	public function deleteclinicimages(){
+		$data =(int) JRequest::getVar('delete_id');
+		$this->getModel('Settings')->deleteimages();
+		echo json_encode($data);
+		exit;
+	}
+
+	public function showattachment(){
+		echo "--------->".$file_path =JRequest::getVar('file_path');
+
+		//$this->getModel('Settings')->deleteimages();
+		//echo json_encode($data);
+		exit;
 	}
 
 

@@ -12,7 +12,7 @@ defined('_JEXEC') or die('Restricted access');
 ?>
 
 <div id="easyapp">
-	<form action="<?php echo JRoute::_('index.php?option=com_easyappointment&view=settings', false);?>" method="post" name="adminForm" id="adminForm" class="form-horizontal">
+	<form action="<?php echo JRoute::_('index.php?option=com_easyappointment&view=settings', false);?>" method="post" name="adminForm" id="adminForm" class="form-horizontal" enctype="multipart/form-data">
 
 		<?php //echo MedialDisplay::loadMenu() ;?>
 
@@ -51,7 +51,7 @@ if($fieldset->name=="consult_online" || $fieldset->name=="home_visit"){ ?>
     </div>
 	<div class="clr"></div>
   <?php } ?>
-	
+
   <div class="row tbb-action">
     <div class="col-md-12 text-center">
     <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 input_line text-center"></div>
@@ -88,10 +88,10 @@ if($fieldset->name=="consult_online" || $fieldset->name=="home_visit"){ ?>
       <label class="control-label col-md-6 f_left"> <?php echo $field->label; ?> </label>
       <div class="controls cold-md-6">
         <?php echo $field->fieldname == 'tags' ? JText::_('COM_EASYAPPOINTMENT_NOTIFICATIONS_TAGS') : $field->input; ?>
-		
+
       </div>
     </div>
-	
+
   <?php } ?>
 <div class="clr"></div>
   <div class="row tbb-action">

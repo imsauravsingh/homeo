@@ -200,7 +200,8 @@
 			<option value="0">COM_EASYAPPOINTMENT_UNCONFIRMED</option>
 			<option value="1">COM_EASYAPPOINTMENT_CONFIRMED</option>
 		</field>
-		<field name="clinic_images" type="file" directory="clinic" label="Clinic images" description="Choose an image from your computer with maximum 100KB" size="10" accept="image/*" />
+		<field name="book_appointment][clinic_images" type="file" multiple="multiple" directory="images/clinic" label="Clinic images" description="Choose an image from your computer with maximum 100KB" size="10" />
+		<field name="clinic_images_show" type="clinicimages" description="Show all clinic images" />
 	</fieldset>
 
 	<fieldset name="profile_display">
@@ -210,7 +211,8 @@
 		<field name="profile_display][experience" type="experience" label="COM_EASYAPPOINTMENT_FORM_PROFILE_DISPLAY_EXPERIENCE" default=""/>
 		<field name="registration_no" type="text" class="input-sm" label="COM_EASYAPPOINTMENT_REGISTRATION_NO" default="" />
 		<field name="registration_from" type="text" class="input-sm" label="COM_EASYAPPOINTMENT_REGISTRATION_FROM" default="" />
-		<field name="registration_file" type="file" class="input-sm" directory="registration" label="COM_EASYAPPOINTMENT_REGISTRATION_DOCUMENT" default="" />
+		<field name="registration_file" type="file" class="input-sm" multiple="multiple" directory="images/clinic" size="10" label="COM_EASYAPPOINTMENT_REGISTRATION_DOCUMENT" />
+		<field name="registration_file_show" type="registrationfileshow" class="input-sm" label="Registration Files" default="" />
 	</fieldset>
 
 
