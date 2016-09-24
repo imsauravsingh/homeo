@@ -167,6 +167,9 @@ label.rrr {
     ul.bm-cool-menu{
         border-top:1px solid #fff !important;
     }
+    .buttons .btn:nth-child(2){
+        border-right:1px solid #ddd !important;
+    }
 }
 @media screen and (min-width:980px) and (max-width:1024px)/*tab landscape css*/{
     

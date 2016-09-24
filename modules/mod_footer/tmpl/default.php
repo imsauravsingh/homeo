@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 <div class="row footer">
 <div class="container">
   <div class="row">
-    <div class="col-md-3 col-xs-12">
+    <div class="col-md-3 col-sm-3 col-xs-12">
       <div class="footer_heading">homeo8home</div>
       <ul class="list-unstyled">
         <li><a href="#">Welcome to Home8Home</a></li>
@@ -23,7 +23,7 @@ defined('_JEXEC') or die;
         <li><a href="#">How to Reach Us</a></li>
       </ul>
     </div>
-    <div class="col-md-3 col-xs-12">
+    <div class="col-md-3 col-sm-3 col-xs-12">
       <div class="footer_heading">Our Services</div>
       <ul class="list-unstyled">
         <li><a href="#">Online Consultation</a></li>
@@ -35,7 +35,7 @@ defined('_JEXEC') or die;
         <li><a href="#">Expert Team Opinion</a></li>
       </ul>
     </div>
-    <div class="col-md-3 col-xs-12">
+    <div class="col-md-3 col-sm-3 col-xs-12">
       <div class="footer_heading">Our Policies</div>
       <ul class="list-unstyled">
         <li><a href="#">Privacy Policy</a></li>
@@ -46,7 +46,7 @@ defined('_JEXEC') or die;
         <li><a href="#">Disclaimer Policy</a></li>
       </ul>
     </div>
-    <div class="col-md-3 col-xs-12">
+    <div class="col-md-3 col-sm-3 col-xs-12">
       <div class="footer_heading">How to Reach</div>
       <ul class="list-unstyled">
         <li><a href="#">B - 129 2nd floor, Nirman Colony, Nirman Vihar, New Delhi, India.</a></li>
@@ -59,7 +59,7 @@ defined('_JEXEC') or die;
   <div class="clear"></div>
   </div>
   <div class="row">
-    <div class="col-md-6 col-xs-12">
+    <div class="col-md-6 col-sm-6 col-xs-12">
       <div class="footer_heading">Subscribe our NEWSLETTER</div>
       <ul class="list-unstyled">
         <li>Subscripe our newsletter to get offers, Discounr and Campaign Detail</li>
@@ -74,7 +74,7 @@ defined('_JEXEC') or die;
         </li>
       </ul>
     </div>
-    <div class="col-md-6 col-xs-12">
+    <div class="col-md-6 col-sm-6 col-xs-12">
       <div class="footer_heading">Follow us Online</div>
       <ul class="list-unstyled">
         <li>Keep in touch with us socially and follow us</li>

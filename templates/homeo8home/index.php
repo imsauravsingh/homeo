@@ -140,7 +140,7 @@ else
 if ($this->params->get('logoFile'))
 {
 	$logo = '<img src="' . JUri::root() . $this->params->get('logoFile') . '" alt="' . $sitename . '" />';
-	$logo2 = '<img src="' . JUri::root() . $this->params->get('logoFile') . '" style="width: 50%; margin-top: -4px;" alt="' . $sitename . '" />';
+	$logo2 = '<img src="' . JUri::root() . $this->params->get('logoFile') . '" style="width: ; margin-top: -1px;" alt="' . $sitename . '" />';
 }
 elseif ($this->params->get('sitetitle'))
 {
