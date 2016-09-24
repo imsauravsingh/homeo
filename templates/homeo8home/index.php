@@ -174,7 +174,7 @@ $$(window).ready(function() {
       $$("div.dashboard_divli").hide();
       $$("div#"+$$(this).attr("id")).show();
     });
-        if($$("div#system-message").is(":visible")!=undefined && $$("div#system-message").is(":visible")==true){  $$("div#system-message").fadeOut(5000); }        
+        if($$("div#system-message").is(":visible")!=undefined && $$("div#system-message").is(":visible")==true){  $$("div#system-message").fadeOut(5000); }
 });
 
 ';
@@ -238,7 +238,7 @@ $doc->addScriptDeclaration($bottomScript);
 				  <ul class="sidebar-nav">
 					<a id="menu-close" href="#" class="pull-right toggle"><p>&#10060;</p></a>
 					<li class="sidebar-brand">
-					  
+
 					</li>
 					<li>
 					  <a href="/homeo/index.php?option=com_k2&view=itemlist&layout=category&task=category&id=1&Itemid=485">Healthy Tips</a>

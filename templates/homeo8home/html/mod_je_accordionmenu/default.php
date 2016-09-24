@@ -172,6 +172,9 @@ foreach ($list as $i => &$item) :
 if($item->id==517){
 $item517_class = $class;
 $item517_class_hide = "style='display:none;'";
+}else{
+	$item517_class_hide = "style='display:block;'";
+
 }
 
 	echo '<li'.$class.' '.$item517_class_hide.'>';
