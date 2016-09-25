@@ -21,14 +21,13 @@ class JFormFieldRegistrationfileshow extends JFormField
 	{
     //JHTML::_('behavior.modal');
     $imagescript = "
-    var $$ =jQuery.noConflict();
-    $$(window).ready(function() {
-    $$('.removeRegistrationImage').on('click',function(){
+    jQuery(window).ready(function() {
+    jQuery('.removeRegistrationImage').on('click',function(){
     var delete_id = this.id;
-    $$.get('".JURI::root()."/index.php?option=com_easyappointment&task=settings.deleteclinicimages&tmpl=component',{delete_id:delete_id},function(data){
+    jQuery.get('".JURI::root()."/index.php?option=com_easyappointment&task=settings.deleteclinicimages&tmpl=component',{delete_id:delete_id},function(data){
     if(data){
     var delete_id = parseInt(data);
-      $$('div#divregistration_file_'+delete_id).remove();
+      jQuery('div#divregistration_file_'+delete_id).remove();
     }
     });
     });

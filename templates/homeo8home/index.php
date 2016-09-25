@@ -152,29 +152,30 @@ else
 }
 $bottomScript = '
 var baseurl = "'.JURI::base().'";
-var $$ =jQuery.noConflict();
-$$(window).ready(function() {
+//var $$ =jQuery.noConflict();
+jQuery(window).ready(function() {
 		//Set the carousel options
-		$$("#quote-carousel").carousel({
+		jQuery("#quote-carousel").carousel({
 		pause: true,
 		interval: 4000,
 		});
 
-		 $$("ul#banner_li li").on("click",function(){
-											$$("div#main_bg_banner").removeClass();
-											$$("div#main_bg_banner").addClass($$(this).attr("data-banner"));
+		 jQuery("ul#banner_li li").on("click",function(){
+											jQuery("div#main_bg_banner").removeClass();
+											jQuery("div#main_bg_banner").addClass(jQuery(this).attr("data-banner"));
+                      jQuery("input#search_data_bytab").val(jQuery(this).attr("data-searchbind"));
 									});
-    $$("div.dashboard_divli").hide();
-    $$("div#tab_book_appointment").show();
-    $$("li#tab_book_appointment").addClass("active_tab");
+    jQuery("div.dashboard_divli").hide();
+    jQuery("div#tab_book_appointment").show();
+    jQuery("li#tab_book_appointment").addClass("active_tab");
 
-    $$("li.dashboard_li").on("click", function(){
-      $$("li.dashboard_li").removeClass("active_tab");
-      $$(this).addClass("active_tab");
-      $$("div.dashboard_divli").hide();
-      $$("div#"+$$(this).attr("id")).show();
+    jQuery("li.dashboard_li").on("click", function(){
+      jQuery("li.dashboard_li").removeClass("active_tab");
+      jQuery(this).addClass("active_tab");
+      jQuery("div.dashboard_divli").hide();
+      jQuery("div#"+jQuery(this).attr("id")).show();
     });
-        if($$("div#system-message").is(":visible")!=undefined && $$("div#system-message").is(":visible")==true){  $$("div#system-message").fadeOut(5000); }
+        if(jQuery("div#system-message").is(":visible")!=undefined && jQuery("div#system-message").is(":visible")==true){  jQuery("div#system-message").fadeOut(5000); }
 });
 
 ';
@@ -256,13 +257,13 @@ $doc->addScriptDeclaration($bottomScript);
 					</li>
 				  </ul>
 				  <script>
-				$$("#menu-close").click(function(e) {
+				jQuery("#menu-close").click(function(e) {
 					e.preventDefault();
-					$$("#sidebar-wrapper").toggleClass("active");
+					jQuery("#sidebar-wrapper").toggleClass("active");
 				  });
-				  $$("#menu-toggle").click(function(e) {
+				  jQuery("#menu-toggle").click(function(e) {
 					e.preventDefault();
-					$$("#sidebar-wrapper").toggleClass("active");
+					jQuery("#sidebar-wrapper").toggleClass("active");
 				  });
 				</script>
 				</div>

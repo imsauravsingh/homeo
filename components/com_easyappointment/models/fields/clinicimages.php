@@ -13,6 +13,7 @@ defined('_JEXEC') or die('Restricted access');
 jimport('joomla.html.html');
 jimport('joomla.form.formfield');
 JFormHelper::loadFieldClass('list');
+JHTML::_('behavior.modal','a.clinicmodal-thumbnail');
 
 class JFormFieldClinicimages extends JFormField
 {
@@ -21,14 +22,13 @@ class JFormFieldClinicimages extends JFormField
 	{
 
     $imagescript = "
-    var $$ =jQuery.noConflict();
-    $$(window).ready(function() {
-    $$('.removeClinicImage').on('click',function(){
+    jQuery(window).ready(function() {
+    jQuery('.removeClinicImage').on('click',function(){
     var delete_id = this.id;
-    $$.get('".JURI::root()."/index.php?option=com_easyappointment&task=settings.deleteclinicimages&tmpl=component',{delete_id:delete_id},function(data){
+    jQuery.get('".JURI::root()."/index.php?option=com_easyappointment&task=settings.deleteclinicimages&tmpl=component',{delete_id:delete_id},function(data){
     if(data){
     var delete_id = parseInt(data);
-      $$('div#divclinic_img_'+delete_id).remove();
+      jQuery('div#divclinic_img_'+delete_id).remove();
     }
     });
     });
@@ -65,7 +65,7 @@ class JFormFieldClinicimages extends JFormField
     if(count($results)){
       foreach ($results as $key => $value) {
         if(file_exists(JPATH_SITE.DS.'images'.DS.'clinic_images'.DS.$user->id.DS.$value->clinic_image)){
-          $html .= '<div class="clinic_img" id="divclinic_img_'.$value->id.'"><img style="width:50px" title="'.$value->attachment_name.'" src="'.JURI::root().DS.'images'.DS.'clinic_images'.DS.$user->id.DS.$value->clinic_image.'"><span class="removeClinicImage" id="'.$value->id.'">Delete</span></div>';
+          $html .= '<div class="clinic_img" id="divclinic_img_'.$value->id.'"><a class="clinicmodal-thumbnail" href="'.JURI::root().DS.'images'.DS.'clinic_images'.DS.$user->id.DS.$value->clinic_image.'"><img style="width:50px" title="'.$value->attachment_name.'" src="'.JURI::root().DS.'images'.DS.'clinic_images'.DS.$user->id.DS.$value->clinic_image.'"></a><span class="removeClinicImage" id="'.$value->id.'">Delete</span></div>';
         }
       }
     }

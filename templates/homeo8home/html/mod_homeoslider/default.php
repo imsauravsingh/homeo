@@ -15,20 +15,21 @@ $doc = JFactory::getDocument();
 
 // Add Javascript
 $modhomeoScript = '
-var $ =jQuery.noConflict();
-$(window).ready(function() {
+jQuery(window).ready(function() {
 
-	$("#searchOnlineDoctors, #searchAppointmentDoctors, #searchHomevisitDoctors").on("click",function(){
+	jQuery("#searchOnlineDoctors, #searchAppointmentDoctors, #searchHomevisitDoctors").on("click",function(){
 
-var city = parseInt($(this).parent().parent().parent().find("select[name=\'city\']").val());
-var locality = parseInt($(this).parent().parent().parent().find("select[name=\'locality\']").val());
-var speciality = parseInt($(this).parent().parent().parent().find("select[name=\'speciality\']").val());
-//var city = parseInt($("select[name=\'city\']").val());
-//var locality =parseInt($("select[name=\'locality\']").val());
-//var speciality =parseInt($("select[name=\'speciality\']").val());
+var city = parseInt(jQuery(this).parent().parent().parent().find("select[name=\'city\']").val());
+var locality = parseInt(jQuery(this).parent().parent().parent().find("select[name=\'locality\']").val());
+var speciality = parseInt(jQuery(this).parent().parent().parent().find("select[name=\'speciality\']").val());
+//var city = parseInt(jQuery("select[name=\'city\']").val());
+//var locality =parseInt(jQuery("select[name=\'locality\']").val());
+//var speciality =parseInt(jQuery("select[name=\'speciality\']").val());
+var search_data_bytab = jQuery("input#search_data_bytab").val();
+
 if(isNaN(city)){
 	alert("Please select city!");
-	$("select[name=\'city\']").focus();
+	jQuery("select[name=\'city\']").focus();
 	return false;
 }else{
 	var searchredirecturl = baseurl;
@@ -37,9 +38,9 @@ if(isNaN(city)){
 	if(isNaN(city)) city = 0;
 
 	if(speciality!=0){
-		searchredirecturl +="index.php?option=com_easyappointment&view=browse&category="+speciality+"&Itemid=501&speciality="+speciality+"&city="+city+"&locality="+locality;
+		searchredirecturl +="index.php?option=com_easyappointment&view=browse&category="+speciality+"&Itemid=501&speciality="+speciality+"&city="+city+"&locality="+locality+"&search_data_bytab="+search_data_bytab;
 	}else{
-		searchredirecturl +="index.php?option=com_easyappointment&view=browse&category=0&Itemid=501&search_type=1&speciality="+speciality+"&city="+city+"&locality="+locality;
+		searchredirecturl +="index.php?option=com_easyappointment&view=browse&category=0&Itemid=501&search_type=1&speciality="+speciality+"&city="+city+"&locality="+locality+"&search_data_bytab="+search_data_bytab;
 	}
 	window.location.href=searchredirecturl;
 }
@@ -82,10 +83,11 @@ $speciality .= '</select>';
                 <div class=" Tabs">
 				<div class="active">
 					<ul class="nav nav-pills" id="banner_li">
-						<li class="active" data-banner="banner_tab0_img"><a data-toggle="pill" href="#banner_tab0">Consult Online</a></li>
-						<li data-banner="banner_tab1_img"><a data-toggle="pill" href="#banner_tab1">Ask a Question</a></li>
-						<li data-banner="banner_tab2_img"><a data-toggle="pill" href="#banner_tab2">Book Appointment</a></li>
-						<li data-banner="banner_tab3_img"><a data-toggle="pill" href="#banner_tab3">Home Visit</a></li>
+						<li class="active" data-banner="banner_tab0_img" data-searchbind="consult_online"><a data-toggle="pill" href="#banner_tab0">Consult Online</a></li>
+						<li data-banner="banner_tab1_img" data-searchbind="ask_question"><a data-toggle="pill" href="#banner_tab1">Ask a Question</a></li>
+						<li data-banner="banner_tab2_img" data-searchbind="book_appointment"><a data-toggle="pill" href="#banner_tab2">Book Appointment</a></li>
+						<li data-banner="banner_tab3_img" data-searchbind="home_visit"><a data-toggle="pill" href="#banner_tab3">Home Visit</a></li>
+						<input type="hidden" name="search_data_bytab" id="search_data_bytab" value="consult_online">
 					</ul>
 
 					<div class="tab-content homeo_services_content">
@@ -287,7 +289,7 @@ $speciality .= '</select>';
 						</div>
                     <div class="clearfix"></div>
 					</div>
-                    
+
 				</div>
                 </div>
                 </div>

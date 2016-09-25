@@ -95,7 +95,7 @@ class JFormFieldOnlinechat extends JFormField
 
     $html ='<div class="controls cold-md-6">';
     $html .='<label>Fee:</label>';
-    $html .= '<input type="number" name="jform[consult_online][chat_fee]" id="jform_consult_online__chat_fee" value="'.$chat_fee.'" class="input-sm" placeholder="Chat Fee">Rs';
+    $html .= '<input type="number" name="jform[consult_online][chat_fee]" id="jform_consult_online__chat_fee" value="'.$chat_fee.'" class="input-sm" placeholder="Chat Fee" default="400">Rs';
     $html .='</div>';
 
     return $html;

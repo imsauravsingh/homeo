@@ -33,6 +33,41 @@ class MedialStaff extends JUser
     	return self::$instance[$identifier];
     }
 
+		public static function getClinicImages($id){
+			$db = JFactory::getDbo();
+
+	    // Create a new query object.
+	    $query = $db->getQuery(true);
+
+	    // Select all records from the user profile table where key begins with "custom.".
+	    // Order it by the ordering field.
+	    $query->select($db->quoteName(array('id', 'clinic_image','attachment_name', 'created_at')));
+	    $query->from($db->quoteName('#__clinic_images_attachment'));
+	    $query->where($db->quoteName('user_id') . '='. $db->quote($id));
+	    $query->where($db->quoteName('clinic_image') . '!=""');
+	    $query->order('created_at DESC');
+
+	    // Reset the query using our newly populated query object.
+	    $db->setQuery($query);
+
+	    // Load the results as a list of stdClass objects (see later for more options on retrieving data).
+	    return $results = $db->loadObjectList();
+
+		}
+		public static function getProfilData($profile_display, $search='edu'){
+	    $profile_display = (array) $profile_display;
+
+	    $edu_input = preg_quote($search, '~');
+	    $edu_result = preg_grep('~' . $edu_input . '~', array_keys($profile_display));
+
+	    $data = array();
+	    foreach($edu_result as $er){
+	      if(!empty($profile_display[$er])){
+	        $data[]=$profile_display[$er];
+	      }
+	    }
+	    return $data;
+	  }
 
     public function __construct($identifier)
     {

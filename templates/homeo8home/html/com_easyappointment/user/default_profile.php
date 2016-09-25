@@ -5,7 +5,7 @@
  * @copyright  Ionut Lupu. All rights reserved.
  * @license : http://www.gnu.org/copyleft/gpl.html GNU/GPL , see license.txt
  */
- 
+
 // Check to ensure this file is included in Joomla!
 defined('_JEXEC') or die('Restricted access');
 
@@ -48,7 +48,7 @@ defined('_JEXEC') or die('Restricted access');
 		<div class="row">
 			<div class="col-md-10 col-md-offset-2 description">
 				<?php echo $this->user->description;?>
-			</div>			
+			</div>
 		</div>
 	</div>
 	<!-- /details -->

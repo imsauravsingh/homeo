@@ -25,7 +25,59 @@ $K2User = K2HelperPermissions::getK2User($this->user->id);
 ?>
 
 <div id="easyapp">
-<?php include "consultonline_userheader.php"; ?>
+
+	<ol class="breadcrumb">
+		<li><?php echo JText::_('COM_EASYAPPOINTMENT_YOU_ARE_HERE');?>:</li>
+		<li><a href="<?php echo JRoute::_('index.php?option=com_easyappointment&view=browse');?>"><?php echo JText::_('COM_EASYAPPOINTMENT_SETTINGS_SERVICES');?></a></li>
+		<li><a href="<?php echo JRoute::_('index.php?option=com_easyappointment&view=browse&category=' . $this->service->id);?>"><?php echo $this->service->name;?></a></li>
+		<li class="active"><?php echo $this->user->name;?></li>
+	</ol>
+
+	<!-- details -->
+	<div class="well well-sm header">
+		<div class="row">
+			<div class="col-md-2 left">
+				<a class="profilepic" href="<?php echo JRoute::_('index.php?option=com_easyappointment&view=user&id=' . $this->user->id);?>">
+                                    <?php if ($K2User->image): ?>
+                                        <img class="k2AccountPageImage img-circle" src="<?php echo JURI::root(true).'/media/k2/users/'.$K2User->image; ?>" alt="<?php echo $user->name; ?>" />
+                                    <?php elseif($K2User->gender=='m'): ?>
+                                        <img src="<?php echo JURI::root(true).'/images/User2.jpg'; ?>" alt="img" class="img-circle"/>
+                                    <?php elseif($K2User->gender!='m'): ?>
+                                        <img src="<?php echo JURI::root(true).'/images/User.jpg'; ?>" alt="img" class="img-circle"/>
+                                    <?php endif; ?>
+                                </a>
+			</div>
+			<div class="col-md-10">
+				<div class="col-md-6">
+					<h2><?php echo $this->escape(ucfirst($this->user->name));?></h2>
+					<p>
+						<a class="btn btn-primary btn-lg" href="#goto" id="appointment">
+							<i class="ico ico-calendar"></i> <?php echo JText::_('COM_EASYAPPOINTMENT_BOOK_THIS_USER');?>
+						</a>
+					</p>
+				</div>
+
+				<div class="col-md-6">
+					<?php if ($this->user->getParams()->get('show_form_prices') == 1) {?>
+					<h4><i class="ico ico-info"></i> <?php echo JText::_('COM_EASYAPPOINTMENT_PRICES');?></h4>
+					<ul class="prices">
+						<li class="serviceslist">
+							<span class="col-md-6"><?php echo $this->escape($this->service->name);?></span>
+							<span class="col-md-6"><?php echo $this->service->price;?> <?php echo $this->user->getParams()->get('currency');?></span>
+						</li>
+					</ul>
+					<?php } ?>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-10 col-md-offset-2 description">
+				<?php echo $this->user->description;?>
+			</div>
+		</div>
+	</div>
+	<!-- /details -->
 
 	<!-- calendar -->
 	<div class="well well-sm calendar" id="goto">

@@ -174,7 +174,8 @@
 	</fieldset>
 
 	<fieldset name="book_appointment">
-		<field name="book_appointment][enable" type="bookappointment" label="COM_EASYAPPOINTMENT_FORM_BOOK_APPOINTMENT_ENABLE" default=""/>
+		<field name="book_appointment][enable" type="bookappointment" label="COM_EASYAPPOINTMENT_FORM_BOOK_APPOINTMENT_ENABLE" default="" xrule="/^[0-9]{2,}$/" />
+		<field name="book_appointment_fee" type="number" label="COM_EASYAPPOINTMENT_FORM_BOOK_APPOINTMENT_FEE" default="300"/>
 		<field name="book_appointment][clinic_name" type="clinicname" label="COM_EASYAPPOINTMENT_FORM_BOOK_APPOINTMENT_CLINIC_NAME" default=""/>
 		<field name="book_appointment][clinic_address" type="clinicaddress" label="COM_EASYAPPOINTMENT_FORM_BOOK_APPOINTMENT_CLINIC_ADDRESS" default=""/>
 		<field name="starthour" type="defaulthours" class="input-sm" label="COM_EASYAPPOINTMENT_START_HOUR" default="28800" xrule="/^[0-9]{2,}$/" />

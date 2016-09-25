@@ -5,10 +5,11 @@
  * @copyright  Ionut Lupu. All rights reserved.
  * @license : http://www.gnu.org/copyleft/gpl.html GNU/GPL , see license.txt
  */
- 
+
 // Check to ensure this file is included in Joomla!
 defined('_JEXEC') or die('Restricted access');
 
+//echo $this->loadTemplate('userheader');
 ?>
 
 <div id="easyapp">
@@ -55,7 +56,7 @@ defined('_JEXEC') or die('Restricted access');
 		<div class="row">
 			<div class="col-md-10 col-md-offset-2 description">
 				<?php echo $this->user->description;?>
-			</div>			
+			</div>
 		</div>
 	</div>
 	<!-- /details -->
@@ -76,7 +77,7 @@ defined('_JEXEC') or die('Restricted access');
 						<span class="calendar-prev"><a href="javascript:void(0);" id="go-back-cal"><i class="ico ico-go-left"></i></a></span>
 						<span class="calendar-next"><a href="javascript:void(0);" id="go-next-cal"><i class="ico ico-go-right"></i></a></span>
 					</div>
-		
+
 				<div class="col-md-12" id="calendar-table">
 					<?php echo $this->calendar;?>
 				</div>
