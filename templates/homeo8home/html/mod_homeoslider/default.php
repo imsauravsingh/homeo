@@ -92,8 +92,8 @@ $speciality .= '</select>';
 
 					<div class="tab-content homeo_services_content">
 						<div id="banner_tab0" class="tab-pane fade in active">
-								<div class="h3">Why wait in queues at the clinic!</div>
-								<div class="title">Consult Best  Homeopathy Doctors in Delhi/NCR Anytime Anywhere At All the Time</div>
+								<div class="h3">Not able to Move ?</div>
+								<div class="title">homeo8home,choose your doctor and consult online and get your problems assessed. </div>
 								<div class="input">
 									<div id="imaginary_container">
 										<div class="form-group">
@@ -148,8 +148,8 @@ $speciality .= '</select>';
 								</div>
 						</div>
 						<div id="banner_tab1" class="tab-pane fade">
-								<div class="h3">Why wait in queues at the clinic!</div>
-								<div class="title">Get brief answers for your health queries. It's FREE!</div>
+								<div class="h3">Looking for an answer ?</div>
+								<div class="title">Ask questions from expert doctors and also get free health tips and advice on your health.</div>
 								<br>
 								<div class="form-group">
 									<label for="comment">Your Question :</label>
@@ -178,8 +178,8 @@ $speciality .= '</select>';
 								</div>
 						</div>
 						<div id="banner_tab2" class="tab-pane fade">
-							 <div class="h3">Why wait in queues at the clinic!</div>
-								<div class="title">Book instant appointments with doctors.</div>
+							 <div class="h3">Sick of waiting in traffic and queues ?</div>
+								<div class="title">Book your appointment online and save your time at no additional charges.</div>
 								<div class="input">
 									<div id="imaginary_container">
 										<div class="form-group">
@@ -232,8 +232,8 @@ $speciality .= '</select>';
 								</div>
 						</div>
 						<div id="banner_tab3" class="tab-pane fade">
-								 <div class="h3">Beat traffic jams and clinic queues.</div>
-								<div class="title">Book appointments for home visit</div>
+								 <div class="h3">Meet a homeopathy doctor fast with Homeo8Home.</div>
+								<div class="title"> India's first on-demand platform for homeopathy doctor home visits.</div>
 								<div class="input">
 									<div id="imaginary_container">
 										<div class="form-group">

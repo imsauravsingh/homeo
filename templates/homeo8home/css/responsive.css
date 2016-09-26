@@ -167,7 +167,7 @@ label.rrr {
     ul.bm-cool-menu{
         border-top:1px solid #fff !important;
     }
-    .buttons .btn:nth-child(2){
+    .buttons .btn:nth-child(1){
         border-right:1px solid #ddd !important;
     }
 }

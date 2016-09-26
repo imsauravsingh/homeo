@@ -389,7 +389,7 @@ small{
     border: 1px solid #ddd;
 	margin-bottom:50px;
 	background:#fff;
-	padding-top: 19px;
+	padding: 19px 0px;
 }
 .staff_image img {
     width:84px;
@@ -423,6 +423,9 @@ small{
 	border-top: 1px solid #ddd !important;
 	text-transform: capitalize !important;
 	border-bottom: 1px solid #ddd !important;
+}
+.buttons .btn:nth-child(3){
+    border-right: 1px solid #ddd !important;
 }
 .buttons .btn a{
 	color:grey !important;
@@ -1366,4 +1369,44 @@ span#speclztn_addmore,span#awards_addmore,span#education_addmore,span#experience
 }
 #easyapp .input-lg{
     padding:0px 15px !important;
+}
+
+/*consultpnline page style*/
+.consultonline_option {
+    padding: 10px 20px 15px;
+    border: 1px solid #eee;
+    margin-top: -60px;
+}
+.consultonline_option h3,.homeo_assurance h3{
+   /* border-bottom: 1px solid #eee;*/
+    padding-bottom:5px;
+}
+.option_text {
+    font-size: 18px;
+    font-weight: bold;
+}
+.consultonline_option_group,.homeo_assurance_division {
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+.consultonline_option_group .icon{
+    font-size: 20px;
+}
+.consult_online {
+    background: #10ada7 !important;
+    padding: 10px 20px !important;
+    border-radius: 3px !important;
+    /* margin: 10px; */
+    text-transform: uppercase !important;
+}
+.consult_online a{
+    color:#fff !important;
+}
+.homeo_assurance{
+   padding: 10px 20px 15px;
+    border: 1px solid #eee;
+    margin-top: 20px; 
+}
+.homeo_assurance_division img{
+    margin-bottom:10px;
 }

@@ -142,7 +142,7 @@ $search_data_bytab = JRequest::getVar( 'search_data_bytab' );
 			<p>
 			<div class="buttons text-center">
         <?php $disable_booking=""; if($book_appointment->enable){ $disable_booking="disable_booking"; }?>
-				<div class="col-sm-4 col-xs-6 btn <?php echo $disable_booking; ?>">
+				<div class="col-sm-4 col-xs-12 btn <?php echo $disable_booking; ?>">
           <?php if(empty($disable_booking)){ ?>
               <a class="hide_booking_link" href="#"><?php echo JText::_('COM_EASYAPPOINTMENT_BOOK_THIS_USER');?></a>
           <?php }else{ ?>
