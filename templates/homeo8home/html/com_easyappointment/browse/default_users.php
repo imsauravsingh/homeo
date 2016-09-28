@@ -92,7 +92,7 @@ $search_data_bytab = JRequest::getVar( 'search_data_bytab' );
             if(file_exists(JPATH_SITE.DS.'images'.DS.'clinic_images'.DS.$item->id.DS.$value->clinic_image)){ ?>
               <div class="col-lg-2 col-xs-3">
                   <a class="modal-thumbnail thumbnail bottom" title="<?php echo $value->attachment_name; ?>" href="<?php echo JURI::root().DS.'images'.DS.'clinic_images'.DS.$item->id.DS.$value->clinic_image; ?>">
-                    <img style="width:50px" title="<?php echo $value->attachment_name; ?>" src="<?php echo JURI::root().DS.'images'.DS.'clinic_images'.DS.$item->id.DS.$value->clinic_image; ?>">
+                    <img style="width:50px;height:50px" title="<?php echo $value->attachment_name; ?>" src="<?php echo JURI::root().DS.'images'.DS.'clinic_images'.DS.$item->id.DS.$value->clinic_image; ?>">
                   </a>
                   <?php if($i==4 && ((count($clinic_images)-$i)!=0) ){ ?><span class="clinicimg_count"><?php echo count($clinic_images)-$i; ?></span><?php } ?>
               </div>

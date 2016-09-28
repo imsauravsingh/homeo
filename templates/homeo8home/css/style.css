@@ -1410,3 +1410,28 @@ span#speclztn_addmore,span#awards_addmore,span#education_addmore,span#experience
 .homeo_assurance_division img{
     margin-bottom:10px;
 }
+.modal-thumbnail thumbnail bottom{display: table;}
+#easyapp .modal-thumbnail thumbnail bottom img{
+    height:50px !important;
+}
+span.clinicimg_count {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: rgba(0, 0, 0, 0.61);
+    /* padding: 18px 26px; */
+    margin: 0px 15px;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    width: 65%;
+    height: 100%;
+    text-align: center;
+    line-height: 350%;
+}
+.main_clinic_imgdiv .clinic_img{
+    margin-bottom: 5px;
+}
+button:focus {
+    outline: -webkit-focus-ring-color auto 0px !important;
+}

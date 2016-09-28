@@ -19,9 +19,9 @@ defined('_JEXEC') or die;
                 
 				<div class="col-lg-8 col-lg-offset-2 text-center">
 					<span class="text"> Some Cool Facts</span>
-					<h1>WHY YOU SHOULD CHOOSE US</h1>
+					<h1>WHY CHOOSE US</h1>
 					<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean finibus interdum urna. Phasellus ac lorem ut tellus 			                    ornare condimentum. Nulla facilisi. Nulla at facilisis nibh, in ultricies arcu. Fusce elementum mollis eros, vel                    ultricies enim consequat in.
+					Homeo 8 Home aims to provide high level of healthcare facilities with the right Homeopathic treatment in the comfort of your home. With the help of continuously evolving treatment strategies, we ensure to give you the best quality care in just a single click.
 					</p>
                   
                 </div>
@@ -30,17 +30,17 @@ defined('_JEXEC') or die;
 					<div class="col-md-4 col-sm-4 col-xs-12 text-center division">
 						<img src="images/icon1.png" alt="img"/>
 						<h3>Space barrier is broken</h3>
-						<p>Now patients can choose the doctors from anywhere in the world.</p> 
+						<p>Now patients can choose the doctors from anywhere in the world. </p> 
 					</div>
 					<div class="col-md-4 col-sm-4 col-xs-12 text-center division">
 						<img src="images/icon2.png" alt="img"/>
-						<h3>Space barrier is broken</h3>
-						<p>Now patients can choose the doctors from anywhere in the world.</p> 
+						<h3>Save your time & money</h3>
+						<p>. Now the patients won’t have to deal with routine questions doctor usually asks in face-to-face consultation. </p> 
 					</div>
 					<div class="col-md-4 col-sm-4 col-xs-12 text-center division">
 						<img src="images/icon3.png" alt="img"/>
-						<h3>Space barrier is broken</h3>
-						<p>Now patients can choose the doctors from anywhere in the world.</p> 
+						<h3>Available at your convenience</h3>
+						<p>With Homeo 8 Home, you won’t need to leave your home or office.</p> 
 					</div>
 					<div class="clearfix"></div>
 				</div>
